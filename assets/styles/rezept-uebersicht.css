@@ -3,10 +3,14 @@ body {
     font-family: Roboto;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 600px) {
 
     .blank {
         height: 15px;
+    }
+
+    a{
+        color: black;
     }
 
     .header .logo {
@@ -217,20 +221,20 @@ body {
     .picture {
         text-align: center;
         margin: auto;
-        height: 100vh;
+        height: 50vh;
         background-color: white;
     }
 
     .picture img {
         width: 100vw;
-        height: 100vh;
+        height: 50vh;
         object-fit: cover;
     }
 
     .picture:after {
         position: relative;
-        height: 87vh;
-        top: -91vh;
+        height: 37vh;
+        top: -41vh;
         margin: auto;
         border: 3px solid white;
         content: '';
@@ -239,20 +243,14 @@ body {
     }
 
     .hero-content {
-        width: 90vw;
         text-align: center;
         position: relative;
-        top: -60vh;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+        top: -5vh;
 
+    }
     .white {
         color: white;
-        font-size: 28px;
-        width: 80%;
-        margin: auto;
-        margin-bottom: 100px;
+        font-size: 50px;
     }
 
     .mini-head {
@@ -267,8 +265,7 @@ body {
     }
 
     .whitebox {
-        height: 23vh;
-        width: 95%;
+        height: 24vh;
         background-color: white;
         color: #E6942E;
         text-align: center;
@@ -280,9 +277,10 @@ body {
 
     .orange {
         font-family: leorio;
-        font-size: 28px;
+        font-size: 30px;
         color: #E6942E;
-        margin-bottom: 30px;
+        margin: 20px;
+        margin-bottom: 20px;
 
     }
 
@@ -290,7 +288,6 @@ body {
         border: 3px solid #E6942E;
         padding: 10px;
         display: inline;
-        font-size: 14px;
     }
 
     a .mini-button {
@@ -302,84 +299,93 @@ body {
         text-decoration: none;
     }
 
-    .green-background {
+    .dropdown-1{
+        visibility: hidden;
+    }
+
+    .dropdown-1:nth-of-type(1){
+        visibility: visible;
         background-color: #DAF2E9;
-        width: 100%;
+        border: 2px solid #378166;
+        color: #378166;
+        font-weight: bold;
+        margin-bottom: 15px;
+        height: 50px;
         position: relative;
-        top: -45vh;
-        text-align: center;
-        margin: auto;
-
+        left: 25%;
+        top: -7vh;
     }
 
-    .black-headline {
-        font-family: leorio;
-        font-size: 28px;
-        color: black;
-        padding-top: 40px;
-    }
-
-    .site-content {
-        text-align: center;
-        margin: auto;
-        height: 63vh;
-    }
-
-    .content-1 {
-        height: 30vh;
-        margin-bottom: 10px;
-    }
-
-    .content-2 {
-        height: 30vh;
-    }
-
-    .content-1 .content-link {
-        margin-top: 40px;
-        height: 150px;
-        object-fit: cover;
-    }
-
-    .content-2 .content-link {
-        height: 150px;
-        object-fit: cover;
-    }
-
-    .content-box {
-        position: relative;
-        border: 2px solid white;
-        width: 290px;
-        height: 140px;
-        top: -20.5vh;
-        margin-left: 60px;
-    }
-
-    .content-box h4 {
-        color: white;
-        font-size: 20px;
-        position: relative;
-        top: 30%;
-    }
-
-    .content-box h4 a {
-        color: white;
-    }
-
-    .impressum {
-        position: relative;
-        top: -35vh;
+    .inhaltsblock{
         background-color: white;
-        height: 30vh;
+        width: 95%;
+        height: 530px;
+        margin: 20px;
+        margin-bottom: 40px;
     }
 
-    .content{
-        height: 330vh;
+    .teaserbild img{
+        width: 100%;
+    }
+
+    .text h4{
+        margin: 0;
+        color: #E6942E;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    .text h1{
+        font-family: leorio;
+        font-size: 40px;
+        margin: 0;
+        margin-bottom: 20px;
+        margin-left: 20px;
+
+    }
+
+    .infos img{
+        height: 20px;
+        vertical-align: bottom;
+    }
+    .infos{
+        padding-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .info-1{
+        margin-bottom: 5px;
+    }
+
+    hr{
+        width: 80%;
+    }
+
+    .funktionen{
+        display: flex;
+        font-size: 10px;
+        padding-top: 10px;
+        margin-left: 20px;
+
+    }
+
+    .funktionen img{
+        height: 25px;
+    }
+
+    .ergebnisse{
+        position: relative;
+        top:-10vh;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
     }
 
 
 }
 
-@media (min-width: 950px) {
+@media (min-width: 600px) {
 
     .header {
         position: fixed;
@@ -390,6 +396,10 @@ body {
         display: flex;
         flex-direction: row;
         z-index: 100;
+    }
+
+    a{
+        color: black;
     }
 
     .menu {
@@ -456,10 +466,10 @@ body {
     }
 
     .hero-content {
-        width: 90vw;
+        width: 80vw;
         text-align: center;
         position: relative;
-        top: -60vh;
+        top: -10vh;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -481,8 +491,8 @@ body {
     }
 
     .whitebox {
-        height: 30vh;
-        width: 60%;
+        height: 25vh;
+        width: 70%;
         background-color: white;
         color: #E6942E;
         text-align: center;
@@ -516,65 +526,90 @@ body {
         text-decoration: none;
     }
 
-    .green-background {
+    .green-background{
         background-color: #DAF2E9;
-        width: 100%;
+        border: 2px solid #378166;
+        height: 17vh;
         position: relative;
-        top: -59vh;
-        text-align: center;
-        margin: auto;
-
+        top:-30vh;
+        z-index: -10;
+        display: flex;
+        justify-content: space-around;
     }
 
-    .black-headline {
+    .dropdown-1{
+        margin-top: 8vh;
+        background-color: #DAF2E9;
+        border: 2px solid #378166;
+        color: #378166;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .inhaltsblock{
+        background-color: white;
+        width: 350px;
+        height: 530px;
+        margin: 40px;
+    }
+
+    .teaserbild img{
+        width: 350px;
+    }
+
+    .text h4{
+        margin: 0;
+        color: #E6942E;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    .text h1{
         font-family: leorio;
         font-size: 40px;
-        color: black;
-        padding-top: 40px;
+        margin: 0;
+        margin-bottom: 20px;
+        margin-left: 20px;
+
     }
 
-    .site-content {
+    .infos img{
+        height: 20px;
+        vertical-align: bottom;
+    }
+    .infos{
+        padding-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .info-1{
+        margin-bottom: 5px;
+    }
+
+    hr{
+        width: 80%;
+    }
+
+    .funktionen{
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        height: 50vh;
+        font-size: 10px;
+        padding-top: 10px;
+        margin-left: 20px;
+
     }
 
-    .content-link {
-        margin: 50px;
-        height: 200px;
-        object-fit: cover;
+    .funktionen img{
+        height: 25px;
     }
 
-    .content-box {
+    .ergebnisse{
         position: relative;
-        border: 2px solid white;
-        width: 290px;
-        height: 190px;
-        top: -34.7vh;
-        margin-left: 53px;
-    }
-
-    .content-box h4 {
-        color: white;
-        font-size: 20px;
-        position: relative;
-        top: 30%;
-    }
-
-    .content-box h4 a {
-        color: white;
-    }
-
-    .impressum {
-        position: relative;
-        top: -50vh;
-        background-color: white;
-        height: 30vh;
-    }
-
-    .content {
-        height: 280vh;
+        top:-10vh;
+        left: 10%;
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
     }
 
 }

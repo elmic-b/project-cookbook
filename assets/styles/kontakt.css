@@ -207,30 +207,31 @@ body {
         transition-delay: 0.62s;
     }
 
-    .logo a{
+    .logo a {
         color: black;
     }
 
-    .menu-item a{
+    .menu-item a {
         color: black;
     }
+
     .picture {
         text-align: center;
         margin: auto;
-        height: 100vh;
+        height: 50vh;
         background-color: white;
     }
 
     .picture img {
         width: 100vw;
-        height: 100vh;
+        height: 50vh;
         object-fit: cover;
     }
 
     .picture:after {
         position: relative;
-        height: 87vh;
-        top: -91vh;
+        height: 37vh;
+        top: -41vh;
         margin: auto;
         border: 3px solid white;
         content: '';
@@ -239,142 +240,128 @@ body {
     }
 
     .hero-content {
-        width: 90vw;
-        text-align: center;
-        position: relative;
-        top: -60vh;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .white {
-        color: white;
-        font-size: 28px;
-        width: 80%;
-        margin: auto;
-        margin-bottom: 100px;
-    }
-
-    .mini-head {
-        background-color: #E6942E;
-        display: inline;
-        padding-left: 10px;
-        padding-right: 10px;
-        color: white;
-        text-align: center;
-        margin: auto;
-        z-index: 10;
-    }
-
-    .whitebox {
-        height: 23vh;
-        width: 95%;
         background-color: white;
-        color: #E6942E;
+    }
+
+    .obere-box {
+        border: 2px solid #E6942E;
+        width:90vw;
+        height: 12vh;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         margin: auto;
-        z-index: -10;
-        margin-top: -10px;
-        padding-top: 10px;
+        position: relative;
+        top: -5vh;
+        background-color: white;
     }
 
     .orange {
         font-family: leorio;
-        font-size: 28px;
+        font-size: 45px;
         color: #E6942E;
-        margin-bottom: 30px;
-
+        margin: 0;
+        margin-top: 15px;
     }
 
-    .mini-button {
-        border: 3px solid #E6942E;
+    .social-media p{
+        font-size: 20px;
+        margin-top: -1vh;
+    }
+
+    .infos {
+        text-align: center;
+        margin: auto;
         padding: 10px;
-        display: inline;
-        font-size: 14px;
+        padding-bottom: 20px;
+        font-size: 20px;
     }
 
-    a .mini-button {
-        color: #E6942E;
-        text-decoration: none;
+    .infos img{
+        vertical-align: bottom;
+        padding-right: 10px;
     }
+
+    hr{
+        width: 90%;
+    }
+
+
+    .info-1 {
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+
+    .funktionen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5px;
+        padding-bottom: 20px;
+        margin-bottom: 15vh;
+    }
+
+    .funktion-1{
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+
+    .funktion-1 img{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+
+
+    .social-media{
+        background-color: white;
+        text-align: center;
+        margin: auto;
+    }
+
+    .kontaktdaten{
+        background-color: white;
+        text-align: center;
+        margin: auto;
+    }
+
+
+    .obere-box-2 {
+        border: 2px solid #E6942E;
+        width:90vw;
+        height: 12vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        position: relative;
+        top: -5vh;
+        background-color: white;
+    }
+
+    .orange-2 {
+        font-family: leorio;
+        font-size: 45px;
+        color: #E6942E;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+
+    .kontaktdaten p{
+        font-size: 20px;
+        margin-top: -2vh;
+    }
+
 
     a {
         text-decoration: none;
     }
 
-    .green-background {
-        background-color: #DAF2E9;
-        width: 100%;
-        position: relative;
-        top: -45vh;
-        text-align: center;
-        margin: auto;
-
-    }
-
-    .black-headline {
-        font-family: leorio;
-        font-size: 28px;
-        color: black;
-        padding-top: 40px;
-    }
-
-    .site-content {
-        text-align: center;
-        margin: auto;
-        height: 63vh;
-    }
-
-    .content-1 {
-        height: 30vh;
-        margin-bottom: 10px;
-    }
-
-    .content-2 {
-        height: 30vh;
-    }
-
-    .content-1 .content-link {
-        margin-top: 40px;
-        height: 150px;
-        object-fit: cover;
-    }
-
-    .content-2 .content-link {
-        height: 150px;
-        object-fit: cover;
-    }
-
-    .content-box {
-        position: relative;
-        border: 2px solid white;
-        width: 290px;
-        height: 140px;
-        top: -20.5vh;
-        margin-left: 60px;
-    }
-
-    .content-box h4 {
-        color: white;
-        font-size: 20px;
-        position: relative;
-        top: 30%;
-    }
-
-    .content-box h4 a {
-        color: white;
-    }
-
-    .impressum {
-        position: relative;
-        top: -35vh;
-        background-color: white;
-        height: 30vh;
-    }
-
-    .content{
-        height: 330vh;
-    }
 
 
 }
@@ -456,126 +443,134 @@ body {
     }
 
     .hero-content {
-        width: 90vw;
+        width: 45vw;
         text-align: center;
         position: relative;
-        top: -60vh;
         left: 50%;
+        top: -3%;
         transform: translate(-50%, -50%);
-    }
-
-    .white {
-        color: white;
-        font-size: 50px;
-    }
-
-    .mini-head {
-        background-color: #E6942E;
-        display: inline;
-        padding-left: 10px;
-        padding-right: 10px;
-        color: white;
-        text-align: center;
-        margin: auto;
-        z-index: 10;
-    }
-
-    .whitebox {
-        height: 30vh;
-        width: 60%;
         background-color: white;
-        color: #E6942E;
+    }
+
+    .obere-box {
+        border: 2px solid #E6942E;
+        width: 500px;
+        height: 12vh;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         margin: auto;
-        z-index: -10;
-        margin-top: -10px;
-        padding-top: 10px;
+        position: relative;
+        top: -20vh;
+        background-color: white;
     }
 
     .orange {
         font-family: leorio;
-        font-size: 40px;
+        font-size: 50px;
         color: #E6942E;
-        margin: 20px;
-        margin-bottom: 40px;
-
+        margin: 0;
+        margin-top: 15px;
     }
 
-    .mini-button {
-        border: 3px solid #E6942E;
+    .social-media p{
+        font-size: 25px;
+        margin-top: -15vh;
+    }
+
+    .infos {
+        text-align: center;
+        margin: auto;
         padding: 10px;
-        display: inline;
+        padding-bottom: 20px;
+        font-size: 25px;
     }
 
-    a .mini-button {
-        color: #E6942E;
-        text-decoration: none;
+    .infos img{
+        vertical-align: bottom;
+        padding-right: 10px;
     }
+
+    hr{
+        width: 90%;
+    }
+
+
+    .info-1 {
+margin-bottom: 10px;
+        padding: 5px;
+    }
+
+    .funktionen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5px;
+        padding-bottom: 20px;
+        margin-bottom: 30vh;
+    }
+
+    .funktion-1{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+
+    .funktion-1 img{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+
+
+    .social-media{
+        background-color: white;
+        text-align: center;
+        margin: auto;
+    }
+
+    .kontaktdaten{
+        background-color: white;
+        text-align: center;
+        margin: auto;
+    }
+
+
+
+    .obere-box-2 {
+        border: 2px solid #E6942E;
+        width: 500px;
+        height: 12vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        position: relative;
+        top:-5vh;
+        background-color: white;
+    }
+
+    .orange-2 {
+        font-family: leorio;
+        font-size: 50px;
+        color: #E6942E;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .kontaktdaten p{
+        font-size: 25px;
+        margin-top: -3vh;
+    }
+
 
     a {
         text-decoration: none;
     }
 
-    .green-background {
-        background-color: #DAF2E9;
-        width: 100%;
-        position: relative;
-        top: -59vh;
-        text-align: center;
-        margin: auto;
 
-    }
-
-    .black-headline {
-        font-family: leorio;
-        font-size: 40px;
-        color: black;
-        padding-top: 40px;
-    }
-
-    .site-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        height: 50vh;
-    }
-
-    .content-link {
-        margin: 50px;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .content-box {
-        position: relative;
-        border: 2px solid white;
-        width: 290px;
-        height: 190px;
-        top: -34.7vh;
-        margin-left: 53px;
-    }
-
-    .content-box h4 {
-        color: white;
-        font-size: 20px;
-        position: relative;
-        top: 30%;
-    }
-
-    .content-box h4 a {
-        color: white;
-    }
-
-    .impressum {
-        position: relative;
-        top: -50vh;
-        background-color: white;
-        height: 30vh;
-    }
-
-    .content {
-        height: 280vh;
-    }
 
 }
 

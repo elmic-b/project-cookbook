@@ -20,8 +20,8 @@ class StartController extends AbstractController
 {
 
     /**
-     * @Route("/",name="app_homepage")
-     */
+ * @Route("/homepage",name="app_homepage")
+ */
     public function homepage( Environment $twigEnvironment){
         return $this->render('start/homepage.html.twig');
     }
