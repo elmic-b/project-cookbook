@@ -1,99 +1,94 @@
 {% extends 'base.html.twig' %}
 
    {% block stylesheets %}
-       {{ encore_entry_link_tags('product') }}
+       {{ parent() }}
+
+       {{ encore_entry_link_tags('home') }}
    {% endblock %}
 
-{% block body %}<div id="wrapper">
-    <div id="container">
-        <main id="main">
-            <div class="inside">
-                <div class="mod_article block" id="article-28">
 
-                    <div class="content">
-                        <div class="picture">
-                            <img src="assets/images/5/pfannkuchen-b0827851.jpg" width="500" alt="" itemprop="image">
-                        </div>
-                        <div class="hero-content">
-                            <h1 class="white">WILLKOMMEN ZU PROJECT-COOKBOOK</h1>
-                            <h4 class="mini-head">ONLINEBUCH</h4>
-                            <div class="whitebox">
-                                <h1 class="orange">SEHEN SIE SICH UNSERE REZEPTSAMMLUNG AN!</h1>
-                                <a href="onlinebuch.html"><h4 class="mini-button">ZUR REZEPTSAMMLUNG</h4></a>
-                            </div>
-                        </div>
-                        <div class="green-background">
-                            <h1 class="black-headline">WEITERE FUNKTIONEN ZUM KOCHBUCH!</h1>
-                            <div class="site-content">
-                                <div class="content-1">
-                                    <a href="suche.html">
-                                        <img src="assets/images/5/pfannkuchen-b0827851.jpg" class="content-link" width="300" alt="" itemprop="image">
-                                    </a>
-                                    <div class="content-box">
-                                        <h4>
-                                            <a href="suche.html">
-                                                REZEPTSUCHE
-                                            </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="content-2">
-                                    <a href="account.html">
-                                        <img src="assets/images/5/pfannkuchen-b0827851.jpg" class="content-link" width="300" alt="" itemprop="image">
-                                    </a>
-                                    <div class="content-box">
-                                        <h4>
-                                            <a href="account.html">
-                                                DEIN ACCOUNT
-                                            </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="green-background">
-                            <h1 class="black-headline">INFORMATIONEN ZU UNS!</h1>
-                            <div class="site-content">
-                                <div class="content-1">
-                                    <a href="ueber-uns.html">
-                                        <img src="assets/images/5/pfannkuchen-b0827851.jpg" class="content-link" width="300" alt="" itemprop="image">
-                                    </a>
-                                    <div class="content-box">
-                                        <h4>
-                                            <a href="ueber-uns.html">
-                                                DIE PROJEKTMITGLIEDER
-                                            </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="content-2">
-                                    <a href="kontakt.html">
-                                        <img src="assets/images/5/pfannkuchen-b0827851.jpg" class="content-link" width="300" alt="" itemprop="image">
-                                    </a>
-                                    <div class="content-box">
-                                        <h4>
-                                            <a href="kontakt.html">
-                                                UNSER SOCIAL MEDIA
-                                            </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="impressum">
-                            <h1>Impressum.</h1>
-                        </div>
-                    </div>
+{% block body %}
+    <figure class="picture">
+        <img src="{{ asset('images/recipe-images/unbearbeitet/pfannkuchen-headline.jpg') }}" width="500"
+             alt="Pfannkuchen, mit Ahornsirup und Beeren" itemprop="image">
+    </figure>
+
+    <div class="hero-content">
+        <h1 class="white">Willkommen bei Project Cookbook</h1>
+        <h4 class="mini-head">ONLINEBUCH</h4>
+        <div class="whitebox">
+            <h1 class="orange">SEHEN SIE SICH UNSERE REZEPTSAMMLUNG AN!</h1>
+            <a href="{{ path('app_rezepte-uebersicht') }}"><h4 class="mini-button">ZUR REZEPTSAMMLUNG</h4></a>
+        </div>
+    </div>
+
+    <div class="green-background">
+        <h1 class="black-headline">WEITERE FUNKTIONEN ZUM KOCHBUCH!</h1>
+        <div class="site-content">
+            <div class="content-1">
+                <a href="{{ path('app_suche') }}">
+                    <img src="{{ asset('images/recipe-images/bearbeitet/Gazpacho.jpg') }}" class="content-link" width="300" alt=""
+                         itemprop="image">
+                </a>
+                <div class="content-box">
+                    <h4>
+                        <a href="{{ path('app_suche') }}">
+                            REZEPTSUCHE
+                        </a>
+                    </h4>
                 </div>
             </div>
-        </main>
+            <div class="content-2">
+                <a href="#">
+                    <img src="{{ asset('images/recipe-images/bearbeitet/Quiche.jpg') }}" class="content-link" width="300" alt=""
+                         itemprop="image">
+                </a>
+                <div class="content-box">
+                    <h4>
+                        <a href="#">
+                            DEIN ACCOUNT
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="green-background">
+        <h1 class="black-headline">INFORMATIONEN ZU UNS!</h1>
+        <div class="site-content">
+            <div class="content-1">
+                <a href="#">
+                    <img src="{{ asset('images/recipe-images/unbearbeitet/zimtschnecken kopie.jpg') }}" class="content-link" width="300" alt=""
+                         itemprop="image">
+                </a>
+                <div class="content-box">
+                    <h4>
+                        <a href="#">
+                            DIE PROJEKTMITGLIEDER
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            <div class="content-2">
+                <a href="{{ path('app_kontakt') }}">
+                    <img src="{{ asset('images/recipe-images/bearbeitet/Kaiserschmarrn.jpg') }}" class="content-link" width="300" alt=""
+                         itemprop="image">
+                </a>
+                <div class="content-box">
+                    <h4>
+                        <a href="{{ path('app_kontakt') }}">
+                            UNSER SOCIAL MEDIA
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 
 {% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
 
-    <script>(function(){var burger=document.querySelector(".burger-container"),header=document.querySelector(".header");burger.onclick=function(){header.classList.toggle("menu-opened")}})()</script>
-    {{ encore_entry_script_tags('product') }}
 {% endblock %}

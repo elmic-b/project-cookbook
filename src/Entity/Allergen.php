@@ -2,51 +2,42 @@
 
 namespace App\Entity;
 
-use App\Repository\AllergenRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=AllergenRepository::class)
+ * Allergen
+ *
+ * @ORM\Table(name="allergen")
+ * @ORM\Entity(repositoryClass="App\Repository\AllergenRepository")
  */
 class Allergen
 {
     /**
+     * @var int
+     *
+     * @ORM\Column(name="allergen_id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    private $allergenId;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $allergen_id;
-
-    /**
-     * @ORM\Column(type="string", length=20, nullable=true)
+     * @var string|null
+     *
+     * @ORM\Column(name="abbr", type="string", length=20, nullable=true)
      */
     private $abbr;
 
     /**
-     * @ORM\Column(type="string", length=60, nullable=true)
+     * @var string|null
+     *
+     * @ORM\Column(name="name", type="string", length=60, nullable=true)
      */
     private $name;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function getAllergenId(): ?int
     {
-        return $this->allergen_id;
-    }
-
-    public function setAllergenId(int $allergen_id): self
-    {
-        $this->allergen_id = $allergen_id;
-
-        return $this;
+        return $this->allergenId;
     }
 
     public function getAbbr(): ?string
@@ -72,4 +63,6 @@ class Allergen
 
         return $this;
     }
+
+    
 }

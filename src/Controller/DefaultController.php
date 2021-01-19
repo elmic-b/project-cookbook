@@ -24,6 +24,16 @@ class DefaultController extends AbstractController
 
 
     /**
+     * @Route("/default" , name="app_default")
+     */
+    public function default(){
+        return $this->render('start/default.html.twig');
+    }
+
+
+
+
+    /**
      * @Route("/kontakt" , name="app_kontakt")
      */
     public function kontakt(){

@@ -4,42 +4,44 @@
     <meta charset="UTF-8">
     <title>{% block title %}Project Cookbook{% endblock %}</title>
     {% block stylesheets %}
-      {{ encore_entry_link_tags('app') }}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids|Roboto" rel="stylesheet">
+        {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
 <body>
 
-<nav class="header">
+<nav>
     <div class="burger-container">
         <div id="burger">
             <div class="bar topBar"></div>
             <div class="bar btmBar"></div>
         </div>
     </div>
-    <div class="logo"><a href="{{ path('app_home') }}">PROJECT COOKBOOK</a></div>
+
+    <div class="logo-container"><a href="{{ path('app_home') }}">PROJECT COOKBOOK</a></div>
+
     <div class="blank"> </div>
+
     <ul class="menu">
-        <li class="menu-item"><a href="{{ path('app_onlinebuch') }}">ONLINEBUCH</a></li>
-        <li class="menu-item"><a href="{{ path('app_suche') }}">SUCHE</a></li>
-        <li class="menu-item"><a href="#">Über uns</a></li>
-        <li class="menu-item"><a href="{{ path('app_kontakt') }}">SOCIAL MEDIA</a></li>
+        <li class="menu-item"><a href="{{ path('app_rezepte-uebersicht') }}">onlinebuch</a></li>
+        <li class="menu-item"><a href="{{ path('app_suche') }}">suche</a></li>
+        <li class="menu-item"><a href="#">über uns</a></li>
+        <li class="menu-item"><a href="{{ path('app_kontakt') }}">social media</a></li>
     </ul>
-    <div class="account-right">
-        <a href="account.html">
-            <img src="assets/images/e/user%282%29-49b22aa7.svg" width="35" height="35" alt="" itemprop="image">
+    <div class="account-container">
+        <a href="#">
+            <img src="{{ asset('images/svgs/user.svg') }}" width="27" alt="Userlogo, der Link führt zur Anmeldung" itemprop="image">
         </a>
     </div>
 </nav>
 
 
-
 {% block body %}{% endblock %}
-<footer class="mt-5 p-3 text-center">
-    Made with <i style="color: red;" class="fa fa-heart"></i> by the guys and gals at <a style="color: #444; text-decoration: underline;" href="https://symfonycasts.com">SymfonyCasts</a>
-</footer>
+
+
 {% block javascripts %}
-
-
+    <script>(function(){var burger=document.querySelector(".burger-container"),header=document.querySelector("nav");burger.onclick=function(){header.classList.toggle("menu-opened")}})()</script>
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
 </body>

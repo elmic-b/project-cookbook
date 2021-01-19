@@ -1,0 +1,344 @@
+body {
+    background-color: #F7F7F7;
+    font-family: Roboto;
+}
+
+
+
+@media (max-width: 950px) {
+
+    .picture {
+        text-align: center;
+        margin: auto;
+        height: 100vh;
+        background-color: white;
+    }
+
+    .picture img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .picture:after {
+        position: relative;
+        height: 87vh;
+        top: -91vh;
+        margin: auto;
+        border: 3px solid white;
+        content: '';
+        display: block;
+        width: 90vw;
+    }
+
+    .hero-content {
+        width: 90vw;
+        text-align: center;
+        position: relative;
+        top: -60vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .white {
+        color: white;
+        width: 80%;
+        margin: auto;
+        text-transform: uppercase;
+        margin-bottom: 10vh;
+    }
+
+    .mini-head {
+        background-color: #E6942E;
+        display: inline;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: white;
+        text-align: center;
+        margin: auto;
+        z-index: 10;
+    }
+
+    .whitebox {
+        height: 23vh;
+        width: 95%;
+        background-color: white;
+        color: #E6942E;
+        text-align: center;
+        margin: auto;
+        z-index: -10;
+        margin-top: -10px;
+        padding-top: 10px;
+    }
+
+    .orange {
+        font-family: leorio;
+        font-size: 28px;
+        color: #E6942E;
+        margin-bottom: 30px;
+
+    }
+
+    .mini-button {
+        border: 3px solid #E6942E;
+        padding: 10px;
+        display: inline;
+        font-size: 14px;
+    }
+
+    .mini-button:hover{
+        background-color: #E6942E ;
+        color: white;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+    }
+
+    a .mini-button {
+        color: #E6942E;
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .green-background {
+        background-color: #DAF2E9;
+        width: 100%;
+        position: relative;
+        top: -45vh;
+        text-align: center;
+        margin: auto;
+
+    }
+
+    .black-headline {
+        font-family: leorio;
+        font-size: 28px;
+        color: black;
+        padding-top: 40px;
+    }
+
+    .site-content {
+        text-align: center;
+        margin: auto;
+        height: 63vh;
+    }
+
+    .content-1 {
+        height: 30vh;
+        margin-bottom: 10px;
+    }
+
+    .content-2 {
+        height: 30vh;
+    }
+
+    .content-1 .content-link {
+        margin-top: 40px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .content-2 .content-link {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .content-box {
+        position: relative;
+        border: 2px solid white;
+        width: 290px;
+        height: 140px;
+        top: -18.5vh;
+        margin-left: 60px;
+    }
+
+    .content-box h4 {
+        color: white;
+        font-size: 20px;
+        position: relative;
+        top: 30%;
+    }
+
+    .content-box h4 a {
+        color: white;
+    }
+
+    .impressum {
+        position: relative;
+        top: -35vh;
+        background-color: white;
+        height: 30vh;
+    }
+
+    .content {
+        height: 330vh;
+    }
+
+}
+
+@media (min-width: 950px) {
+
+    .picture {
+        text-align: center;
+        margin: auto;
+        height: 100vh;
+        background-color: white
+    }
+
+    .picture img {
+        width: 95vw;
+        height: 90vh;
+        object-fit: cover;
+    }
+
+    .picture:after {
+        position: relative;
+        height: 70vh;
+        top: -78vh;
+        margin: auto;
+        border: 5px solid white;
+        content: '';
+        display: block;
+        width: 87.5vw;
+    }
+
+    .hero-content {
+        width: 90vw;
+        text-align: center;
+        position: relative;
+        top: -60vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .white {
+        color: white;
+        font-size: 50px;
+    }
+
+    .mini-head {
+        background-color: #E6942E;
+        display: inline;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: white;
+        text-align: center;
+        margin: auto;
+        z-index: 10;
+    }
+
+    .whitebox {
+        height: 30vh;
+        width: 60%;
+        background-color: white;
+        color: #E6942E;
+        text-align: center;
+        margin: auto;
+        z-index: -10;
+        margin-top: -10px;
+        padding-top: 10px;
+    }
+
+    .orange {
+        font-family: leorio;
+        font-size: 40px;
+        color: #E6942E;
+        margin: 20px;
+        margin-bottom: 40px;
+
+    }
+
+    .mini-button {
+        border: 3px solid #E6942E;
+        padding: 10px;
+        display: inline;
+    }
+
+    .mini-button:hover{
+        background-color: #E6942E ;
+        color: white;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+    }
+
+    a .mini-button {
+        color: #E6942E;
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .green-background {
+        background-color: #DAF2E9;
+        width: 100%;
+        position: relative;
+        top: -59vh;
+        text-align: center;
+        margin: auto;
+
+    }
+
+    .black-headline {
+        font-family: leorio;
+        font-size: 40px;
+        color: black;
+        padding-top: 40px;
+    }
+
+    .site-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 50vh;
+    }
+
+    .content-link {
+        margin: 50px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .content-box {
+        position: relative;
+        border: 2px solid white;
+        width: 290px;
+        height: 190px;
+        top: -34.7vh;
+        margin-left: 53px;
+    }
+
+    .content-box h4 {
+        color: white;
+        font-size: 20px;
+        position: relative;
+        top: 30%;
+    }
+
+    .content-box h4 a {
+        color: white;
+    }
+
+    .impressum {
+        position: relative;
+        top: -50vh;
+        background-color: white;
+        height: 30vh;
+    }
+
+    .content {
+        height: 280vh;
+    }
+
+}
+
+

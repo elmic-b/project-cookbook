@@ -5,18 +5,17 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
-
-
-
-
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
 
-// start the Stimulus application
-import './bootstrap';
-
 // Import jQuery
 const $ = require('jquery');
+
+/**
+ * Navbar
+ */
+
+
 
 
 
@@ -34,3 +33,5 @@ $container.find('a').on('click', function(e) {
         $container.find('.js-vote-total').text(data.votes);
     });
 });
+
+
