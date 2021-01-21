@@ -42,37 +42,59 @@
             <option>Marianne Rosenberg</option>
         </select>
     </div>
+
+
     <div class="ergebnisse">
+
+            {%  for recipe in recipe %}
+
         <div class="inhaltsblock">
-            <a href="rezepte.html">
-                <div class="teaserbild">
-                    <img src="assets/images/1/essen%201-bd920722.jpg" width="100" alt="" itemprop="image">
-                </div>
-                <div class="text">
-                    <h4>HAUPTSPEISE</h4>
-                    <h1></h1>
-                    <div class="infos">
-                        <div class="info-1">
-                            <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                                 itemprop="image">
-                            Einfach
-                        </div>
-                        <div class="info-1">
-                            <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                                 itemprop="image">
-                            Gesamt 1h
-                        </div>
-                        <div class="info-1">
-                            <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                                 itemprop="image">
-                            Vegetarisch
-                        </div>
-                        <div class="info-1">
-                            <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                                 itemprop="image">
-                            Gluten - Milch
-                        </div>
+            <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
+
+
+            <div class="teaserbild">
+                <img src="#" width="100" alt="" itemprop="image">
+            </div>
+
+            <div class="text">
+
+                <h4>{{ recipe.category }}</h4>
+                <h1>{{ recipe.name }}</h1>
+
+                <div class="infos">
+                    <div class="info-1">
+                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
+                             itemprop="image">
+                        {{ recipe.difficulty }}
                     </div>
+                    <div class="info-1">
+                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
+                             itemprop="image">
+                        {{ recipe.cooking_time }}
+                    </div>
+                    <div class="info-1">
+                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
+                             itemprop="image">
+                        {{ recipe.nutrition }}
+                    </div>
+                    <div class="info-1">
+                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
+                             itemprop="image">
+                        {{ recipe.allergen }}
+                    </div>
+                </div>
+
+            </div>
+            </a>
+        </div>
+            {% endfor %}
+
+
+
+
+
+
+
                     <hr>
                     <div class="funktionen">
                         <div class="funktion-1">
@@ -96,170 +118,9 @@
                             DOWNLOAD
                         </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="inhaltsblock">
-            <div class="teaserbild">
-                <img src="assets/images/1/essen%201-bd920722.jpg" width="100" alt="" itemprop="image">
-            </div>
-            <div class="text">
-                <h4>HAUPTSPEISE</h4>
-                <h1>PIROGGEN</h1>
-                <div class="infos">
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Einfach
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Gesamt 1h
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Vegetarisch
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Gluten - Milch
-                    </div>
-                </div>
-                <hr>
-                <div class="funktionen">
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        SPEICHERN
-                    </div>
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        VORLESEN
-                    </div>
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        HERUNTERLADEN
-                    </div>
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        DOWNLOAD
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="inhaltsblock">
-            <div class="teaserbild">
-                <img src="assets/images/1/essen%201-bd920722.jpg" width="100" alt="" itemprop="image">
-            </div>
-            <div class="text">
-                <h4>HAUPTSPEISE</h4>
-                <h1>PIROGGEN</h1>
-                <div class="infos">
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Einfach
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Gesamt 1h
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Vegetarisch
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Gluten - Milch
-                    </div>
-                </div>
-                <hr>
-                <div class="funktionen">
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        SPEICHERN
-                    </div>
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        VORLESEN
-                    </div>
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        HERUNTERLADEN
-                    </div>
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        DOWNLOAD
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="inhaltsblock">
-            <div class="teaserbild">
-                <img src="assets/images/1/essen%201-bd920722.jpg" width="100" alt="" itemprop="image">
-            </div>
-            <div class="text">
-                <h4>HAUPTSPEISE</h4>
-                <h1>PIROGGEN</h1>
-                <div class="infos">
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Einfach
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Gesamt 1h
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Vegetarisch
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        Gluten - Milch
-                    </div>
-                </div>
-                <hr>
-                <div class="funktionen">
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        SPEICHERN
-                    </div>
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        VORLESEN
-                    </div>
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        HERUNTERLADEN
-                    </div>
-                    <div class="funktion-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        DOWNLOAD
-                    </div>
-                </div>
-            </div>
+
+
+
         </div>
     </div>
 

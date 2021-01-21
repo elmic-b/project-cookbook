@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Allergen;
 use App\Entity\Recipe;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -19,6 +20,10 @@ class RecipeRepository extends ServiceEntityRepository
         parent::__construct($registry, Recipe::class);
     }
 
+
+
+
+
     // /**
     //  * @return Recipe[] Returns an array of Recipe objects
     //  */
@@ -33,8 +38,12 @@ class RecipeRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult()
         ;
+
     }
     */
+
+
+
 
     /*
     public function findOneBySomeField($value): ?Recipe

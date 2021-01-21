@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Cooking
  *
- * @ORM\Table(name="cooking", indexes={@ORM\Index(name="fk_cooking_rec", columns={"fk_recipe"})})
- * @ORM\Entity(repositoryClass="App\Repository\CookingRepository")
+ * @ORM\Table(name="cooking", indexes={@ORM\Index(name="IDX_467BE66A38817584", columns={"fk_recipe_id"})})
+ * @ORM\Entity
  */
 class Cooking
 {
@@ -40,7 +40,7 @@ class Cooking
      *
      * @ORM\ManyToOne(targetEntity="Recipe")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="fk_recipe", referencedColumnName="recipe_id")
+     *   @ORM\JoinColumn(name="fk_recipe_id", referencedColumnName="recipe_id")
      * })
      */
     private $fkRecipe;

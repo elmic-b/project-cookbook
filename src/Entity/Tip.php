@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Tip
  *
  * @ORM\Table(name="tip")
- * @ORM\Entity(repositoryClass="App\Repository\TipRepository")
+ * @ORM\Entity
  */
 class Tip
 {

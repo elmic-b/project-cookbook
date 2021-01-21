@@ -2,13 +2,15 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Origin
  *
  * @ORM\Table(name="origin")
- * @ORM\Entity(repositoryClass="App\Repository\OriginRepository")
+ * @ORM\Entity
  */
 class Origin
 {
@@ -28,6 +30,21 @@ class Origin
      */
     private $name;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Recipe", mappedBy="origin")
+     */
+    private $recipe;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->recipe = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     public function getOriginId(): ?int
     {
         return $this->originId;
@@ -45,5 +62,31 @@ class Origin
         return $this;
     }
 
+    /**
+     * @return Collection|Recipe[]
+     */
+    public function getRecipe(): Collection
+    {
+        return $this->recipe;
+    }
+
+    public function addRecipe(Recipe $recipe): self
+    {
+        if (!$this->recipe->contains($recipe)) {
+            $this->recipe[] = $recipe;
+            $recipe->addOrigin($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRecipe(Recipe $recipe): self
+    {
+        if ($this->recipe->removeElement($recipe)) {
+            $recipe->removeOrigin($this);
+        }
+
+        return $this;
+    }
 
 }

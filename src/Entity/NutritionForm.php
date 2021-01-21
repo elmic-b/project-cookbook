@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * NutritionForm
  *
  * @ORM\Table(name="nutrition_form")
- * @ORM\Entity(repositoryClass="App\Repository\NutritionFormRepository")
+ * @ORM\Entity
  */
 class NutritionForm
 {

@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Category
  *
  * @ORM\Table(name="category")
- * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
+ * @ORM\Entity
  */
 class Category
 {
@@ -27,7 +27,6 @@ class Category
      * @ORM\Column(name="category", type="string", length=30, nullable=true)
      */
     private $category;
-
 
     public function getCategoryId(): ?int
     {

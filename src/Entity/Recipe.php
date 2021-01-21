@@ -2,13 +2,15 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Recipe
  *
- * @ORM\Table(name="recipe", indexes={@ORM\Index(name="fk_difficulty", columns={"fk_difficulty"}), @ORM\Index(name="fk_tip", columns={"fk_tip"}), @ORM\Index(name="fk_nutrition_form", columns={"fk_nutrition_form"}), @ORM\Index(name="fk_category", columns={"fk_category"})})
- * @ORM\Entity(repositoryClass="App\Repository\RecipeRepository")
+ * @ORM\Table(name="recipe", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_DA88B13767C22F66", columns={"fk_tip_id"})}, indexes={@ORM\Index(name="IDX_DA88B137686514D7", columns={"fk_nutrition_form_id"}), @ORM\Index(name="IDX_DA88B1377BB031D6", columns={"fk_category_id"}), @ORM\Index(name="IDX_DA88B13798B0E86C", columns={"fk_difficulty_id"})})
+ * @ORM\Entity
  */
 class Recipe
 {
@@ -45,6 +47,13 @@ class Recipe
     /**
      * @var string|null
      *
+     * @ORM\Column(name="img_alt", type="string", length=100, nullable=true)
+     */
+    private $imgAlt;
+
+    /**
+     * @var string|null
+     *
      * @ORM\Column(name="audio_link", type="string", length=100, nullable=true)
      */
     private $audioLink;
@@ -64,11 +73,31 @@ class Recipe
     private $downloadLink;
 
     /**
+     * @var \Tip
+     *
+     * @ORM\ManyToOne(targetEntity="Tip")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="fk_tip_id", referencedColumnName="tip_id")
+     * })
+     */
+    private $fkTip;
+
+    /**
+     * @var \NutritionForm
+     *
+     * @ORM\ManyToOne(targetEntity="NutritionForm")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="fk_nutrition_form_id", referencedColumnName="nutrition_form_id")
+     * })
+     */
+    private $fkNutritionForm;
+
+    /**
      * @var \Category
      *
      * @ORM\ManyToOne(targetEntity="Category")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="fk_category", referencedColumnName="category_id")
+     *   @ORM\JoinColumn(name="fk_category_id", referencedColumnName="category_id")
      * })
      */
     private $fkCategory;
@@ -78,30 +107,81 @@ class Recipe
      *
      * @ORM\ManyToOne(targetEntity="Difficulty")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="fk_difficulty", referencedColumnName="difficulty_id")
+     *   @ORM\JoinColumn(name="fk_difficulty_id", referencedColumnName="difficulty_id")
      * })
      */
     private $fkDifficulty;
 
     /**
-     * @var \NutritionForm
+     * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToOne(targetEntity="NutritionForm")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="fk_nutrition_form", referencedColumnName="nutrition_form_id")
-     * })
+     * @ORM\ManyToMany(targetEntity="Allergen", inversedBy="recipe")
+     * @ORM\JoinTable(name="recipe_allergen",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="recipe_id", referencedColumnName="recipe_id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="allergen_id", referencedColumnName="allergen_id")
+     *   }
+     * )
      */
-    private $fkNutritionForm;
+    private $allergen;
 
     /**
-     * @var \Tip
+     * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToOne(targetEntity="Tip")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="fk_tip", referencedColumnName="tip_id")
-     * })
+     * @ORM\ManyToMany(targetEntity="HeadingIng", inversedBy="recipe")
+     * @ORM\JoinTable(name="recipe_heading_ing",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="recipe_id", referencedColumnName="recipe_id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="heading_ing_id", referencedColumnName="heading_ing_id")
+     *   }
+     * )
      */
-    private $fkTip;
+    private $headingIng;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Ingridient", inversedBy="recipe")
+     * @ORM\JoinTable(name="recipe_ingridient",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="recipe_id", referencedColumnName="recipe_id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="ingridient_id", referencedColumnName="ingridient_id")
+     *   }
+     * )
+     */
+    private $ingridient;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Origin", inversedBy="recipe")
+     * @ORM\JoinTable(name="recipe_origin",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="recipe_id", referencedColumnName="recipe_id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="origin_id", referencedColumnName="origin_id")
+     *   }
+     * )
+     */
+    private $origin;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->allergen = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->headingIng = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->ingridient = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->origin = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     public function getRecipeId(): ?int
     {
@@ -144,6 +224,18 @@ class Recipe
         return $this;
     }
 
+    public function getImgAlt(): ?string
+    {
+        return $this->imgAlt;
+    }
+
+    public function setImgAlt(?string $imgAlt): self
+    {
+        $this->imgAlt = $imgAlt;
+
+        return $this;
+    }
+
     public function getAudioLink(): ?string
     {
         return $this->audioLink;
@@ -180,6 +272,30 @@ class Recipe
         return $this;
     }
 
+    public function getFkTip(): ?Tip
+    {
+        return $this->fkTip;
+    }
+
+    public function setFkTip(?Tip $fkTip): self
+    {
+        $this->fkTip = $fkTip;
+
+        return $this;
+    }
+
+    public function getFkNutritionForm(): ?NutritionForm
+    {
+        return $this->fkNutritionForm;
+    }
+
+    public function setFkNutritionForm(?NutritionForm $fkNutritionForm): self
+    {
+        $this->fkNutritionForm = $fkNutritionForm;
+
+        return $this;
+    }
+
     public function getFkCategory(): ?Category
     {
         return $this->fkCategory;
@@ -204,29 +320,100 @@ class Recipe
         return $this;
     }
 
-    public function getFkNutritionForm(): ?NutritionForm
+    /**
+     * @return Collection|Allergen[]
+     */
+    public function getAllergen(): Collection
     {
-        return $this->fkNutritionForm;
+        return $this->allergen;
     }
 
-    public function setFkNutritionForm(?NutritionForm $fkNutritionForm): self
+    public function addAllergen(Allergen $allergen): self
     {
-        $this->fkNutritionForm = $fkNutritionForm;
+        if (!$this->allergen->contains($allergen)) {
+            $this->allergen[] = $allergen;
+        }
 
         return $this;
     }
 
-    public function getFkTip(): ?Tip
+    public function removeAllergen(Allergen $allergen): self
     {
-        return $this->fkTip;
-    }
-
-    public function setFkTip(?Tip $fkTip): self
-    {
-        $this->fkTip = $fkTip;
+        $this->allergen->removeElement($allergen);
 
         return $this;
     }
 
+    /**
+     * @return Collection|HeadingIng[]
+     */
+    public function getHeadingIng(): Collection
+    {
+        return $this->headingIng;
+    }
+
+    public function addHeadingIng(HeadingIng $headingIng): self
+    {
+        if (!$this->headingIng->contains($headingIng)) {
+            $this->headingIng[] = $headingIng;
+        }
+
+        return $this;
+    }
+
+    public function removeHeadingIng(HeadingIng $headingIng): self
+    {
+        $this->headingIng->removeElement($headingIng);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Ingridient[]
+     */
+    public function getIngridient(): Collection
+    {
+        return $this->ingridient;
+    }
+
+    public function addIngridient(Ingridient $ingridient): self
+    {
+        if (!$this->ingridient->contains($ingridient)) {
+            $this->ingridient[] = $ingridient;
+        }
+
+        return $this;
+    }
+
+    public function removeIngridient(Ingridient $ingridient): self
+    {
+        $this->ingridient->removeElement($ingridient);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Origin[]
+     */
+    public function getOrigin(): Collection
+    {
+        return $this->origin;
+    }
+
+    public function addOrigin(Origin $origin): self
+    {
+        if (!$this->origin->contains($origin)) {
+            $this->origin[] = $origin;
+        }
+
+        return $this;
+    }
+
+    public function removeOrigin(Origin $origin): self
+    {
+        $this->origin->removeElement($origin);
+
+        return $this;
+    }
 
 }
