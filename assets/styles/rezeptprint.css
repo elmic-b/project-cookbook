@@ -1,0 +1,135 @@
+*{
+    visibility: hidden;
+}
+
+body{
+    margin: 5vh;
+}
+.picture-1 img{
+    visibility: visible;
+    text-align: center;
+    margin-left: 5vw;
+    width: 800px;
+    height: 500px;
+}
+
+.hero-text h1, h3{
+    visibility: visible;
+    color: black;
+    text-align:center;
+}
+
+h1{
+    font-size: 50px;
+    margin: 0;
+}
+
+h3{
+    font-size: 35px;
+    margin: 0;
+}
+
+.print figure img{
+    visibility: visible;
+    width: 110px;
+}
+
+.print figure figcaption{
+    visibility: visible;
+    width: 110px;
+    font-family: leorio;
+    font-size: 17px;
+    text-align: center;
+}
+
+.print{
+    margin-top: -4vh;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.h1-zutat{
+    visibility: visible;
+    font-size: 50px;
+    margin: 0;
+    position: absolute;
+    font-family: leorio;
+    top: 105vh;
+}
+
+.h1-zubereitung{
+    visibility: visible;
+    font-size: 50px;
+    margin: 0;
+    position: absolute;
+    font-family: leorio;
+    top: 105vh;
+    left: 50vw;
+}
+
+
+.h2-zutat{
+    position: relative;
+    visibility: visible;
+    color: black;
+    font-family: leorio;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.ingridients{
+    visibility: visible;
+    text-transform: capitalize;
+}
+.zubereitung{
+    width: 60%;
+}
+
+.zutaten-tabellen{
+    position: absolute;
+    top:113.5vh;
+    left: 2vw;
+    text-align: left;
+    margin-bottom: 40px;
+    visibility: visible;
+
+}
+
+.black{
+    visibility: visible;
+    font-family: leorio;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+
+table{
+    padding-left: 10px;
+    margin-top: -10px;
+    font-size: 20px;
+    visibility: visible;
+}
+td{
+    padding-right: 30px;
+    padding-bottom: 20px;
+    visibility: visible;
+}
+
+.zubereitung-box{
+    position: absolute;
+    top: 113vh;
+    left: 45vw;
+    padding-left: 5vw;
+    margin-bottom: 40px;
+    visibility: visible;
+
+    font-size: 20px;
+}
+
+.zubereitung-box p{
+    visibility: visible;
+    width: 60%;
+}

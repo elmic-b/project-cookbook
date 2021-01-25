@@ -11,6 +11,7 @@
 </head>
 <body>
 
+{% block navbar %}
 <nav>
     <div class="burger-container">
         <div id="burger">
@@ -26,16 +27,15 @@
     <ul class="menu">
         <li class="menu-item"><a href="{{ path('app_rezepte-uebersicht') }}">onlinebuch</a></li>
         <li class="menu-item"><a href="{{ path('app_suche') }}">suche</a></li>
-        <li class="menu-item"><a href="#">über uns</a></li>
-        <li class="menu-item"><a href="{{ path('app_kontakt') }}">social media</a></li>
     </ul>
     <div class="account-container">
-        <a href="#">
+        <a href="#" disabled="true">
             <img src="{{ asset('images/svgs/user.svg') }}" width="27" alt="Userlogo, der Link führt zur Anmeldung" itemprop="image">
         </a>
     </div>
 </nav>
 
+{% endblock %}
 
 {% block body %}
 
@@ -44,7 +44,7 @@
 
     </div>
 {% endblock %}
-
+{% block footer %}
 <footer>
     <h3 class="impressum">Impressum</h3>
     <div>
@@ -52,8 +52,10 @@
         <a class="impressum-link">kontakt</a>
         <a class="impressum-link">impressum</a>
     </div>
+    <script>(function(){var s = document.createElement("script");s.setAttribute("data-account","kyfQmN5l1Z");s.setAttribute("src","https://cdn.userway.org/widget.js");document.body.appendChild(s);})();</script><noscript>Enable JavaScript to ensure <a href="https://userway.org">website accessibility</a></noscript>
 </footer>
 
+{% endblock %}
 {% block javascripts %}
     <script>(function(){var burger=document.querySelector(".burger-container"),header=document.querySelector("nav");burger.onclick=function(){header.classList.toggle("menu-opened")}})()</script>
     {{ encore_entry_script_tags('app') }}

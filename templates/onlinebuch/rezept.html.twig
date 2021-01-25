@@ -3,6 +3,9 @@
    {% block stylesheets %}
        {{ parent() }}
        {{ encore_entry_link_tags('rezept') }}
+       {{ encore_entry_script_tags('rezeptprint') }}
+       <link rel="stylesheet" href="/build/rezeptprint.css" type="text/css" media="print" />
+       <link rel="stylesheet" href="/build/rezept.css" type="text/css"/>
    {% endblock %}
 
 {% block body %}
@@ -16,50 +19,46 @@
         <h3>{{ category|upper }}</h3>
 
         <div class="buttons">
-            <a>voriges Rezept</a>
-            <a>nächstes rezept</a>
+            <a href="{{ path('app_rezept', {'id': recipe.recipeId-1 }) }}">voriges Rezept</a>
+            <a href="{{ path('app_rezept', {'id': recipe.recipeId+1 }) }}">nächstes Rezept</a>
         </div>
     </div>
 
     <div class="eigenschaften">
 
             <h1 class="h1-eig">rezepteigenschaften</h1>
-        <div class="content-1">
+        <div class="content-1 print">
             <figure>
-                <img src="{{ asset('images/svgs/instagram.svg') }}" height="150" alt="" itemprop="image">
+                <img src="{{ asset('images/svgs/koch.svg') }}" height="70" alt="" itemprop="image">
                 <figcaption> {{ difficulty }}</figcaption>
             </figure>
             <figure>
-                <img src="{{ asset('images/svgs/facebook.svg') }}" height="150" alt="" itemprop="image">
+                <img src="{{ asset('images/svgs/uhr.svg') }}" height="70" alt="" itemprop="image">
                 <figcaption>  {{ recipe.cookingTime }}</figcaption>
             </figure>
             <figure class="youtube">
-                <img src="{{ asset('images/svgs/youtube.svg') }}" height="150" alt="" itemprop="image">
+                <img src="{{ asset('images/svgs/gericht.svg') }}" height="70" alt="" itemprop="image">
                 <figcaption> {{ nutrition }}</figcaption>
             </figure>
             <figure>
-                <img src="{{ asset('images/svgs/tik-tok.svg') }}" height="150" alt="" itemprop="image">
-                <figcaption>{{ nutrition }}</figcaption>
+                <img src="{{ asset('images/svgs/allergisch.svg') }}" height="70" alt="" itemprop="image">
+                <figcaption>{{ recipe.allergene}}</figcaption>
             </figure>
         </div>
         <hr>
         <div class="funktionen">
             <div class="content-1">
                 <figure>
-                    <img src="{{ asset('images/svgs/instagram.svg') }}" height="100" alt="" itemprop="image">
-                    <figcaption> {{ difficulty }}</figcaption>
+                    <a href="{{ path('app_rezept_download', {'id': recipe.recipeId}) }}">
+                    <img src="{{ asset('images/svgs/direkter-download.svg') }}" height="35" alt="" itemprop="image">
+                    <figcaption> herunterladen</figcaption>
+                    </a>
                 </figure>
-                <figure>
-                    <img src="{{ asset('images/svgs/facebook.svg') }}" height="100" alt="" itemprop="image">
-                    <figcaption>  {{ recipe.cookingTime }}</figcaption>
-                </figure>
-                <figure class="youtube">
-                    <img src="{{ asset('images/svgs/youtube.svg') }}" height="100" alt="" itemprop="image">
-                    <figcaption> {{ nutrition }}</figcaption>
-                </figure>
-                <figure>
-                    <img src="{{ asset('images/svgs/tik-tok.svg') }}" height="100" alt="" itemprop="image">
-                    <figcaption>{{ nutrition }}</figcaption>
+                <figure class="drucken">
+                    <a onClick="window.print()">
+                        <img src="{{ asset('images/svgs/drucken.svg') }}" height="35" alt="" itemprop="image">
+                        <figcaption> ausdrucken</figcaption>
+                    </a>
                 </figure>
             </div>
         </div>
@@ -124,6 +123,10 @@
 
 {% block javascripts %}
 
+
+
+    }
     {{ parent() }}
     {{ encore_entry_script_tags('rezept') }}
+    {{ encore_entry_script_tags('rezeptprint') }}
 {% endblock %}

@@ -1,85 +1,25 @@
 {% extends 'base.html.twig' %}
 
-
-{% block body %}
-
-
-
-
-                        <div class="picture">
-                            <img src="assets/images/5/pfannkuchen-b0827851.jpg" width="500" alt="" itemprop="image">
-                        </div>
-                        <div class="hero-content">
-                            <h1 class="white">WILLKOMMEN ZU PROJECT-COOKBOOK</h1>
-                            <h4 class="mini-head">ONLINEBUCH</h4>
-                            <div class="whitebox">
-                                <h1 class="orange">SEHEN SIE SICH UNSERE REZEPTSAMMLUNG AN!</h1>
-                                <a href="onlinebuch.html"><h4 class="mini-button">ZUR REZEPTSAMMLUNG</h4></a>
-                            </div>
-                        </div>
-                        <div class="green-background">
-                            <h1 class="black-headline">WEITERE FUNKTIONEN ZUM KOCHBUCH!</h1>
-                            <div class="site-content">
-                                <div class="content-1">
-                                    <a href="suche.html">
-                                        <img src="assets/images/5/pfannkuchen-b0827851.jpg" class="content-link" width="300" alt="" itemprop="image">
-                                    </a>
-                                    <div class="content-box">
-                                        <h4>
-                                            <a href="suche.html">
-                                                REZEPTSUCHE
-                                            </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="content-2">
-                                    <a href="account.html">
-                                        <img src="assets/images/5/pfannkuchen-b0827851.jpg" class="content-link" width="300" alt="" itemprop="image">
-                                    </a>
-                                    <div class="content-box">
-                                        <h4>
-                                            <a href="account.html">
-                                                DEIN ACCOUNT
-                                            </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="green-background">
-                            <h1 class="black-headline">INFORMATIONEN ZU UNS!</h1>
-                            <div class="site-content">
-                                <div class="content-1">
-                                    <a href="ueber-uns.html">
-                                        <img src="assets/images/5/pfannkuchen-b0827851.jpg" class="content-link" width="300" alt="" itemprop="image">
-                                    </a>
-                                    <div class="content-box">
-                                        <h4>
-                                            <a href="ueber-uns.html">
-                                                DIE PROJEKTMITGLIEDER
-                                            </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="content-2">
-                                    <a href="kontakt.html">
-                                        <img src="assets/images/5/pfannkuchen-b0827851.jpg" class="content-link" width="300" alt="" itemprop="image">
-                                    </a>
-                                    <div class="content-box">
-                                        <h4>
-                                            <a href="kontakt.html">
-                                                UNSER SOCIAL MEDIA
-                                            </a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="css/coloringpage.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/coloringpageprint.css" type="text/css" media="print" />
 {% endblock %}
 
+{% block navbar %}
+    <br>
+{% endblock %}
+{% block body %}
+
+<h1>hallo!</h1>
+    <a href="javascript:window.print()">
+        <img src="../../images/{{ asset('images/starting-page/onlinebuch.png') }}" height="100" alt="print this page" id="print-button" /></a>
+    <img src="../../{{ asset('images/starting-page/onlinebuch.png') }}" alt="Coloring Page 1" width="100" height="100" />
+{% endblock %}
+{% block footer %}
+    <br>
+{% endblock %}
 {% block javascripts %}
 
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
+

@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+   {% block stylesheets %}
+       {{ parent() }}
+       {{ encore_entry_link_tags('rezept') }}
+       {{ encore_entry_script_tags('rezeptprint') }}
+       <link rel="stylesheet" href="/build/rezeptprint.css" type="text/css" media="print" />
+       <link rel="stylesheet" href="/build/rezept.css" type="text/css"/>
+   {% endblock %}
+
+{% block body %}
+    <div class="hero-text">
+        <h1>{{ recipe.name|upper }}</h1>
+        <h3>{{ category|upper }}</h3>
+
+    </div>
+
+    <table>
+        <tr>
+            <td>{{ difficulty }}</td>
+            <td>{{ recipe.cookingTime }}</td>
+            <td>{{  nutrition  }}</td>
+            <td>{{ recipe.allergene}}</td>
+        </tr>
+    </table>
+
+
+    <div class="rezept">
+        <div class="zutaten">
+            <h1 class="h1-zutat">ZUTATEN</h1>
+            <div class="zutaten-tabellen">
+                <h2 class="h2-zutat">für {{ recipe.portions|upper }}:</h2>
+                <table class="ingridients">
+
+
+                    {% for ingridient in ingridients %}
+                        <tr>
+                            <td>
+                                {{ ingridient.portion }}
+                            </td>
+                            <td>
+                                {{ ingridient.name }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                </table>
+                <h2 class="black"></h2>
+                <table class="teig">
+
+                </table>
+            </div>
+        </div>
+        <div class="leer">
+        </div>
+        <div class="zubereitung">
+            <h1 class="h1-zubereitung">ZUBEREITUNG</h1>
+
+            <div class="zubereitung-box">
+
+                {% for cook in cooking %}
+                    <h2 class="black">{{ cook.heading|upper }}</h2>
+
+                    <p>{{ cook.cooking }}</p>
+                    <br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+
+
+    }
+    {{ parent() }}
+    {{ encore_entry_script_tags('rezept') }}
+    {{ encore_entry_script_tags('rezeptprint') }}
+{% endblock %}

@@ -2,14 +2,12 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * HeadingIng
  *
- * @ORM\Table(name="heading_ing")
+ * @ORM\Table(name="heading_ing", indexes={@ORM\Index(name="fk_recipe_h", columns={"fk_recipe"})})
  * @ORM\Entity
  */
 class HeadingIng
@@ -31,19 +29,14 @@ class HeadingIng
     private $name;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var \Recipe
      *
-     * @ORM\ManyToMany(targetEntity="Recipe", mappedBy="headingIng")
+     * @ORM\ManyToOne(targetEntity="Recipe")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="fk_recipe", referencedColumnName="recipe_id")
+     * })
      */
-    private $recipe;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->recipe = new \Doctrine\Common\Collections\ArrayCollection();
-    }
+    private $fkRecipe;
 
     public function getHeadingIngId(): ?int
     {
@@ -62,31 +55,17 @@ class HeadingIng
         return $this;
     }
 
-    /**
-     * @return Collection|Recipe[]
-     */
-    public function getRecipe(): Collection
+    public function getFkRecipe(): ?Recipe
     {
-        return $this->recipe;
+        return $this->fkRecipe;
     }
 
-    public function addRecipe(Recipe $recipe): self
+    public function setFkRecipe(?Recipe $fkRecipe): self
     {
-        if (!$this->recipe->contains($recipe)) {
-            $this->recipe[] = $recipe;
-            $recipe->addHeadingIng($this);
-        }
+        $this->fkRecipe = $fkRecipe;
 
         return $this;
     }
 
-    public function removeRecipe(Recipe $recipe): self
-    {
-        if ($this->recipe->removeElement($recipe)) {
-            $recipe->removeHeadingIng($this);
-        }
-
-        return $this;
-    }
 
 }

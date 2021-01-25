@@ -229,6 +229,7 @@ body {
 
 @media (min-width: 950px) {
 
+
     .picture-1 {
         height: 90vh;
         width: 100%;
@@ -244,12 +245,14 @@ body {
 
 
     .hero-text {
+        background-color: black;
         position: absolute;
         top: 23vh;
         left: 50%;
         width: 90%;
         transform: translate(-50%);
         text-align: center;
+        padding-bottom: 20px;
     }
 
     .hero-text h1 {
@@ -301,8 +304,8 @@ body {
     .h1-eig {
      color: black;
         font-family: leorio;
-        font-size: 70px;
-        text-transform: uppercase;
+        font-size: 60px;
+        text-transform: lowercase;
         text-align: center;
     }
 
@@ -318,6 +321,7 @@ body {
     .content-1 figure{
         margin: 10vh 10vh 10vh;
         font-family: leorio;
+        text-align: center;
         font-size: 20px;
         font-weight: bold;
     }
@@ -354,6 +358,10 @@ body {
         margin-top: 1vh;
     }
 
+    .drucken:hover{
+     cursor: pointer;
+    }
+
     .picture-2 {
         height: 60vh;
         width: 100%;
@@ -365,8 +373,13 @@ body {
         height: 100%;
     }
     .hero-text-2 {
+        color: white;
+        background-color: black;
         position: absolute;
-        top: 225vh;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-family: leorio;
+        top: 215vh;
         left: 50%;
         width: 90%;
         transform: translate(-50%);
@@ -384,6 +397,8 @@ body {
         font-family: leorio;
         font-size: 60px;
         text-transform: uppercase;
+        margin-bottom: 10vh;
+
     }
 
     .h1-zubereitung{
@@ -392,6 +407,8 @@ body {
         font-family: leorio;
         font-size: 60px;
         text-transform: uppercase;
+        margin-bottom: 10vh;
+
     }
 
     .leer {
@@ -402,7 +419,6 @@ body {
     }
 
     .h2-zutat{
-
         color: black;
         font-family: leorio;
         font-size: 30px;
@@ -413,11 +429,11 @@ body {
         text-transform: capitalize;
     }
     .zubereitung{
-        width: 65%;
+        width: 60%;
     }
 
     .zutaten{
-        width: 25%;
+        width: 35%;
     }
 
     .black{
@@ -431,13 +447,13 @@ body {
     }
 
     table{
-        padding-left: 40px;
+        padding-left: 10px;
         margin-top: -10px;
         font-size: 20px;
     }
     td{
-        padding-right: 20px;
-        padding-bottom: 10px;
+        padding-right: 30px;
+        padding-bottom: 20px;
     }
 
     .zubereitung-box{
@@ -447,6 +463,13 @@ body {
         font-size: 20px;
     }
 
+    a{
+        text-decoration: none;
+    }
+
+    .content-1 a{
+        color: black;
+    }
 
 
 }

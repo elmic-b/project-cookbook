@@ -189,6 +189,8 @@ body {
         width: 100%;
     }
 
+
+
     .picture-1 img {
         width: 100%;
         object-fit: cover;
@@ -381,6 +383,7 @@ margin-bottom: 15vh;
     }
 
 
+
     .teaser-pic-about img {
         object-fit: cover;
         margin: 10px 50px 10px;
@@ -419,8 +422,10 @@ margin-bottom: 15vh;
     }
 
     .text {
+        background-color: black;
         position: relative;
-        top: -13vh;
+        width: 70%;
+        top: -14vh;
         margin: 10px 50px 10px;
         left: 1vw;
     }
@@ -450,6 +455,8 @@ margin-bottom: 15vh;
 
     .social-medias figure figcaption{
         margin-top: 2vh;
+        font-weight: bold;
+        font-size: 25px;
     }
 
 
@@ -464,6 +471,22 @@ margin-bottom: 15vh;
         font-weight: bold;
     }
 
+    .search{
+        padding: 5px;
+        width: 25vw;
+    }
+
+    .but{
+        padding: 5px;
+    }
+
+    h1.suche{
+        font-size: 80px;
+    }
+
+.mitglieder{
+    padding-top: 5vh;
+}
 
 }
 

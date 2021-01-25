@@ -40,6 +40,20 @@ class Recipe
     /**
      * @var string|null
      *
+     * @ORM\Column(name="allergen_abbr", type="string", length=50, nullable=true)
+     */
+    private $allergenAbbr;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="allergene", type="string", length=30, nullable=true)
+     */
+    private $allergene;
+
+    /**
+     * @var string|null
+     *
      * @ORM\Column(name="cooking_time", type="string", length=30, nullable=true)
      */
     private $cookingTime;
@@ -130,36 +144,6 @@ class Recipe
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="HeadingIng", inversedBy="recipe")
-     * @ORM\JoinTable(name="recipe_heading_ing",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="recipe_id", referencedColumnName="recipe_id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="heading_ing_id", referencedColumnName="heading_ing_id")
-     *   }
-     * )
-     */
-    private $headingIng;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Ingridient", inversedBy="recipe")
-     * @ORM\JoinTable(name="recipe_ingridient",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="recipe_id", referencedColumnName="recipe_id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="ingridient_id", referencedColumnName="ingridient_id")
-     *   }
-     * )
-     */
-    private $ingridient;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
      * @ORM\ManyToMany(targetEntity="Origin", inversedBy="recipe")
      * @ORM\JoinTable(name="recipe_origin",
      *   joinColumns={
@@ -178,8 +162,6 @@ class Recipe
     public function __construct()
     {
         $this->allergen = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->headingIng = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->ingridient = new \Doctrine\Common\Collections\ArrayCollection();
         $this->origin = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -208,6 +190,30 @@ class Recipe
     public function setPortions(?string $portions): self
     {
         $this->portions = $portions;
+
+        return $this;
+    }
+
+    public function getAllergenAbbr(): ?string
+    {
+        return $this->allergenAbbr;
+    }
+
+    public function setAllergenAbbr(?string $allergenAbbr): self
+    {
+        $this->allergenAbbr = $allergenAbbr;
+
+        return $this;
+    }
+
+    public function getAllergene(): ?string
+    {
+        return $this->allergene;
+    }
+
+    public function setAllergene(?string $allergene): self
+    {
+        $this->allergene = $allergene;
 
         return $this;
     }
@@ -340,54 +346,6 @@ class Recipe
     public function removeAllergen(Allergen $allergen): self
     {
         $this->allergen->removeElement($allergen);
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|HeadingIng[]
-     */
-    public function getHeadingIng(): Collection
-    {
-        return $this->headingIng;
-    }
-
-    public function addHeadingIng(HeadingIng $headingIng): self
-    {
-        if (!$this->headingIng->contains($headingIng)) {
-            $this->headingIng[] = $headingIng;
-        }
-
-        return $this;
-    }
-
-    public function removeHeadingIng(HeadingIng $headingIng): self
-    {
-        $this->headingIng->removeElement($headingIng);
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Ingridient[]
-     */
-    public function getIngridient(): Collection
-    {
-        return $this->ingridient;
-    }
-
-    public function addIngridient(Ingridient $ingridient): self
-    {
-        if (!$this->ingridient->contains($ingridient)) {
-            $this->ingridient[] = $ingridient;
-        }
-
-        return $this;
-    }
-
-    public function removeIngridient(Ingridient $ingridient): self
-    {
-        $this->ingridient->removeElement($ingridient);
 
         return $this;
     }

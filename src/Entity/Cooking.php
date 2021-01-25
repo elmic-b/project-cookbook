@@ -31,7 +31,7 @@ class Cooking
     /**
      * @var string|null
      *
-     * @ORM\Column(name="cooking", type="string", length=550, nullable=true)
+     * @ORM\Column(name="cooking", type="string", length=650, nullable=true)
      */
     private $cooking;
 

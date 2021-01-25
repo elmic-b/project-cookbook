@@ -11,6 +11,9 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+// Include Dompdf required namespaces
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class DefaultController extends AbstractController
 {
@@ -27,6 +30,7 @@ class DefaultController extends AbstractController
 INNER JOIN Difficulty ON Recipe.fk_difficulty_id = Difficulty.difficulty_id
 INNER JOIN Category ON fk_category_id = category_id
 INNER JOIN Nutrition_form ON fk_nutrition_form_id=nutrition_form_id
+limit 2
 ';
 
         $stmt = $conn->prepare($sql);
@@ -49,10 +53,36 @@ INNER JOIN Nutrition_form ON fk_nutrition_form_id=nutrition_form_id
      * @Route("/default" , name="app_default")
      */
     public function default(){
+
+        // Configure Dompdf according to your needs
+     /*   $pdfOptions = new Options();
+        $pdfOptions->set('defaultFont', 'Arial');
+
+        // Instantiate Dompdf with our options
+        $dompdf = new Dompdf($pdfOptions);
+
+        // Retrieve the HTML generated in our twig file
+        $html = $this->renderView('start/default.html.twig', [
+            'title' => "Welcome to our PDF Test"
+        ]);
+
+        // Load HTML to Dompdf
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser (force download)
+        $dompdf->stream("default.pdf", [
+            "Attachment" => true
+        ]);
+*/
+
         return $this->render('start/default.html.twig');
     }
-
-
 
 
     /**
