@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>{% block title %}Project Cookbook{% endblock %}</title>
     {% block stylesheets %}
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids|Roboto" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
@@ -37,8 +37,22 @@
 </nav>
 
 
-{% block body %}{% endblock %}
+{% block body %}
 
+    <div class="body-class">
+
+
+    </div>
+{% endblock %}
+
+<footer>
+    <h3 class="impressum">Impressum</h3>
+    <div>
+
+        <a class="impressum-link">kontakt</a>
+        <a class="impressum-link">impressum</a>
+    </div>
+</footer>
 
 {% block javascripts %}
     <script>(function(){var burger=document.querySelector(".burger-container"),header=document.querySelector("nav");burger.onclick=function(){header.classList.toggle("menu-opened")}})()</script>

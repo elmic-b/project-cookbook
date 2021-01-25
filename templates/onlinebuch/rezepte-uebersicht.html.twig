@@ -8,119 +8,38 @@
 {% block body %}
 
 
-
-    <div class="picture">
-        <img src="{{ asset('images/recipe-images/unbearbeitet/pfannkuchen-headline.jpg') }}" width="500" alt="" itemprop="image">
+    <div class="picture-1">
+        <img src="{{ asset('images/starting-page/onlinebuch.png') }}">
     </div>
-    <div class="hero-content">
-        <h4 class="mini-head">ONLINEBUCH</h4>
-        <div class="whitebox">
-            <h1 class="orange">HALLO! HIER BEFINDET SICH
-                UNSERE REZEPTSAMMLUNG!</h1>
+
+    <div class="hero-text">
+        <h1>ONLINEBUCH</h1>
+        <h3>HIER BEFINDET SICH UNSERE REZEPTSAMMLUNG</h3>
+
+        <div class="see-more">
+            <h6>MEHR ENTDECKEN</h6>
+            <img class="arrow" src="{{ asset('images/svgs/arrow.svg') }}" alt="Pfeil nach unten" width="25">
         </div>
     </div>
-    <div class="green-background">
-        <select class="dropdown-1" name="top5" size="1">
-            <option>ZUBEREITUNGSZEIT</option>
-            <option>Michael Jackson</option>
-            <option>Tom Waits</option>
-            <option>Nina Hagen</option>
-            <option>Marianne Rosenberg</option>
-        </select>
-        <select class="dropdown-1" name="top5" size="1">
-            <option>ZUBEREITUNGSZEIT</option>
-            <option>Michael Jackson</option>
-            <option>Tom Waits</option>
-            <option>Nina Hagen</option>
-            <option>Marianne Rosenberg</option>
-        </select>
-        <select class="dropdown-1" name="top5" size="1">
-            <option>ZUBEREITUNGSZEIT</option>
-            <option>Michael Jackson</option>
-            <option>Tom Waits</option>
-            <option>Nina Hagen</option>
-            <option>Marianne Rosenberg</option>
-        </select>
-    </div>
 
 
-    <div class="ergebnisse">
+    <div class="rezepte">
 
-            {%  for recipe in recipe %}
+        <h1 class="leorio">ERGEBNISSE</h1>
 
-        <div class="inhaltsblock">
-            <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
+        <div class="content-1">
+            {% for recipe in recipe %}
 
-
-            <div class="teaserbild">
-                <img src="#" width="100" alt="" itemprop="image">
-            </div>
-
-            <div class="text">
-
-                <h4>{{ recipe.category }}</h4>
-                <h1>{{ recipe.name }}</h1>
-
-                <div class="infos">
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        {{ recipe.difficulty }}
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        {{ recipe.cooking_time }}
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        {{ recipe.nutrition }}
-                    </div>
-                    <div class="info-1">
-                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                             itemprop="image">
-                        {{ recipe.allergen }}
+                <div class="teaser-pic">
+                    <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
+                        <img src="{{ asset(recipe.image_link) }}" width="350" height="300" alt="" itemprop="image">
+                    </a>
+                    <div class="text">
+                        <h3 class="leorio">{{ recipe.name }}</h3>
+                        <h5 class="leorio">{{ recipe.category }}</h5>
                     </div>
                 </div>
-
-            </div>
-            </a>
-        </div>
             {% endfor %}
-
-
-
-
-
-
-
-                    <hr>
-                    <div class="funktionen">
-                        <div class="funktion-1">
-                            <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                                 itemprop="image">
-                            SPEICHERN
-                        </div>
-                        <div class="funktion-1">
-                            <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                                 itemprop="image">
-                            VORLESEN
-                        </div>
-                        <div class="funktion-1">
-                            <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                                 itemprop="image">
-                            HERUNTERLADEN
-                        </div>
-                        <div class="funktion-1">
-                            <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt=""
-                                 itemprop="image">
-                            DOWNLOAD
-                        </div>
-                    </div>
-
-
-
         </div>
     </div>
 

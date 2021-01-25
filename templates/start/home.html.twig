@@ -2,84 +2,141 @@
 
    {% block stylesheets %}
        {{ parent() }}
-
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        {{ encore_entry_link_tags('home') }}
    {% endblock %}
 
 
 {% block body %}
-    <figure class="picture">
-        <img src="{{ asset('images/recipe-images/unbearbeitet/pfannkuchen-headline.jpg') }}" width="500"
-             alt="Pfannkuchen, mit Ahornsirup und Beeren" itemprop="image">
-    </figure>
+    <div class="picture-1">
+        <img src="{{ asset('images/starting-page/onlinebuch.png') }}">
+    </div>
 
-    <div class="hero-content">
-        <h1 class="white">Willkommen bei Project Cookbook</h1>
-        <h4 class="mini-head">ONLINEBUCH</h4>
-        <div class="whitebox">
-            <h1 class="orange">SEHEN SIE SICH UNSERE REZEPTSAMMLUNG AN!</h1>
-            <a href="{{ path('app_rezepte-uebersicht') }}"><h4 class="mini-button">ZUR REZEPTSAMMLUNG</h4></a>
+
+    <div class="hero-text">
+        <h1>project cookbook</h1>
+        <h3>jetzt neu! unsere ersten rezepte!</h3>
+
+        <div class="see-more">
+            <h6>MEHR ENTDECKEN</h6>
+            <img class="arrow" src="{{ asset('images/svgs/arrow.svg') }}" alt="Pfeil nach unten" width="25">
         </div>
     </div>
 
-    <div class="green-background">
-        <h1 class="black-headline">WEITERE FUNKTIONEN ZUM KOCHBUCH!</h1>
-        <div class="site-content">
-            <div class="content-1">
-                <a href="{{ path('app_suche') }}">
-                    <img src="{{ asset('images/recipe-images/bearbeitet/Gazpacho.jpg') }}" class="content-link" width="300" alt=""
-                         itemprop="image">
-                </a>
-                <div class="content-box">
-                    <h4>
-                        <a href="{{ path('app_suche') }}">
-                            REZEPTSUCHE
-                        </a>
-                    </h4>
+
+    <div class="rezepte">
+
+        <h1 class="leorio">die #winter-edition</h1>
+
+        <div class="content-1">
+            {% for recipe in recipe %}
+
+                <div class="teaser-pic">
+                    <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
+                        <img src="{{ asset(recipe.image_link) }}" width="350" height="300" alt="" itemprop="image">
+                    </a>
+                    <div class="text">
+                        <h3 class="leorio">{{ recipe.name }}</h3>
+                        <h5 class="leorio">{{ recipe.category }}</h5>
+                    </div>
                 </div>
-            </div>
-            <div class="content-2">
-                <a href="#">
-                    <img src="{{ asset('images/recipe-images/bearbeitet/Quiche.jpg') }}" class="content-link" width="300" alt=""
-                         itemprop="image">
-                </a>
-                <div class="content-box">
-                    <h4>
-                        <a href="#">
-                            DEIN ACCOUNT
-                        </a>
-                    </h4>
-                </div>
-            </div>
+            {% endfor %}
+        </div>
+        <a class="weitere-rezepte">weitere rezepte</a>
+    </div>
+
+    <div class="picture-2">
+        <img src="{{ asset('images/starting-page/account.jpg') }}" >
+    </div>
+
+    <div class="hero-text-2">
+        <h1>suchst du was bestimmtes?</h1>
+        <form action="/action_page.php">
+            <input class="search" type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+    <div class="content-2">
+        <h1 class="leorio">das genügt dir noch nicht?</h1>
+        <h3 class="leorio">keine sorge, es gibt noch mehr von uns</h3>
+
+        <div class="social-medias">
+            <figure>
+                <img src="{{ asset('images/svgs/instagram.svg') }}" height="150" alt="" itemprop="image">
+                <figcaption>projectcookbook</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ asset('images/svgs/facebook.svg') }}" height="150" alt="" itemprop="image">
+                <figcaption>projectcookbook</figcaption>
+            </figure>
+            <figure class="youtube">
+                <img src="{{ asset('images/svgs/youtube.svg') }}"  height="150" alt="" itemprop="image">
+                <figcaption>projectcookbook</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ asset('images/svgs/tik-tok.svg') }}"  height="150" alt="" itemprop="image">
+                <figcaption>projectcookbook</figcaption>
+            </figure>
         </div>
     </div>
-    <div class="green-background">
-        <h1 class="black-headline">INFORMATIONEN ZU UNS!</h1>
-        <div class="site-content">
-            <div class="content-1">
-                <a href="#">
-                    <img src="{{ asset('images/recipe-images/unbearbeitet/zimtschnecken kopie.jpg') }}" class="content-link" width="300" alt=""
-                         itemprop="image">
-                </a>
-                <div class="content-box">
-                    <h4>
-                        <a href="#">
-                            DIE PROJEKTMITGLIEDER
-                        </a>
-                    </h4>
+
+
+
+    <div class="picture-3">
+        <img src="{{ asset('images/starting-page/social-media.png') }}" >
+    </div>
+
+    <div class="hero-text-3">
+        <h1>begeistert?</h1>
+        <h3>werde ein mitglied und verpasse nichts mehr!</h3>
+        <a class="anmelden">Anmelden</a>
+    </div>
+
+
+    <div class="mitglieder">
+
+        <h1 class="leorio">#meet-the-team</h1>
+
+        <div class="content-4">
+
+                <div class="teaser-pic-about">
+
+                        <img src="{{ asset('images/about/anna.JPG') }}" width="350" height="300" alt="" itemprop="image">
+
+                    <div class="text">
+                        <h3 class="leorio">Anna Schwabegger</h3>
+                        <h5 class="leorio">Projektleiterin</h5>
+                    </div>
+                </div>
+
+            <div class="teaser-pic-about">
+
+                    <img src="{{ asset('images/about/david.JPG') }}" width="350" height="300" alt="" itemprop="image">
+
+                <div class="text">
+                    <h3 class="leorio">David Tovilovic</h3>
+                    <h5 class="leorio">Stv. Projektleiter</h5>
                 </div>
             </div>
-            <div class="content-2">
-                <a href="{{ path('app_kontakt') }}">
-                    <img src="{{ asset('images/recipe-images/bearbeitet/Kaiserschmarrn.jpg') }}" class="content-link" width="300" alt=""
-                         itemprop="image">
-                </a>
-                <div class="content-box">
-                    <h4>
-                        <a href="{{ path('app_kontakt') }}">
-                            UNSER SOCIAL MEDIA
-                        </a>
-                    </h4>
+
+            <div class="teaser-pic-about">
+
+                    <img src="{{ asset('images/about/elma.JPG') }}" width="350" height="300" alt="" itemprop="image">
+
+                <div class="text">
+                    <h3 class="leorio">Elma Bajraktarevic</h3>
+                    <h5 class="leorio">Teammitglied</h5>
+                </div>
+            </div>
+
+            <div class="teaser-pic-about">
+
+                    <img src="{{ asset('images/about/laura.JPG') }}" width="350" height="300" alt="" itemprop="image">
+
+                <div class="text">
+                    <h3 class="leorio">Laura Winkler</h3>
+                    <h5 class="leorio">Teammitglied</h5>
                 </div>
             </div>
         </div>

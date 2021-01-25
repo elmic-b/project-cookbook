@@ -48,7 +48,7 @@ INNER JOIN Nutrition_form ON fk_nutrition_form_id=nutrition_form_id
         $stmt->execute();
         // returns an array of Product objects
         $results = $stmt->fetchAll();
-        
+
 
         return $this->render('onlinebuch/rezepte-uebersicht.html.twig', [
 

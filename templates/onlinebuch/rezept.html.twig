@@ -7,119 +7,123 @@
 
 {% block body %}
 
-                        <div class="content">
-                            <div class="picture">
-                                <img src="{{ asset(recipe.imageLink) }}" width="500" alt="" itemprop="image">
-                            </div>
-                            <div class="hero-content">
-                                <div class="obere-box">
-                                    <h1 class="orange">{{ recipe.name|upper }}</h1>
-                                    <h4>{{ category|upper }}</h4>
-                                </div>
-                                <div class="infos">
-                                    <div class="info-1">
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt="" itemprop="image">
-                                        {{ difficulty }}
-                                    </div>
-                                    <div class="info-1">
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt="" itemprop="image">
-                                        {{ recipe.cookingTime }}
-                                    </div>
-                                    <div class="info-1">
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt="" itemprop="image">
-                                        {{ nutrition }}
-                                    </div>
-                                    <div class="info-1">
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt="" itemprop="image">
-                                        {%  for allergen in allergene %}
-                                            {{ allergen.name }},
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="funktionen">
-                                    <div class="funktion-1">
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt="" itemprop="image">
-                                        SPEICHERN
-                                    </div>
-                                    <div class="funktion-1">
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt="" itemprop="image">
-                                        VORLESEN
-                                    </div>
-                                    <div class="funktion-1">
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt="" itemprop="image">
-                                        HERUNTERLADEN
-                                    </div>
-                                    <div class="funktion-1">
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="30" height="30" alt="" itemprop="image">
-                                        DOWNLOAD
-                                    </div>
-                                </div>
-                                <div class="switch">
+    <div class="picture-1">
+        <img src="{{ asset(recipe.imageLink) }}">
+    </div>
 
-                                    <div class="links">
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="15" height="10" alt="" itemprop="image">
-                                        VORIGES REZEPT
-                                    </div>
-                                    <div class="rechts">
-                                        NÄCHSTES REZEPT
-                                        <img src="assets/images/e/user%282%29-49b22aa7.svg" width="15" height="10" alt="" itemprop="image">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rezept">
-                                <div class="zutaten">
-                                    <div class="obere-box-links">
-                                        <h1 class="orange">ZUTATEN</h1>
-                                        <h4>{{ recipe.portions|upper }}</h4>
-                                    </div>
-                                    <div class="zutaten-tabellen">
-                                        <h2 class="black">DU BRAUCHST:</h2>
-                                        <table class="teig">
+    <div class="hero-text">
+        <h1>{{ recipe.name|upper }}</h1>
+        <h3>{{ category|upper }}</h3>
+
+        <div class="buttons">
+            <a>voriges Rezept</a>
+            <a>nächstes rezept</a>
+        </div>
+    </div>
+
+    <div class="eigenschaften">
+
+            <h1 class="h1-eig">rezepteigenschaften</h1>
+        <div class="content-1">
+            <figure>
+                <img src="{{ asset('images/svgs/instagram.svg') }}" height="150" alt="" itemprop="image">
+                <figcaption> {{ difficulty }}</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ asset('images/svgs/facebook.svg') }}" height="150" alt="" itemprop="image">
+                <figcaption>  {{ recipe.cookingTime }}</figcaption>
+            </figure>
+            <figure class="youtube">
+                <img src="{{ asset('images/svgs/youtube.svg') }}" height="150" alt="" itemprop="image">
+                <figcaption> {{ nutrition }}</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ asset('images/svgs/tik-tok.svg') }}" height="150" alt="" itemprop="image">
+                <figcaption>{{ nutrition }}</figcaption>
+            </figure>
+        </div>
+        <hr>
+        <div class="funktionen">
+            <div class="content-1">
+                <figure>
+                    <img src="{{ asset('images/svgs/instagram.svg') }}" height="100" alt="" itemprop="image">
+                    <figcaption> {{ difficulty }}</figcaption>
+                </figure>
+                <figure>
+                    <img src="{{ asset('images/svgs/facebook.svg') }}" height="100" alt="" itemprop="image">
+                    <figcaption>  {{ recipe.cookingTime }}</figcaption>
+                </figure>
+                <figure class="youtube">
+                    <img src="{{ asset('images/svgs/youtube.svg') }}" height="100" alt="" itemprop="image">
+                    <figcaption> {{ nutrition }}</figcaption>
+                </figure>
+                <figure>
+                    <img src="{{ asset('images/svgs/tik-tok.svg') }}" height="100" alt="" itemprop="image">
+                    <figcaption>{{ nutrition }}</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="picture-2">
+        <img src="{{ asset(recipe.imageLink) }}" >
+    </div>
+
+    <div class="hero-text-2">
+        <h1>auf die plätze, feritg, kochen!</h1>
+
+    </div>
 
 
-                                            {%  for ingridient in ingridients %}
-                                                <tr>
-                                                    <td>
-                                                        {{ ingridient.portion|upper }}
-                                                    </td>
-                                                    <td>
-                                                        {{ ingridient.name|upper }}
-                                                    </td>
-                                                </tr>
-                                            {% endfor %}
 
-                                        </table>
-                                        <h2 class="black"></h2>
-                                        <table class="teig">
+    <div class="rezept">
+        <div class="zutaten">
+                <h1 class="h1-zutat">ZUTATEN</h1>
+            <div class="zutaten-tabellen">
+                <h2 class="h2-zutat">für {{ recipe.portions|upper }}:</h2>
+                <table class="ingridients">
 
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="leer">
-                                </div>
-                                <div class="zubereitung">
-                                    <div class="obere-box-rechts">
-                                        <h1 class="orange">ZUBEREITUNG</h1>
-                                        <h4>{{ category|upper }}</h4>
-                                    </div>
-                                    <div class="zubereitung-box">
 
-                                            {%  for cook in cooking %}
-                                                <h2 class="black">{{ cook.heading|upper }}</h2>
+                    {% for ingridient in ingridients %}
+                        <tr>
+                            <td>
+                                {{ ingridient.portion }}
+                            </td>
+                            <td>
+                                {{ ingridient.name }}
+                            </td>
+                        </tr>
+                    {% endfor %}
 
-                                        <p>{{ cook.cooking }}</p>
-                                                <br>
-                                            {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </table>
+                <h2 class="black"></h2>
+                <table class="teig">
+
+                </table>
+            </div>
+        </div>
+        <div class="leer">
+        </div>
+        <div class="zubereitung">
+                <h1 class="h1-zubereitung">ZUBEREITUNG</h1>
+
+            <div class="zubereitung-box">
+
+                {% for cook in cooking %}
+                    <h2 class="black">{{ cook.heading|upper }}</h2>
+
+                    <p>{{ cook.cooking }}</p>
+                    <br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
 
 {% endblock %}
 
 {% block javascripts %}
 
-  {{ parent() }}
+    {{ parent() }}
     {{ encore_entry_script_tags('rezept') }}
 {% endblock %}

@@ -19,8 +19,30 @@ class DefaultController extends AbstractController
      * @Route("/" , name="app_home")
      */
     public function home(){
-        return $this->render('start/home.html.twig');
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $conn = $entityManager->getConnection();
+
+        $sql = 'SELECT Recipe.* , Difficulty.*, Category.*, Nutrition_form.* FROM Recipe
+INNER JOIN Difficulty ON Recipe.fk_difficulty_id = Difficulty.difficulty_id
+INNER JOIN Category ON fk_category_id = category_id
+INNER JOIN Nutrition_form ON fk_nutrition_form_id=nutrition_form_id
+';
+
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        // returns an array of Product objects
+        $results = $stmt->fetchAll();
+
+
+        return $this->render('start/home.html.twig', [
+
+            'recipe' => $results,
+
+        ]);
+
     }
+
 
 
     /**

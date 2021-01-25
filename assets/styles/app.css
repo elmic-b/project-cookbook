@@ -9,6 +9,7 @@ body {
     background-color: #F7F7F7;
     margin: 0;
     font-family: Roboto;
+    background-color: red;
 }
 
 
@@ -163,15 +164,17 @@ body {
     }
 
     ul.menu li.menu-item a {
-
         display: block;
+        text-transform: capitalize;
         position: relative;
         text-decoration: none;
+
         font-size: 20px;
         line-height: 1.7;
         width: 100%;
         text-align: center;
         margin-left: auto;
+
     }
 
 
@@ -230,6 +233,7 @@ body {
 
     .menu-item a {
         color: black;
+
     }
 
 }
@@ -283,6 +287,28 @@ body {
     .account-container {
         margin-top: 10px;
         margin-right: 10px;
+    }
+
+    footer{
+        background-color: white;
+        border-top: 1px solid black;
+        display: flex;
+        margin-top: 5vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .impressum{
+        color: black;
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .impressum-link{
+        color: black;
+        text-transform: uppercase;
+        margin: 10px;
+
     }
 
 }
