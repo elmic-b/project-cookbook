@@ -2,36 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="030f12cb-bb69-43e8-92ad-0ad926dcc0b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/da_project_cookbook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/da_project_cookbook.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/rezept-uebersicht.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/rezept-uebersicht.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/rezept.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/rezept.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Eggs Benedikt.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Eggs Benedikt.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Erbsensuppe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Erbsensuppe.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Gazpacho.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Gazpacho.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Gulasch.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Gulasch.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Kaiserschmarrn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Kaiserschmarrn.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Mandelkuchen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Mandelkuchen.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Paprikasch.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Paprikasch.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Quiche.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Quiche.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Ratatouille.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Ratatouille.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Watrushki.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Watrushki.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Watrushki_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Watrushki_2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RezeptController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RezeptController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Cooking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Cooking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/HeadingIng.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/HeadingIng.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ingridient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ingridient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SucheController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SucheController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/onlinebuch/rezept.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/onlinebuch/rezept.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/start/default.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start/default.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/onlinebuch/rezepte-uebersicht.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/onlinebuch/rezepte-uebersicht.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/start/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/start/suche.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start/suche.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,100 +26,7 @@
     <pharConfigPath>C:\xampp\htdocs\da_project_cookbook\composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/onlinebuch/rezept.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-              <folding>
-                <element signature="e#517#527#0#Twig" expanded="true" />
-                <element signature="e#622#632#0#Twig" expanded="true" />
-                <element signature="e#1885#1904#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/RezeptController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="256" column="57" selection-start-line="256" selection-start-column="57" selection-end-line="256" selection-end-column="57" />
-              <folding>
-                <element signature="e#116#140#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/start/home.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-              <folding>
-                <element signature="e#1421#1443#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/start/default.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Recipe.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="169" column="31" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
-              <folding>
-                <element signature="e#30#78#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/styles/rezept.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="470" column="21" selection-start-line="470" selection-start-column="21" selection-end-line="470" selection-end-column="21" />
-              <folding>
-                <element signature="e#66#3975#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/styles/rezeptprint.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="64" selection-start-line="64" selection-end-line="65" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -150,6 +39,7 @@
     <findStrings>
       <find>id</find>
       <find>cooking</find>
+      <find>border</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -161,10 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Entity/Cookings.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Difficulties.php" />
-        <option value="$PROJECT_DIR$/src/Entity/HeadingIngs.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Ingridients.php" />
         <option value="$PROJECT_DIR$/src/Entity/NutritionForms.php" />
         <option value="$PROJECT_DIR$/src/Entity/Origins.php" />
         <option value="$PROJECT_DIR$/src/Entity/Recipes.php" />
@@ -194,24 +80,28 @@
         <option value="$PROJECT_DIR$/src/Entity/Difficulty.php" />
         <option value="$PROJECT_DIR$/src/Entity/HeadingIng.php" />
         <option value="$PROJECT_DIR$/assets/app.js" />
-        <option value="$PROJECT_DIR$/assets/styles/app.css" />
         <option value="$PROJECT_DIR$/src/Entity/Recipe.php" />
-        <option value="$PROJECT_DIR$/src/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/public/css/coloringpage.css" />
         <option value="$PROJECT_DIR$/public/css/coloringpageprint.css" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/assets/rezeptprint.js" />
-        <option value="$PROJECT_DIR$/assets/styles/home.css" />
+        <option value="$PROJECT_DIR$/src/Controller/RezeptController.php" />
+        <option value="$PROJECT_DIR$/templates/start/default.html.twig" />
+        <option value="$PROJECT_DIR$/templates/onlinebuch/download.html.twig" />
+        <option value="$PROJECT_DIR$/assets/styles/rezeptprint.css" />
+        <option value="$PROJECT_DIR$/src/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/assets/styles/app.css" />
         <option value="$PROJECT_DIR$/assets/styles/rezept-uebersicht.css" />
+        <option value="$PROJECT_DIR$/assets/styles/home.css" />
         <option value="$PROJECT_DIR$/templates/start/home.html.twig" />
         <option value="$PROJECT_DIR$/templates/onlinebuch/rezepte-uebersicht.html.twig" />
         <option value="$PROJECT_DIR$/templates/onlinebuch/rezept.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/RezeptController.php" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
-        <option value="$PROJECT_DIR$/templates/start/default.html.twig" />
-        <option value="$PROJECT_DIR$/templates/onlinebuch/download.html.twig" />
         <option value="$PROJECT_DIR$/assets/styles/rezept.css" />
-        <option value="$PROJECT_DIR$/assets/styles/rezeptprint.css" />
+        <option value="$PROJECT_DIR$/templates/start/suche.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/SucheController.php" />
+        <option value="$PROJECT_DIR$/assets/suche.js" />
+        <option value="$PROJECT_DIR$/assets/styles/suche.css" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
       </list>
     </option>
   </component>
@@ -327,8 +217,8 @@
       <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="503" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="501" />
     <option name="y" value="-25" />
     <option name="width" value="980" />
     <option name="height" value="1050" />
@@ -338,7 +228,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -389,6 +278,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,17 +290,17 @@
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\da_project_cookbook\public\images\svgs" />
+      <recent name="C:\xampp\htdocs\da_project_cookbook\public\images" />
+      <recent name="C:\xampp\htdocs\da_project_cookbook\public\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\da_project_cookbook\src\Repository" />
       <recent name="C:\xampp\htdocs\da_project_cookbook\src\Entity" />
       <recent name="C:\xampp\htdocs\da_project_cookbook\assets" />
       <recent name="C:\xampp\htdocs\da_project_cookbook\public\fonts" />
       <recent name="C:\xampp\htdocs\da_project_cookbook\templates\start" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\da_project_cookbook\public\images\svgs" />
-      <recent name="C:\xampp\htdocs\da_project_cookbook\public\images" />
-      <recent name="C:\xampp\htdocs\da_project_cookbook\public\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -444,18 +334,19 @@
       <workItem from="1611473828873" duration="35666000" />
       <workItem from="1611568672940" duration="5151000" />
       <workItem from="1611575743288" duration="368000" />
-      <workItem from="1611581838911" duration="11084000" />
+      <workItem from="1611581838911" duration="11916000" />
+      <workItem from="1611647461598" duration="29000" />
+      <workItem from="1611670737748" duration="24742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144078000" />
+    <option name="totallyTimeSpent" value="169681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2181208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22483222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -491,10 +382,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/migrations/Version20210119170729.php" />
-    <entry file="file://$PROJECT_DIR$/migrations/Version20210119173611.php" />
-    <entry file="file://$PROJECT_DIR$/src/Entity/Text.php" />
-    <entry file="file://$PROJECT_DIR$/src/Entity/RecipeAllergen.php" />
     <entry file="file://$PROJECT_DIR$/src/Entity/RecipeHeading.php" />
     <entry file="file://$PROJECT_DIR$/src/Entity/Origin.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -612,23 +499,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/coloringpage.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/rezeptprint.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/coloringpage.css" />
     <entry file="file://$PROJECT_DIR$/assets/rezept.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -636,50 +507,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/coloringpageprint.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/coloringpageprint.css" />
     <entry file="file://$PROJECT_DIR$/assets/rezept-uebersicht.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/home.css">
+    <entry file="file://$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Gazpacho.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/onlinebuch/download.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="422" selection-start-line="422" selection-end-line="430" selection-end-column="5" />
+        <state relative-caret-position="425">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding>
-            <element signature="e#66#3329#0" />
+            <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/app.css">
+    <entry file="file://$PROJECT_DIR$/assets/styles/rezeptprint.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3871">
-          <caret line="297" column="28" selection-start-line="297" selection-start-column="28" selection-end-line="297" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/rezept-uebersicht.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="306" column="26" selection-start-line="306" selection-start-column="26" selection-end-line="306" selection-end-column="26" />
-          <folding>
-            <element signature="e#66#3011#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/start/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-          <folding>
-            <element signature="e#1421#1443#0#Twig" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -689,33 +537,6 @@
           <caret line="169" column="31" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
           <folding>
             <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="51" selection-start-line="51" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/onlinebuch/rezepte-uebersicht.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Gazpacho.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/RezeptController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="256" column="57" selection-start-line="256" selection-start-column="57" selection-end-line="256" selection-end-column="57" />
-          <folding>
-            <element signature="e#116#140#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -730,49 +551,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="64" selection-start-line="64" selection-end-line="65" selection-end-column="7" />
+        <state relative-caret-position="391">
+          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/onlinebuch/download.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        <state relative-caret-position="340">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/styles/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1627">
+          <caret line="255" column="15" selection-start-line="255" selection-start-column="15" selection-end-line="255" selection-end-column="15" />
+          <folding>
+            <element signature="e#5311#6990#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/styles/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="797" column="2" selection-start-line="797" selection-start-column="2" selection-end-line="802" />
+          <folding>
+            <element signature="e#66#3329#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/start/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="120" selection-start-line="4" selection-start-column="120" selection-end-line="4" selection-end-column="120" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#1400#1422#0#Twig" expanded="true" />
+            <element signature="e#1743#1752#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/onlinebuch/rezept.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding>
-            <element signature="e#517#527#0#Twig" expanded="true" />
-            <element signature="e#622#632#0#Twig" expanded="true" />
-            <element signature="e#1885#1904#0#Twig" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/styles/rezept.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="470" column="21" selection-start-line="470" selection-start-column="21" selection-end-line="470" selection-end-column="21" />
+        <state relative-caret-position="2890">
+          <caret line="323" column="15" selection-start-line="323" selection-start-column="15" selection-end-line="323" selection-end-column="15" />
           <folding>
-            <element signature="e#66#3975#0" />
+            <element signature="e#3993#8739#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/rezeptprint.css">
+    <entry file="file://$PROJECT_DIR$/templates/onlinebuch/rezepte-uebersicht.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
+        <state relative-caret-position="374">
+          <caret line="22" column="12" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/start/suche.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/SucheController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/RezeptController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#116#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/rezeptprint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/styles/rezept-uebersicht.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" lean-forward="true" selection-end-line="336" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/styles/suche.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="336" selection-start-line="336" selection-end-line="336" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/suche.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>

@@ -26,6 +26,7 @@ Encore
     .addEntry('product', './assets/product.js')
     .addEntry('kontakt', './assets/kontakt.js')
     .addEntry('rezept', './assets/rezept.js')
+    .addEntry('suche', './assets/suche.js')
     .addEntry('rezeptprint', './assets/rezeptprint.js')
     .addEntry('home', './assets/home.js')
     .addEntry('rezept-uebersicht', './assets/rezept-uebersicht.js')

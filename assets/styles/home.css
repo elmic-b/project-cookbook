@@ -7,290 +7,54 @@ body {
 
 @media (max-width: 950px) {
 
-    .picture {
-        text-align: center;
-        margin: auto;
-        height: 100vh;
-        background-color: white;
-    }
 
-    .picture img {
-        width: 100%;
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 100vh;
+        width: 100%;
         object-fit: cover;
     }
 
-    .picture:after {
-        position: relative;
-        height: 87vh;
-        top: -91vh;
-        margin: auto;
-        border: 3px solid white;
-        content: '';
-        display: block;
-        width: 90vw;
-    }
-
     .hero-text {
-        width: 90vw;
-        text-align: center;
-        position: relative;
-        top: -60vh;
+        position: absolute;
+        top: 0;
         left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: green;
-    }
-
-    .white {
-        color: white;
-        width: 80%;
-        margin: auto;
-        text-transform: uppercase;
-        margin-bottom: 10vh;
-    }
-
-    .mini-head {
-        background-color: #E6942E;
-        display: inline;
-        padding-left: 10px;
-        padding-right: 10px;
-        color: white;
-        text-align: center;
-        margin: auto;
-        z-index: 10;
-    }
-
-    .whitebox {
-        height: 23vh;
         width: 95%;
-        background-color: white;
-        color: #E6942E;
-        text-align: center;
-        margin: auto;
-        z-index: -10;
-        margin-top: -10px;
-        padding-top: 10px;
-    }
-
-    .orange {
-        font-family: leorio;
-        font-size: 28px;
-        color: #E6942E;
-        margin-bottom: 30px;
-
-    }
-
-    .mini-button {
-        border: 3px solid #E6942E;
-        padding: 10px;
-        display: inline;
-        font-size: 14px;
-    }
-
-    .mini-button:hover {
-        background-color: #E6942E;
-        color: white;
-        -webkit-transition-duration: 0.5s;
-        -moz-transition-duration: 0.5s;
-        -ms-transition-duration: 0.5s;
-        -o-transition-duration: 0.5s;
-        transition-duration: 0.5s;
-    }
-
-    a .mini-button {
-        color: #E6942E;
-        text-decoration: none;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .green-background {
-        background-color: #DAF2E9;
-        width: 100%;
-        position: relative;
-        top: -45vh;
-        text-align: center;
-        margin: auto;
-
-    }
-
-    .black-headline {
-        font-family: leorio;
-        font-size: 28px;
-        color: black;
-        padding-top: 40px;
-    }
-
-    .site-content {
-        text-align: center;
-        margin: auto;
-        height: 63vh;
-    }
-
-    .content-1 {
-        height: 30vh;
-        margin-bottom: 10px;
-    }
-
-    .content-2 {
-        height: 30vh;
-    }
-
-    .content-1 .content-link {
-        margin-top: 40px;
-        height: 150px;
-        object-fit: cover;
-    }
-
-    .content-2 .content-link {
-        height: 150px;
-        object-fit: cover;
-    }
-
-    .content-box {
-        position: relative;
-        border: 2px solid white;
-        width: 290px;
-        height: 140px;
-        top: -18.5vh;
-        margin-left: 60px;
-    }
-
-    .content-box h4 {
-        color: white;
-        font-size: 20px;
-        position: relative;
-        top: 30%;
-    }
-
-    .content-box h4 a {
-        color: white;
-    }
-
-    .impressum {
-        position: relative;
-        top: -35vh;
-        background-color: white;
-        height: 30vh;
-    }
-
-    .content {
-        height: 330vh;
-    }
-
-}
-
-@media (min-width: 950px) {
-
-    .picture-1 {
-        height: 90vh;
-        width: 100%;
-    }
-
-
-
-    .picture-1 img {
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-    }
-
-    .picture-2 {
-        height: 60vh;
-        width: 100%;
-    }
-
-    .picture-2 img {
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-    }
-
-    .picture-3 {
-        height: 60vh;
-        width: 100%;
-    }
-
-    .picture-3 img {
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-    }
-
-
-    .hero-text {
-        position: absolute;
-        top: 23vh;
-        left: 50%;
-        width: 90%;
+        height: 100vh;
         transform: translate(-50%);
         text-align: center;
-    }
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
 
-    .hero-text-2 {
-        position: absolute;
-        top: 225vh;
-        left: 50%;
-        width: 90%;
-        transform: translate(-50%);
-        text-align: center;
-    }
-
-    .hero-text-3 {
-        position: absolute;
-        top: 370vh;
-        left: 50%;
-        width: 90%;
-        transform: translate(-50%);
-        text-align: center;
-    }
-
-    .hero-text-3 h3{
-        margin-bottom: 5vh;
-    }
-
-    .anmelden{
-        background-color: white;
-        color: black;
-        font-family: leorio;
-        font-size: 25px;
-        text-transform: uppercase;
-        padding: 15px 25px 15px;
-        border: 2px solid black;
-        font-weight: bold;
     }
 
 
-    h1 {
+    .hero-text h1 {
         color: white;
-        font-family: leorio;
-        text-transform: uppercase;
-        font-size: 90px;
+        font-family: Roboto;
         font-weight: 300;
+        text-transform: uppercase;
+        font-size: 40px;
         margin-bottom: 0;
     }
 
-    h1.leorio{
-        font-weight: bold;
-    }
 
-
-    h3 {
-        font-family: leorio;
+    .hero-text h3 {
+        font-family: Roboto;
         text-transform: uppercase;
-        font-size: 40px;
+        font-size: 25px;
         color: white;
         font-weight: 300;
-        margin: 0;
+        margin: 10px 0 0;
     }
-
 
     .see-more {
-        margin-top: 25vh;
         height: 80px;
     }
+
 
     h6 {
         color: white;
@@ -300,7 +64,7 @@ body {
 
 
     .arrow {
-        animation: MoveUpDown 1.7s ease-out infinite;
+        animation: MoveUpDown 1.8s ease-out infinite;
 
     }
 
@@ -314,48 +78,88 @@ body {
     }
 
 
-    .rezepte {
-        background-color: white;
-        margin-top: 10vh;
+
+
+    .onlinebuch {
+        position: absolute;
+        top: 108vh;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-color: white;
     }
 
-
-    .content-1 {
-        padding-top: 10vh;
-        margin: auto;
-        display: flex;
-        width: 80%;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-    }
-
-    .content-2 h1.leorio{
-        font-weight: bold;
-        margin-top: 20vh;
-    }
-
-    .content-2 h3.leorio{
-        color: black;
-        text-transform: lowercase;
+    .onlinebuch h1 {
+        font-family: leorio;
+        font-size: 35px;
         text-align: center;
-        font-weight: bold;
     }
 
 
-    .content-4 {
-        padding-top: 10vh;
+    .recipes {
         margin: auto;
         display: flex;
-        width: 80%;
+        width: 100%;
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
     }
 
+    .recipe-teaser {
+        margin: 7vh 0px 7vh;
+    }
+
+    .recipe-teaser img {
+        object-fit: cover;
+    }
+
+    .teaser-image {
+        width: 300px;
+        height: 250px;
+        margin: 10px 50px 10px;
+    }
+
+    .teaser-image img {
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+    .teaser-image:after {
+        position: absolute;
+        margin-top: -24.3vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        content: '';
+        width: 300px;
+        height: 175px;
+        display: block;
+    }
+
+    .recipe-teaser .text {
+        position: absolute;
+        margin: -11vh 65px 0px;
+    }
+
+    .recipe-teaser .text h3 {
+        color: white;
+        font-size: 33px;
+        font-family: leorio;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .recipe-teaser .text h5 {
+
+        color: white;
+        font-size: 13px;
+        font-family: Roboto;
+        margin: 0;
+        text-transform: uppercase;
+    }
 
 
     .weitere-rezepte {
@@ -367,126 +171,636 @@ body {
         font-weight: bold;
         border: 2px solid black;
         color: black;
-margin-bottom: 15vh;
+        transition-duration: 0.4s;
     }
 
-    h1.leorio {
+
+
+    .search {
+        background-image: url(../../public/images/starting-page/account.jpg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        object-fit: cover;
+        height: 90vh;
+        width: 100%;
+        position: absolute;
+        top: 285vh;
         text-align: center;
-
-        font-size: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
-
-    .teaser-pic img {
-        object-fit: cover;
-        margin: 10px 50px 10px;
-    }
-
-
-
-    .teaser-pic-about img {
-        object-fit: cover;
-        margin: 10px 50px 10px;
-    }
-    .teaser-pic-about .text {
-        position: relative;
-        top: -13vh;
-        margin: 10px 50px 10px;
-        left: 0.5vw;
-    }
-    .teaser-pic-about .text h1{
-        font-size: 18px;
-    }
-
-
-
-
-    a {
+    .search h1 {
         color: white;
-        text-decoration: none;
-    }
-
-    h3.leorio {
-        font-size: 45px;
-        text-transform: uppercase;
-        color: white;
-    }
-
-    h5.leorio {
-        color: white;
-        font-size: 16px;
-        text-transform: uppercase;
-        margin-top: -5px;
-        font-weight: normal;
         font-family: Roboto;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 40px;
+        margin: -15vh 0 -20vh;
     }
 
-    .text {
-        background-color: black;
-        position: relative;
-        width: 70%;
-        top: -14vh;
-        margin: 10px 50px 10px;
-        left: 1vw;
+    .search-bar {
+        padding: 15px;
+        width: 70vw;
     }
 
 
-    .leorio {
-        color: black;
+    .search-button {
+        padding: 15px;
+    }
+
+
+    .social-media{
+        width: 95%;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        top: 385vh;
+    }
+
+    .social-media h1 {
         font-family: leorio;
-        text-transform: lowercase;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 0;
     }
 
-    .social-medias{
+    .social-media h3 {
+        font-family: leorio;
+        font-size: 25px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .social-media-infos {
         margin: auto;
         display: flex;
-        width: 90%;
         flex-direction: row;
         justify-content: center;
-        padding-bottom: 10vh;
+        align-content: center;
+        flex-wrap: wrap;
+
     }
 
-    .social-medias figure{
-        margin: 10vh 10vh 10vh;
-        font-family: leorio;
-        font-size: 20px;
-        font-weight: bold;
+    .social-media-infos figure{
+        text-align: center;
+        margin-top: 10vh;
     }
 
-    .social-medias figure figcaption{
+
+    .social-media-infos figure figcaption {
         margin-top: 2vh;
+        font-family: leorio;
         font-weight: bold;
         font-size: 25px;
     }
 
 
-    .content-4 .text h3.leorio{
-
-        font-size: 30px;
-        font-weight: bold;
+    .social-media-infos a{
+        color: black;
     }
 
-    .content-4 .text h5.leorio{
 
-        font-weight: bold;
+    .account{
+        background-image: url(../../public/images/starting-page/social-media.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        object-fit: cover;
+        height: 90vh;
+        width: 100%;
+        position: absolute;
+        top: 565vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .search{
-        padding: 5px;
+    .account h1{
+        color: white;
+        font-size: 40px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .account h3{
+        color: white;
+        font-size: 25px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+
+
+    .team {
+        position: absolute;
+        top: 665vh;
+        left: 50%;
+        transform: translate(-50%);
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .team h1 {
+        font-family: leorio;
+        font-size: 35px;
+        text-align: center;
+        margin: 0;
+    }
+
+
+    .team-members {
+        margin: 5vh auto auto;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .member-teaser {
+        margin: 3vh 0px 3vh;
+    }
+
+    .member-teaser img {
+        object-fit: cover;
+    }
+
+    .member-image {
+        overflow: hidden;
+        width: 300px;
+        height: 250px;
+        margin: 10px 30px 10px;
+    }
+
+    .member-image img {
+        transition: transform .5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+    .member-image:after {
+        position: absolute;
+        margin-top: -24.3vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        content: '';
+        width: 300px;
+        height: 175px;
+        display: block;
+    }
+
+    .member-teaser .text {
+        position: absolute;
+        margin: -9.5vh 45px 0px;
+    }
+
+    .member-teaser .text h3 {
+        color: white;
+        font-size: 26px;
+        font-family: leorio;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .member-teaser .text h5 {
+
+        color: white;
+        font-size: 13px;
+        font-family: Roboto;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+
+    a {
+        text-decoration: none;
+    }
+
+    footer{
+        height: 10vh;
+        position: absolute;
+        top: 850vh;
+    }
+
+}
+
+@media (min-width: 950px) {
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 90vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 95%;
+        height: 90vh;
+        transform: translate(-50%);
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+    }
+
+
+    .hero-text h1 {
+        color: white;
+        font-family: Roboto;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 105px;
+        margin-bottom: 0;
+    }
+
+
+    .hero-text h3 {
+        font-family: Roboto;
+        text-transform: uppercase;
+        font-size: 45px;
+        color: white;
+        font-weight: 100;
+        margin: 0;
+    }
+
+    .see-more {
+        height: 80px;
+    }
+
+
+    h6 {
+        color: white;
+        font-size: 11px;
+        margin: 0;
+    }
+
+
+    .arrow {
+        animation: MoveUpDown 1.8s ease-out infinite;
+
+    }
+
+    @keyframes MoveUpDown {
+        0%, 100% {
+            margin-top: 0;
+        }
+        50% {
+            margin-top: 40px;
+        }
+    }
+
+
+
+
+    .onlinebuch {
+        position: absolute;
+        top: 105vh;
+        left: 50%;
+        transform: translate(-50%);
+        width: 95%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .onlinebuch h1 {
+        font-family: leorio;
+        font-size: 60px;
+        text-align: center;
+    }
+
+
+    .recipes {
+        margin: auto;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .recipe-teaser {
+        margin: 7vh 0px 7vh;
+    }
+
+    .recipe-teaser img {
+        object-fit: cover;
+    }
+
+    .teaser-image {
+        overflow: hidden;
+        width: 300px;
+        height: 250px;
+
+        margin: 10px 50px 10px;
+    }
+
+    .teaser-image img {
+        transition: transform .5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+    .teaser-image img:hover {
+        transform: scale(1.05);
+    }
+
+    .teaser-image:after {
+        position: absolute;
+        top: 46.5%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        content: '';
+        width: 300px;
+        height: 175px;
+        display: block;
+    }
+
+    .recipe-teaser .text {
+        color: red;
+        position: absolute;
+        top: 63%;
+
+        margin: 0px 65px 0px;
+    }
+
+    .recipe-teaser .text h3 {
+        color: white;
+        font-size: 33px;
+        font-family: leorio;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .recipe-teaser .text h5 {
+
+        color: white;
+        font-size: 13px;
+        font-family: Roboto;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+
+    .weitere-rezepte {
+        text-align: center;
+        margin: auto;
+        font-size: 25px;
+        font-family: leorio;
+        padding: 10px;
+        font-weight: bold;
+        border: 2px solid black;
+        color: black;
+        transition-duration: 0.4s;
+    }
+
+    .weitere-rezepte:hover {
+        background-color: black;
+        color: white;
+    }
+
+
+    .search {
+        background-image: url(../../public/images/starting-page/account.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        object-fit: cover;
+        height: 60vh;
+        width: 100%;
+        position: absolute;
+        top: 215vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+    .search h1 {
+        z-index: 10;
+        color: white;
+        font-family: Roboto;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 80px;
+        margin: 0;
+    }
+
+    .search-bar {
+        z-index: 15;
+        padding: 15px;
         width: 25vw;
     }
 
-    .but{
-        padding: 5px;
+    .search-button {
+        z-index: 160;
+        padding: 15px;
     }
 
-    h1.suche{
+
+    .social-media{
+        width: 95%;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        top: 300vh;
+    }
+
+    .social-media h1 {
+        font-family: leorio;
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .social-media h3 {
+        font-family: leorio;
+        font-size: 35px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .social-media-infos {
+        margin: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 5vh;
+
+    }
+
+    .social-media-infos figure{
+        text-align: center;
+
+        transition: transform .5s ease;
+    }
+
+    .social-media-infos figure:hover{
+        transform: scale(1.1);
+    }
+
+    .social-media-infos figure figcaption {
+        margin-top: 2vh;
+        font-family: leorio;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+
+    .social-media-infos a{
+        color: black;
+    }
+
+
+    .account{
+        background-color: black;
+        background-image: url(../../public/images/starting-page/social-media.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        object-fit: cover;
+        height: 50vh;
+        width: 100%;
+        position: absolute;
+        top: 385vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .account h1{
+        color: white;
         font-size: 80px;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 0;
     }
 
-.mitglieder{
-    padding-top: 5vh;
-}
+    .account h3{
+        color: white;
+        font-size: 60px;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+
+
+    .team {
+        position: absolute;
+        top: 465vh;
+        left: 50%;
+        transform: translate(-50%);
+        width: 95%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .team h1 {
+        font-family: leorio;
+        font-size: 60px;
+        text-align: center;
+        margin: 0;
+    }
+
+
+    .team-members {
+        margin: auto;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .member-teaser {
+        margin: 3vh 0px 3vh;
+    }
+
+    .member-teaser img {
+        object-fit: cover;
+    }
+
+    .member-image {
+        overflow: hidden;
+        width: 300px;
+        height: 250px;
+        margin: 10px 30px 10px;
+    }
+
+    .member-image img {
+        transition: transform .5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+    .member-image img:hover {
+        transform: scale(1.05);
+    }
+
+    .member-image:after {
+        position: absolute;
+        top: 57%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        content: '';
+        width: 300px;
+        height: 120px;
+        display: block;
+    }
+
+    .member-teaser .text {
+        color: red;
+        position: absolute;
+        top: 68%;
+        margin: 0px 40px 0px;
+    }
+
+    .member-teaser .text h3 {
+        color: white;
+        font-size: 25px;
+        font-family: leorio;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .member-teaser .text h5 {
+
+        color: white;
+        font-size: 13px;
+        font-family: Roboto;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+
+    a {
+        text-decoration: none;
+    }
+
+    footer{
+        height: 10vh;
+        position: absolute;
+     top: 560vh;
+    }
+
 
 }
 

@@ -2,19 +2,21 @@
 
    {% block stylesheets %}
        {{ parent() }}
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        {{ encore_entry_link_tags('rezept-uebersicht') }}
    {% endblock %}
 
 {% block body %}
 
-
-    <div class="picture-1">
-        <img src="{{ asset('images/starting-page/onlinebuch.png') }}">
-    </div>
+    <img class="hero-image" src="{{ asset('images/starting-page/onlinebuch.png') }}">
 
     <div class="hero-text">
-        <h1>ONLINEBUCH</h1>
-        <h3>HIER BEFINDET SICH UNSERE REZEPTSAMMLUNG</h3>
+        <div></div>
+        <div>
+            <h1>onlinebuch</h1>
+            <h3>hier befindet sich unsere rezeptsammlung</h3>
+        </div>
 
         <div class="see-more">
             <h6>MEHR ENTDECKEN</h6>
@@ -23,25 +25,27 @@
     </div>
 
 
-    <div class="rezepte">
 
-        <h1 class="leorio">ERGEBNISSE</h1>
-
-        <div class="content-1">
+    <div class="ergebnisse">
+        <h1>die rezeptsammlung</h1>
+        <div class="recipes">
             {% for recipe in recipe %}
-
-                <div class="teaser-pic">
-                    <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
-                        <img src="{{ asset(recipe.image_link) }}" width="350" height="300" alt="" itemprop="image">
-                    </a>
-                    <div class="text">
-                        <h3 class="leorio">{{ recipe.name }}</h3>
-                        <h5 class="leorio">{{ recipe.category }}</h5>
+                <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
+                    <div class="recipe-teaser">
+                        <div class="teaser-image">
+                            <img src="{{ asset(recipe.image_link) }}" alt="" itemprop="image">
+                        </div>
+                        <div class="text">
+                            <h3>{{ recipe.name }}</h3>
+                            <h5>{{ recipe.category }}</h5>
+                        </div>
                     </div>
-                </div>
+                </a>
             {% endfor %}
+
         </div>
     </div>
+
 
 
 {% endblock %}

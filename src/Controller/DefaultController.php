@@ -30,7 +30,7 @@ class DefaultController extends AbstractController
 INNER JOIN Difficulty ON Recipe.fk_difficulty_id = Difficulty.difficulty_id
 INNER JOIN Category ON fk_category_id = category_id
 INNER JOIN Nutrition_form ON fk_nutrition_form_id=nutrition_form_id
-limit 2
+limit 3
 ';
 
         $stmt = $conn->prepare($sql);

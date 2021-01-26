@@ -8,14 +8,15 @@
 
 
 {% block body %}
-    <div class="picture-1">
-        <img src="{{ asset('images/starting-page/onlinebuch.png') }}">
-    </div>
+    <img class="hero-image" src="{{ asset('images/starting-page/onlinebuch.png') }}">
 
 
     <div class="hero-text">
-        <h1>project cookbook</h1>
-        <h3>jetzt neu! unsere ersten rezepte!</h3>
+        <div></div>
+        <div>
+            <h1>project cookbook</h1>
+            <h3>jetzt neu! unsere ersten rezepte!</h3>
+        </div>
 
         <div class="see-more">
             <h6>MEHR ENTDECKEN</h6>
@@ -23,124 +24,132 @@
         </div>
     </div>
 
-
-    <div class="rezepte">
-
-        <h1 class="leorio">die #winter-edition</h1>
-
-        <div class="content-1">
+    <div class="onlinebuch">
+        <h1>die #winter-edition</h1>
+        <div class="recipes">
             {% for recipe in recipe %}
-
-                <div class="teaser-pic">
-                    <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
-                        <img src="{{ asset(recipe.image_link) }}" width="350" height="300" alt="" itemprop="image">
-                    </a>
-                    <div class="text">
-                        <h3 class="leorio">{{ recipe.name }}</h3>
-                        <h5 class="leorio">{{ recipe.category }}</h5>
+                <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
+                    <div class="recipe-teaser">
+                        <div class="teaser-image">
+                            <img src="{{ asset(recipe.image_link) }}" alt="" itemprop="image">
+                        </div>
+                        <div class="text">
+                            <h3>{{ recipe.name }}</h3>
+                            <h5>{{ recipe.category }}</h5>
+                        </div>
                     </div>
-                </div>
+                </a>
             {% endfor %}
+
         </div>
         <a href="{{ path('app_rezepte-uebersicht') }}" class="weitere-rezepte">weitere rezepte</a>
     </div>
 
-    <div class="picture-2">
-        <img src="{{ asset('images/starting-page/account.jpg') }}" >
-    </div>
 
-    <div class="hero-text-2">
-        <h1 class="suche">suchst du was bestimmtes?</h1>
-        <form action="/action_page.php">
-            <input class="search" type="text" placeholder="Search.." name="search">
-            <button class="but" type="submit"><i class="fa fa-search"></i></button>
+
+    <div class="search">
+        <div></div>
+        <h1>suchst du was bestimmtes?</h1>
+        <form action="{{ path('app_suche') }}">
+            <input class="search-bar" type="text"  name="search">
+            <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
         </form>
+        <div></div>
     </div>
 
-    <div class="content-2">
-        <h1 class="leorio">das genügt dir noch nicht?</h1>
-        <h3 class="leorio">keine sorge, es gibt noch mehr von uns</h3>
 
-        <div class="social-medias">
+
+    <div class="social-media">
+        <h1>das genügt dir noch nicht?</h1>
+        <h3>keine sorge, es gibt noch mehr von uns!</h3>
+
+        <div class="social-media-infos">
             <figure>
-                <img src="{{ asset('images/svgs/instagram.svg') }}" height="150" alt="" itemprop="image">
-                <figcaption>projectcookbook</figcaption>
+                <a href="https://www.instagram.com/project_cookbook_/">
+                    <img src="{{ asset('images/svgs/instagram.svg') }}" height="100" alt="" itemprop="image">
+                    <figcaption>project_cookbook_</figcaption>
+                </a>
             </figure>
             <figure>
-                <img src="{{ asset('images/svgs/facebook.svg') }}" height="150" alt="" itemprop="image">
-                <figcaption>projectcookbook</figcaption>
+                <a href="https://www.facebook.com/projectcookbook.htl3r">
+                    <img src="{{ asset('images/svgs/facebook.svg') }}" height="100" alt="" itemprop="image">
+                    <figcaption>projectcookbook.htl3r</figcaption>
+                </a>
             </figure>
             <figure class="youtube">
-                <img src="{{ asset('images/svgs/youtube.svg') }}"  height="150" alt="" itemprop="image">
+                <img src="{{ asset('images/svgs/youtube.svg') }}" height="100" alt="" itemprop="image">
                 <figcaption>projectcookbook</figcaption>
             </figure>
             <figure>
-                <img src="{{ asset('images/svgs/tik-tok.svg') }}"  height="150" alt="" itemprop="image">
-                <figcaption>projectcookbook</figcaption>
+                <a href="https://www.tiktok.com/@projectcookbook?lang=de-DE">
+                    <img src="{{ asset('images/svgs/tik-tok.svg') }}" height="100" alt="" itemprop="image">
+                    <figcaption>projectcookbook</figcaption>
+                </a>
             </figure>
         </div>
     </div>
 
 
 
-    <div class="picture-3">
-        <img src="{{ asset('images/starting-page/social-media.png') }}" >
-    </div>
-
-    <div class="hero-text-3">
+    <div class="account">
         <h1>begeistert?</h1>
-        <h3>werde ein mitglied und verpasse nichts mehr!</h3>
-        <a class="anmelden">Anmelden</a>
+        <h3>erfahre wer dahinter steckt!</h3>
+      <!--  <a class="account-button">Anmelden</a> -->
     </div>
 
 
-    <div class="mitglieder">
 
-        <h1 class="leorio">#meet-the-team</h1>
+    <div class="team">
 
-        <div class="content-4">
+        <h1>#meet-the-team</h1>
 
-                <div class="teaser-pic-about">
+        <div class="team-members">
 
-                        <img src="{{ asset('images/about/anna.JPG') }}" width="350" height="300" alt="" itemprop="image">
-
-                    <div class="text">
-                        <h3 class="leorio">Anna Schwabegger</h3>
-                        <h5 class="leorio">Projektleiterin</h5>
-                    </div>
+            <div class="member-teaser">
+                <div class="member-image">
+                    <img src="{{ asset('images/about/anna.JPG') }}" alt="Ein Bild von Anna Schwabegger" itemprop="image">
                 </div>
-
-            <div class="teaser-pic-about">
-
-                    <img src="{{ asset('images/about/david.JPG') }}" width="350" height="300" alt="" itemprop="image">
-
                 <div class="text">
-                    <h3 class="leorio">David Tovilovic</h3>
-                    <h5 class="leorio">Stv. Projektleiter</h5>
+                    <h3>Anna Schwabegger</h3>
+                    <h5>Projektleiterin</h5>
                 </div>
             </div>
 
-            <div class="teaser-pic-about">
-
-                    <img src="{{ asset('images/about/elma.JPG') }}" width="350" height="300" alt="" itemprop="image">
-
+            <div class="member-teaser">
+                <div class="member-image">
+                    <img src="{{ asset('images/about/david.JPG') }}" alt="Ein Bild von David Tovilovic" itemprop="image">
+                </div>
                 <div class="text">
-                    <h3 class="leorio">Elma Bajraktarevic</h3>
-                    <h5 class="leorio">Teammitglied</h5>
+                    <h3>David Tovilovic</h3>
+                    <h5>Stv. Projektleiter</h5>
                 </div>
             </div>
 
-            <div class="teaser-pic-about">
-
-                    <img src="{{ asset('images/about/laura.JPG') }}" width="350" height="300" alt="" itemprop="image">
-
+            <div class="member-teaser">
+                <div class="member-image">
+                    <img src="{{ asset('images/about/elma.JPG') }}" alt="Ein Bild von Elma Bajraktarevic" itemprop="image">
+                </div>
                 <div class="text">
-                    <h3 class="leorio">Laura Winkler</h3>
-                    <h5 class="leorio">Teammitglied</h5>
+                    <h3>Elma Bajraktarevic</h3>
+                    <h5>Teammitglied</h5>
                 </div>
             </div>
+
+            <div class="member-teaser">
+                <div class="member-image">
+                    <img src="{{ asset('images/about/laura.JPG') }}" alt="Ein Bild von Laura Winkler" itemprop="image">
+                </div>
+                <div class="text">
+                    <h3>Laura Winkler</h3>
+                    <h5>Teammitglied</h5>
+                </div>
+            </div>
+
         </div>
     </div>
+
+
+
 
 {% endblock %}
 

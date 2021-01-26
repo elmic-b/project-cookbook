@@ -8,220 +8,320 @@ body {
 @media (max-width: 950px) {
 
 
-    .logo a {
-        color: black;
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
     }
 
-    .menu-item a {
-        color: black;
+    .hero-image:after {
+        background-color: black;
+        opacity: 60%;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+
     }
 
-    .picture {
-        text-align: center;
-        margin: auto;
-        height: 50vh;
-        background-color: white;
-    }
-
-    .picture img {
-        width: 100vw;
-        height: 50vh;
+    .hero-image img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
-    .picture:after {
-        position: relative;
-        height: 37vh;
-        top: -41vh;
+
+    .hero-text {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 95%;
+        height: 90vh;
+        transform: translate(-50%);
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+    }
+
+
+    .hero-text h1 {
+        color: white;
+        font-family: Roboto;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+
+    .hero-text h3 {
+        font-family: Roboto;
+        text-transform: uppercase;
+        font-size: 25px;
+        color: white;
+        font-weight: 300;
+        margin: 0 0 -50vh;
+    }
+
+    .hero-buttons {
+        margin-top: 5vh;
+        font-family: leorio;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+
+    }
+
+
+    .hero-buttons a {
+        color: black;
+        background-color: white;
+        text-decoration: none;
+        border: 2px solid white;
+        padding: 10px;
+        transition-duration: 0.4s;
+    }
+
+
+    .recipe-info {
+        position: absolute;
+        top: 110vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .recipe-info h1 {
+        color: black;
+        font-family: leorio;
+        font-size: 35px;
+        text-transform: lowercase;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+
+    .recipe-infos {
         margin: auto;
-        border: 3px solid white;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 5vh;
+
+    }
+
+
+    .recipe-infos figure {
+        text-align: center;
+
+        margin: 6vh 19vw 0 5vh;
+        width: 11vw;
+    }
+
+
+    .recipe-infos figure figcaption {
+        margin-top: 2vh;
+        font-family: leorio;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+
+    hr {
+        background-color: black;
+        height: 1px;
+        width: 70%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .functions {
+        margin: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .functions figure {
+        margin: 5vh 5vh 2vh;
+        font-family: leorio;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        transition: transform .5s ease;
+        text-align: center;
+    }
+
+    .functions figure:hover {
+        transform: scale(1.1);
+    }
+
+    .functions figure figcaption {
+        margin-top: 1vh;
+    }
+
+    .functions a {
+        color: black;
+        text-decoration: none;
+    }
+
+
+    .motivation {
+        height: 90vh;
+        width: 100%;
+        position: absolute;
+        top: 250vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .motivation-picture {
+        height: 90vh;
+        width: 100%;
+    }
+
+    .motivation-picture:after {
         content: '';
         display: block;
-        width: 90vw;
+        position: absolute;
+        top: 0;
+        background-color: black;
+        opacity: 60%;
+        height: 90vh;
+        width: 100%;
     }
 
-
-    .hero-content {
-        background-color: white;
+    .motivation img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
-    .obere-box {
-        border: 2px solid #E6942E;
-        width: 80%;
-        height: 13vh;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: auto;
-        position: relative;
-        top: -7vh;
-        background-color: white;
-    }
-
-    .orange {
-        font-family: leorio;
-        font-size: 45px;
-        color: #E6942E;
-        margin: 0;
-        margin-top: 10px;
-    }
-
-    .obere-box h4 {
-        color: #E6942E;
-        margin: 0;
-    }
-
-    .infos {
-        text-align: left;
-        padding: 10px;
-        margin-top: -5vh;
-        padding-left: 35px;
-        padding-bottom: 20px;
-        font-size: 18px;
-    }
-
-    .infos img{
-        height: 20px;
-    }
-
-    hr{
-        width: 80%;
-    }
-
-
-    .funktionen {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 5px;
-        padding-bottom: 25px;
-    }
-
-    .funktion-1{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: auto;
-        font-size: 12px;
-    }
-
-    .funktion-1 img{
-        position: relative;
+    .motivation h1 {
+        position: absolute;
+        width: 90%;
+        top: 40%;
+        transform: translate(-50%);
         left: 50%;
+        color: white;
+        font-size: 40px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+
+    .recipe {
+        position: absolute;
+        top: 350vh;
+        width: 95%;
+        left: 51%;
         transform: translate(-50%);
     }
 
-    .switch{
-        background-color: white;
-        width: 100%;
-        border: 1px solid black;
+
+    .ingridients {
+        width: 100vw;
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 15vh;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .switch img{
-        padding-left: 10px;
-        padding-right:10px;
+    .ingridients h1 {
+        margin-bottom: 2vh;
+        color: black;
+        font-family: leorio;
+        font-size: 50px;
+        text-transform: lowercase;
+
     }
+
+    .ingridient-table h2 {
+        color: black;
+        font-family: leorio;
+        font-size: 30px;
+        text-transform: lowercase;
+    }
+
+    .ingridient {
+        text-transform: capitalize;
+    }
+
+
+    table {
+        font-size: 20px;
+        margin: auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    tr, td {
+        border: 1px solid black;
+    }
+
+    td {
+        text-align: left;
+        padding-bottom: 20px;
+    }
+
+
+    .cooking {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .cooking-box{
+        width: 90%;
+        font-size: 20px;
+    }
+
+
+    .cooking h1 {
+        margin-bottom: 2vh;
+        color: black;
+        font-family: leorio;
+        font-size: 50px;
+        text-transform: lowercase;
+    }
+
+    .cooking-box h2{
+        color: black;
+        font-family: leorio;
+        font-size: 30px;
+        text-transform: lowercase;
+    }
+    .cooking-box p{
+        width: 95%;
+    }
+
 
 
     a {
         text-decoration: none;
     }
 
-    .rezept{
-        background-color: white;
-        text-align: center;
-        margin: auto;
-    }
-
-    .obere-box-links {
-        border: 2px solid #E6942E;
-        width: 300px;
-        height: 13vh;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: auto;
-        position: relative;
-        top: -7vh;
-        background-color: white;
-    }
-
-
-    .obere-box-links h4 {
-        color: #E6942E;
-        margin: 0;
-    }
-
-    .leer{
-        width: 100%;
-        height: 15vh;
-        background-color: #F8F8F8;
-        border: black 1px solid;
-    }
-
-
-    .obere-box-rechts{
-        border: 2px solid #E6942E;
-        width: 350px;
-        height: 13vh;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: auto;
-        position: relative;
-        top: -7vh;
-
-        background-color: white;
-    }
-
-
-    .obere-box-rechts h4 {
-        color: #E6942E;
-        margin: 0;
-    }
-
-    .black{
-        font-family: leorio;
-        font-size: 30px;
-        margin-top: 50px;
-        text-align: left;
-    }
-
-    .zutaten-tabellen{
-        padding-left: 40px;
-        margin-top: -50px;
-        margin-bottom: 40px;
-    }
-
-    table{
-        padding-left: 40px;
-        margin-top: -10px;
-        font-size: 20px;
-    }
-    td{
-        padding-right: 20px;
-        padding-bottom: 10px;
-    }
-
-    .zubereitung-box{
-        padding-left: 40px;
-        margin-top: -50px;
-        margin-bottom: 40px;
-        padding-bottom: 20px;
-        width: 80%;
-        font-size: 20px;
-        text-align: justify;
-    }
-
-    .impressum {
-        margin-top: 10vh;
-        background-color: white;
-        height: 30vh;
+    footer{
+        height: 10vh;
+        position: absolute;
+        top: 650vh;
     }
 
 
@@ -230,53 +330,69 @@ body {
 @media (min-width: 950px) {
 
 
-    .picture-1 {
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 90vh;
         width: 100%;
     }
 
-    .picture-1 img {
+    .hero-image:after {
+        background-color: black;
+        opacity: 60%;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 90vh;
         width: 100%;
-        object-fit: cover;
-        height: 100%;
+
     }
 
-
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
 
     .hero-text {
-        background-color: black;
         position: absolute;
-        top: 23vh;
+        top: 0;
         left: 50%;
-        width: 90%;
+        width: 95%;
+        height: 90vh;
         transform: translate(-50%);
         text-align: center;
-        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
     }
+
 
     .hero-text h1 {
         color: white;
-        font-family: leorio;
+        font-family: Roboto;
+        font-weight: 100;
         text-transform: uppercase;
-        font-size: 100px;
-        font-weight:bold;
+        font-size: 105px;
         margin-bottom: 0;
     }
 
 
-
-    h3 {
-        font-family: leorio;
+    .hero-text h3 {
+        font-family: Roboto;
         text-transform: uppercase;
-        font-size: 50px;
+        font-size: 45px;
         color: white;
-        font-weight: bold;
-        margin: 0;
+        font-weight: 100;
+        margin: 0 0 -20vh;
     }
 
-
-    .buttons{
+    .hero-buttons {
         margin-top: 5vh;
         font-family: leorio;
         font-weight: bold;
@@ -285,192 +401,264 @@ body {
 
     }
 
-    .buttons a{
-        color: white;
+
+    .hero-buttons a {
+        color: black;
+        background-color: white;
         text-decoration: none;
         border: 2px solid white;
         padding: 10px;
+        transition-duration: 0.4s;
     }
 
-    .eigenschaften {
-        background-color: white;
-        margin-top: 10vh;
+    .hero-buttons a:hover {
+        background-color: black;
+        color: white;
+    }
+
+
+    .recipe-info {
+        position: absolute;
+        top: 105vh;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
 
-    .h1-eig {
-     color: black;
+    .recipe-info h1 {
+        color: black;
         font-family: leorio;
         font-size: 60px;
         text-transform: lowercase;
         text-align: center;
+        margin-bottom: 0;
     }
 
 
-    .content-1{
+    .recipe-infos {
         margin: auto;
         display: flex;
-        width: 90%;
+        width: 100%;
         flex-direction: row;
         justify-content: center;
+        padding-top: 5vh;
+
     }
 
-    .content-1 figure{
-        margin: 10vh 10vh 10vh;
-        font-family: leorio;
+
+    .recipe-infos figure {
         text-align: center;
-        font-size: 20px;
-        font-weight: bold;
+        transition: transform .5s ease;
+        margin: 6vh 0 5vh;
+        width: 11vw;
     }
 
-    .content-1 figure figcaption{
+    .recipe-infos figure:hover {
+        transform: scale(1.1);
+    }
+
+
+    .recipe-infos figure figcaption {
         margin-top: 2vh;
+        font-family: leorio;
+        font-weight: bold;
+        font-size: 25px;
     }
 
 
-    hr{
+    hr {
         background-color: black;
         height: 1px;
-        width: 50%;
+        width: 70%;
         text-align: center;
         margin: auto;
     }
-    .funktionen{
+
+    .functions {
         margin: auto;
         display: flex;
-        width: 90%;
+        width: 100%;
         flex-direction: row;
         justify-content: center;
-        padding-bottom: 5vh;
     }
 
-    .funktionen figure{
-        margin: 10vh 10vh 10vh;
+    .functions figure {
+        margin: 5vh 5vh 2vh;
         font-family: leorio;
+        cursor: pointer;
         font-size: 20px;
         font-weight: bold;
+        transition: transform .5s ease;
+        text-align: center;
     }
 
-    .funktionen figure figcaption{
+    .functions figure:hover {
+        transform: scale(1.1);
+    }
+
+    .functions figure figcaption {
         margin-top: 1vh;
     }
 
-    .drucken:hover{
-     cursor: pointer;
+    .functions a {
+        color: black;
+        text-decoration: none;
     }
 
-    .picture-2 {
-        height: 60vh;
-        width: 100%;
-    }
 
-    .picture-2 img {
+    .motivation {
+        height: 50vh;
         width: 100%;
-        object-fit: cover;
-        height: 100%;
-    }
-    .hero-text-2 {
-        color: white;
-        background-color: black;
         position: absolute;
-        text-transform: uppercase;
-        font-size: 30px;
-        font-family: leorio;
-        top: 215vh;
-        left: 50%;
-        width: 90%;
-        transform: translate(-50%);
+        top: 190vh;
         text-align: center;
-    }
-
-    .rezept{
         display: flex;
-        margin-top: 10vh;
+        flex-direction: column;
         justify-content: center;
     }
 
-    .h1-zutat{
+    .motivation-picture {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .motivation-picture:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: black;
+        opacity: 60%;
+        height: 50vh;
+        width: 100%;
+    }
+
+    .motivation img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .motivation h1 {
+        position: absolute;
+        width: 90%;
+        top: 40%;
+        transform: translate(-50%);
+        left: 50%;
+        color: white;
+        font-size: 80px;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+
+    .recipe {
+        position: absolute;
+        top: 250vh;
+        width: 95%;
+        left: 51%;
+        transform: translate(-50%);
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .ingridients {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ingridients h1 {
+        margin-bottom: 2vh;
         color: black;
         font-family: leorio;
         font-size: 60px;
-        text-transform: uppercase;
-        margin-bottom: 10vh;
+        text-transform: lowercase;
 
     }
 
-    .h1-zubereitung{
-        color: black;
-        text-align: center;
-        font-family: leorio;
-        font-size: 60px;
-        text-transform: uppercase;
-        margin-bottom: 10vh;
-
-    }
-
-    .leer {
-        width: 1px;
-        margin-top: 30vh;
-        height: 70vh;
-        background-color: grey;
-    }
-
-    .h2-zutat{
+    .ingridient-table h2 {
         color: black;
         font-family: leorio;
         font-size: 30px;
-        text-transform: uppercase;
+        text-transform: lowercase;
     }
 
-    .ingridients{
+    .ingridient {
         text-transform: capitalize;
     }
-    .zubereitung{
-        width: 60%;
-    }
 
-    .zutaten{
-        width: 35%;
-    }
 
-    .black{
-        font-family: leorio;
-        font-size: 30px;
-        margin-top: 50px;
-    }
-
-    .zutaten-tabellen{
-        margin-bottom: 40px;
-    }
-
-    table{
-        padding-left: 10px;
-        margin-top: -10px;
+    table {
         font-size: 20px;
+        text-align: center;
     }
-    td{
+
+    tr, td {
+        border: 1px solid black;
+    }
+
+    td {
+        text-align: left;
         padding-right: 30px;
         padding-bottom: 20px;
     }
 
-    .zubereitung-box{
+
+    .cooking {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .cooking-box{
         padding-left: 5vw;
-        margin-bottom: 40px;
         width: 90%;
         font-size: 20px;
     }
 
-    a{
+
+    .cooking h1 {
+        margin-bottom: 2vh;
+        color: black;
+        font-family: leorio;
+        font-size: 60px;
+        text-transform: lowercase;
+    }
+
+    .cooking-box h2{
+        color: black;
+        font-family: leorio;
+        font-size: 30px;
+        text-transform: lowercase;
+    }
+    .cooking-box p{
+        width: 95%;
+    }
+
+    .leer {
+        width: 2px;
+        margin-top: 10vh;
+        height: 100vh;
+        background-color: lightgray;
+    }
+
+    a {
         text-decoration: none;
     }
 
-    .content-1 a{
-        color: black;
+    footer{
+        height: 10vh;
+        position: absolute;
+        top: 400vh;
     }
-
 
 }
 

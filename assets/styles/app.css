@@ -236,19 +236,58 @@ body {
 
     }
 
+    footer{
+        width: 100vw;
+        border-top: 1px solid lightgray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .impressum{
+        font-size: 25px;
+        text-transform: uppercase;
+    text-align: center}
+
+    .impressum-link{
+        text-transform: uppercase;
+        text-align: center;
+    margin: 5px;
+    }
 }
 
 @media (min-width: 950px) {
 
     nav {
+        position: fixed;
+        top: 0;
+        left: 0;
         display: flex;
         flex-direction: row;
-        position: fixed;
         height: 50px;
         width: 100%;
         background-color: white;
-        border-bottom: 2px solid #D6D6D6;
         z-index: 100;
+        border-bottom: lightgray 1.5px solid;
+    }
+
+    .logo-container {
+        padding-top: 15px;
+        margin-left: 20px;
+        text-transform: uppercase;
+        color: white;
+        width: 100vw;
+    }
+
+    .logo-container a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .logo-container a:hover {
+        border-bottom: 1px black solid;
     }
 
     .menu {
@@ -259,30 +298,23 @@ body {
         list-style: none;
     }
 
-    nav li {
+    .menu-item {
         margin-right: 30px;
         padding-top: 15px;
     }
 
-    nav ul li a {
+    .menu-item a {
         color: black;
-        text-decoration: none;
         text-transform: uppercase;
+        transition: transform .5s ease;
     }
 
-    .logo-container a {
-        color: black;
-        text-decoration: none;
-        text-transform: uppercase;
+    .menu-item a:hover {
+        opacity: 1;
+        border-bottom: 1px black solid;
     }
 
-    .logo-container {
-        padding-top: 15px;
-        margin-left: 20px;
-        text-transform: uppercase;
-        color: white;
-        width: 500px;
-    }
+
 
     .account-container {
         margin-top: 10px;
@@ -291,17 +323,20 @@ body {
 
     footer{
         background-color: white;
-        border-top: 1px solid black;
+        border-top: 1px solid lightgrey;
         display: flex;
         margin-top: 5vh;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
     .impressum{
+        font-size: 20px;
+        text-transform: uppercase;
         color: black;
-        font-size: 30px;
         margin: 10px;
+        font-family: Roboto;
     }
 
     .impressum-link{
