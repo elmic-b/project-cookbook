@@ -2,86 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="030f12cb-bb69-43e8-92ad-0ad926dcc0b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/fonts/coolvetica condensed rg.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/coolvetica rg.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Tiramisu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Doctrine/RecipeFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/da_project_cookbook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/da_project_cookbook.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Allergen" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/kontakt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/product.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/rezeptprint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/kontakt.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/product.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/rezept-uebersicht.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/rezept-uebersicht.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/rezept.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/rezept.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/rezeptprint.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/suche.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/suche.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Eggs Benedikt.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Eggs Benedikt.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Erbsensuppe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Gazpacho.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Gazpacho.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Gulasch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Kaiserschmarrn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Kaiserschmarrn.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Paprikasch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Quiche.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Quiche.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Ratatouille.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Ratatouille.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Watrushki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/bearbeitet/Watrushki_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/essen 1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/iwas gericht lecker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/mohnnudeln kopie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/mohnnudeln.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/pancakes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/pfannkuchen-headline.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/sauerkraut.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/tiramisu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/tiramisu_gedreht.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/zaziki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/recipe-images/unbearbeitet/zimtschnecken.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/starting-page/account.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/starting-page/account.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/starting-page/onlinebuch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/starting-page/onlinebuch.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/starting-page/onlinebuch.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/starting-page/social-media.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/starting-page/social-media.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/starting-page/social-media.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CommentController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RezeptController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RezeptController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/StartController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SucheController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SucheController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Cooking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Cooking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Difficulty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Difficulty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/HeadingIng.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/HeadingIng.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ingridient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ingridient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/NutritionForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NutritionForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/HeadingIngRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/HeadingIngRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RecipeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RecipeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/onlinebuch/download.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/onlinebuch/rezept.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/onlinebuch/rezept.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/onlinebuch/rezepte-uebersicht.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/onlinebuch/rezepte-uebersicht.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/start/default.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/start/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/start/homepage.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/start/kontakt.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/start/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/start/suche.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start/suche.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yes" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,17 +17,7 @@
     <executablePath>composer</executablePath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/start/suche.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -132,7 +45,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Downloads/index(3).php" />
         <option value="$USER_HOME$/Downloads/env(4)" />
         <option value="$USER_HOME$/Downloads/env.local(1).php" />
         <option value="$USER_HOME$/Downloads/env(5)" />
@@ -183,6 +95,7 @@
         <option value="$PROJECT_DIR$/src/Controller/SucheController.php" />
         <option value="$PROJECT_DIR$/templates/onlinebuch/rezepte-uebersicht.html.twig" />
         <option value="$PROJECT_DIR$/templates/start/suche.html.twig" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -295,9 +208,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -450,12 +363,13 @@
       <workItem from="1616510715428" duration="4038000" />
       <workItem from="1616541550339" duration="5104000" />
       <workItem from="1616574670554" duration="2302000" />
-      <workItem from="1616665042427" duration="1625000" />
+      <workItem from="1616665042427" duration="4507000" />
+      <workItem from="1616671797884" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329902000" />
+    <option name="totallyTimeSpent" value="333383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,10 +381,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
-    <editor active="true" />
+    <frame x="761" y="0" width="782" height="831" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10263523" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28393352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -516,11 +429,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/env(7)">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/composer(1).json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -766,20 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env.local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/styles/suche.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -861,10 +755,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/start/suche.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        <state relative-caret-position="357">
+          <caret line="53" column="108" lean-forward="true" selection-start-line="53" selection-start-column="108" selection-end-line="53" selection-end-column="108" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.env.local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env" />
   </component>
 </project>
