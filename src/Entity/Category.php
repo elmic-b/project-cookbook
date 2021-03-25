@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Category
  *
- * @ORM\Table(name="category")
+ * @ORM\Table(name="Category")
  * @ORM\Entity
  */
 class Category
@@ -36,13 +36,6 @@ class Category
     public function getCategory(): ?string
     {
         return $this->category;
-    }
-
-    public function setCategory(?string $category): self
-    {
-        $this->category = $category;
-
-        return $this;
     }
 
 

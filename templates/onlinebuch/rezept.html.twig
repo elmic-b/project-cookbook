@@ -1,85 +1,70 @@
 {% extends 'base.html.twig' %}
-
    {% block stylesheets %}
        {{ parent() }}
        {{ encore_entry_link_tags('rezept') }}
-
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-       {{ encore_entry_script_tags('rezeptprint') }}
-       <link rel="stylesheet" href="/build/rezeptprint.css" type="text/css" media="print"/>
-       <link rel="stylesheet" href="/build/rezept.css" type="text/css"/>
    {% endblock %}
-
 {% block body %}
-
-<div class="hero-image">
-    <img src="{{ asset(recipe.imageLink) }}">
-</div>
-
-
-<div class="hero-text">
-    <div></div>
-    <div>
-        <h1>{{ recipe.name }}</h1>
-        <h3>{{ category }}</h3>
+    <div class="hero-image">
+        <img alt="{{ recipe.imgAlt }}" src="{{ asset(recipe.imageLink) }}">
     </div>
-    <div class="hero-buttons">
-        <a href="{{ path('app_rezept', {'id': recipe.recipeId-1 }) }}">voriges Rezept</a>
-        <a href="{{ path('app_rezept', {'id': recipe.recipeId+1 }) }}">nächstes Rezept</a>
+    <div class="hero-text">
+        <div></div>
+        <div>
+            <h1>{{ recipe.name }}</h1>
+            <h3>{{ recipe.fkcategory.category }}</h3>
+        </div>
+        <div class="hero-buttons">
+            <a href="{{ path('app_rezept', {'slug': vorige }) }}">voriges Rezept</a>
+            <a href="{{ path('app_rezept', {'slug': naechste }) }}">nächstes Rezept</a>
+        </div>
+        <div></div>
     </div>
-
-    <div></div>
-</div>
-
-
-<div class="recipe-info">
-    <h1>rezepteigenschaften</h1>
-    <div class="recipe-infos">
-        <figure>
-            <img src="{{ asset('images/svgs/koch.svg') }}" height="70" alt="" itemprop="image">
-            <figcaption> {{ difficulty }}</figcaption>
-        </figure>
-        <figure>
-            <img src="{{ asset('images/svgs/uhr.svg') }}" height="70" alt="" itemprop="image">
-            <figcaption>  {{ recipe.cookingTime }}</figcaption>
-        </figure>
-        <figure class="youtube">
-            <img src="{{ asset('images/svgs/gericht.svg') }}" height="70" alt="" itemprop="image">
-            <figcaption> {{ nutrition }}</figcaption>
-        </figure>
-        <figure>
-            <img src="{{ asset('images/svgs/allergisch.svg') }}" height="70" alt="" itemprop="image">
-            <figcaption>{{ recipe.allergene }}</figcaption>
-        </figure>
+    <div class="recipe-info">
+        <h1>rezepteigenschaften</h1>
+        <div class="recipe-infos">
+            <figure>
+                <img src="{{ asset('images/svgs/koch.svg') }}" height="70"
+                     alt="Rezeptschwierigkeit, {{ recipe.fkDifficulty.difficulty }}" itemprop="image">
+                <figcaption> {{ recipe.fkDifficulty.difficulty }}</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ asset('images/svgs/uhr.svg') }}" height="70"
+                     alt="Zubereitungsdauer, {{ recipe.cookingTime }}" itemprop="image">
+                <figcaption>{{ recipe.cookingTime }}</figcaption>
+            </figure>
+            <figure class="youtube">
+                <img src="{{ asset('images/svgs/gericht.svg') }}" height="70"
+                     alt=" Ernährung, {{ recipe.FKNutritionForm.nutrition }}" itemprop="image">
+                <figcaption> {{ recipe.FKNutritionForm.nutrition }}</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ asset('images/svgs/allergisch.svg') }}" height="70" alt="Allergene, {{ recipe.allergene }}"
+                     itemprop="image">
+                <figcaption>{{ recipe.allergene }}</figcaption>
+            </figure>
+        </div>
+        <hr>
+        <div class="functions">
+            <figure>
+                <a href="{{ asset(recipe.downloadLink) }}" download="{{ recipe.downloadLink }}">
+                    <img src="{{ asset('images/svgs/direkter-download.svg') }}" height="35" alt="Rezeptdownload Icon"
+                         itemprop="image">
+                    <figcaption>Rezept herunterladen</figcaption>
+                </a>
+            </figure>
+        </div>
     </div>
-    <hr>
-    <div class="functions">
-        <figure>
-            <a href="{{ path('app_rezept_download', {'id': recipe.recipeId}) }}">
-                <img src="{{ asset('images/svgs/direkter-download.svg') }}" height="35" alt="" itemprop="image">
-                <figcaption> herunterladen</figcaption>
-            </a>
-        </figure>
-        <figure class="drucken">
-            <a onClick="window.print()">
-                <img src="{{ asset('images/svgs/drucken.svg') }}" height="35" alt="" itemprop="image">
-                <figcaption> ausdrucken</figcaption>
-            </a>
-        </figure>
+    <div class="motivation">
+        <div class="motivation-picture">
+            <img src="{{ asset(recipe.imageLink) }}" alt="{{ recipe.imgAlt }}">
+        </div>
+        <h1>auf die plätze, feritg, kochen!</h1>
     </div>
-</div>
-
-<div class="motivation">
-    <div class="motivation-picture">
-        <img src="{{ asset(recipe.imageLink) }}">
-    </div>
-    <h1>auf die plätze, feritg, kochen!</h1>
-</div>
-
-
     <div class="recipe">
+    <div class="recipe-1">
         <div class="ingridients">
-                <h1>zutaten</h1>
+            <h1>zutaten</h1>
             <div class="ingridient-table">
                 <h2>für {{ recipe.portions|upper }}:</h2>
                 <table class="ingridient">
@@ -93,37 +78,28 @@
                             </td>
                         </tr>
                     {% endfor %}
-
                 </table>
                 <h2 class="black"></h2>
                 <table class="teig">
-
                 </table>
             </div>
         </div>
         <div class="leer">
         </div>
         <div class="cooking">
-                <h1>zubereitung</h1>
-
+            <h1>zubereitung</h1>
             <div class="cooking-box">
-                {% for cook in cooking %}
-                    <h2>{{ cook.heading|upper }}</h2>
-                    <p>{{ cook.cooking }}</p>
+                {% for cooking in cooking %}
+                    <h2>{{ cooking.heading|upper }}</h2>
+                    <p>{{ cooking.cooking }}</p>
                     <br>
                 {% endfor %}
             </div>
         </div>
     </div>
-
 {% endblock %}
-
 {% block javascripts %}
-
-
-
-    }
+    </div>
     {{ parent() }}
     {{ encore_entry_script_tags('rezept') }}
-    {{ encore_entry_script_tags('rezeptprint') }}
 {% endblock %}

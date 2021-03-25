@@ -2,12 +2,14 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * HeadingIng
  *
- * @ORM\Table(name="heading_ing", indexes={@ORM\Index(name="fk_recipe_h", columns={"fk_recipe"})})
+ * @ORM\Table(name="Heading_ing", indexes={@ORM\Index(name="fk_recipe_h", columns={"fk_recipe"})})
  * @ORM\Entity
  */
 class HeadingIng
@@ -38,6 +40,30 @@ class HeadingIng
      */
     private $fkRecipe;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Ingridient", mappedBy="fkHead")
+     */
+    private $ingridient;
+
+    /**
+     * @return Collection|Ingridient[]
+     */
+    public function getIngridient(): Collection
+    {
+        return $this->ingridient;
+    }
+
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->ingridient = new ArrayCollection();
+    }
+
+
     public function getHeadingIngId(): ?int
     {
         return $this->headingIngId;
@@ -48,24 +74,13 @@ class HeadingIng
         return $this->name;
     }
 
-    public function setName(?string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
-    }
 
     public function getFkRecipe(): ?Recipe
     {
         return $this->fkRecipe;
     }
 
-    public function setFkRecipe(?Recipe $fkRecipe): self
-    {
-        $this->fkRecipe = $fkRecipe;
 
-        return $this;
-    }
 
 
 }

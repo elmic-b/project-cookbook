@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\HeadingIng;
+use App\Entity\Ingridient;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -17,6 +18,21 @@ class HeadingIngRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, HeadingIng::class);
+    }
+
+    public function findByIdJoinedToIngridient(int $recipeId)
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT  i.name, i.portion
+            FROM App\Entity\HeadingIng h
+            INNER JOIN h.fkRecipe r
+            INNER JOIN h.ingridient i
+            WHERE r.recipeId = :id'
+        )->setParameter('id', $recipeId);
+
+        return $query->getResult();
     }
 
     // /**

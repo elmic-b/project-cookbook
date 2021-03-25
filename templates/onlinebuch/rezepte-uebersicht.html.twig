@@ -1,57 +1,108 @@
 {% extends 'base.html.twig' %}
-
    {% block stylesheets %}
        {{ parent() }}
-
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        {{ encore_entry_link_tags('rezept-uebersicht') }}
    {% endblock %}
-
 {% block body %}
-
-    <img class="hero-image" src="{{ asset('images/starting-page/onlinebuch.png') }}">
-
+<img class="hero-image" src="{{ asset('images/starting-page/online.png') }}" alt="Mandeln">
     <div class="hero-text">
         <div></div>
         <div>
             <h1>onlinebuch</h1>
             <h3>hier befindet sich unsere rezeptsammlung</h3>
         </div>
-
         <div class="see-more">
             <h6>MEHR ENTDECKEN</h6>
             <img class="arrow" src="{{ asset('images/svgs/arrow.svg') }}" alt="Pfeil nach unten" width="25">
         </div>
     </div>
-
-
-
-    <div class="ergebnisse">
-        <h1>die rezeptsammlung</h1>
-        <div class="recipes">
-            {% for recipe in recipe %}
-                <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
-                    <div class="recipe-teaser">
-                        <div class="teaser-image">
-                            <img src="{{ asset(recipe.image_link) }}" alt="" itemprop="image">
-                        </div>
-                        <div class="text">
-                            <h3>{{ recipe.name }}</h3>
-                            <h5>{{ recipe.category }}</h5>
-                        </div>
-                    </div>
-                </a>
-            {% endfor %}
-
+    <div onclick="showFilter()" class="show-filter">
+        <div class="inside-border">
+            <img src="{{ asset('images/svgs/filter-filled-tool-symbol.svg') }}" alt="Filter" height="30px" width="auto">
         </div>
     </div>
+    <form class="filter" id="test" style="display: none">
+        <div>
+            <label for="difficulty">Schwierigkeit</label>
+            <select id="difficulty" name="difficulty">
+                <option value="">Alle</option>
+                <option value="Einfach">Einfach</option>
+                <option value="Mittel">Mittel</option>
+                <option value="Schwer">Schwer</option>
+            </select>
+        </div>
+        <div>
+            <label for="nutrition">Ernährung</label>
+            <select id="nutrition" name="nutrition">
+                <option value="">Alle</option>
+                <option value="Fleisch">enthält Fleisch</option>
+                <option value="Vegetarisch">Vegetarisch</option>
+                <option value="Vegan">Vegan</option>
+            </select>
+        </div>
+        <div>
+            <label for="category">Kategorie</label>
+            <select id="category" name="category">
+                <option value="">Alle</option>
+                <option value="Vorspeise">Vorspeise</option>
+                <option value="Hauptspeise">Hauptspeise</option>
+                <option value="Nachspeise">Nachspeise</option>
+                <option value="Snacks">Snacks</option>
+            </select>
+        </div>
+        <div class="input-group-append">
+            <button type="submit"
+                    class="btn btn-outline-secondary">
+                <span class="fa fa-search"></span>
+            </button>
+        </div>
+    </form>
 
+    </div>
+    <div class="input-group-append">
+        <button type="submit"
+                class="btn btn-outline-secondary">
+            <span class="fa fa-search"></span>
+        </button>
+    </div>
+    </form>
+<div class="ergebnisse">
+    {% if recipe is empty %}
+        <h1>keine Ergebnisse</h1>
+    {% else %}
+        <h1>die rezeptsammlung</h1>
+    {% endif %}
+    <div class="recipes">
+        {% for recipe in recipe %}
+            <a href="{{ path('app_rezept', {'slug': recipe.name }) }}">
+                <div class="recipe-teaser">
+                    <div class="teaser-image">
+                        <img src="{{ asset(recipe.imageLink) }}" alt="{{ recipe.imgAlt }}" itemprop="image">
+                    </div>
+                    <div class="text">
+                        <h3>{{ recipe.name }}</h3>
+                        <h5>{{ recipe.fkcategory.category }}</h5>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
 
+    {% endblock %}
+    {% block javascripts %}
+</div>
+    <script>
+        function showFilter() {
+            let x = document.getElementById("test");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
 
-{% endblock %}
-
-{% block javascripts %}
-
-    {{ parent() }}
+        }
+    </script>
+{{ parent() }}
     {{ encore_entry_script_tags('rezept-uebersicht') }}
 {% endblock %}

@@ -7,7 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Ingridient
  *
- * @ORM\Table(name="ingridient", indexes={@ORM\Index(name="fk_heading_i", columns={"fk_head"})})
+ * @ORM\Table(name="Ingridient",
+ *     indexes={@ORM\Index(name="fk_heading_i", columns={"fk_head"})})
  * @ORM\Entity
  */
 class Ingridient
@@ -38,7 +39,7 @@ class Ingridient
     /**
      * @var \HeadingIng
      *
-     * @ORM\ManyToOne(targetEntity="HeadingIng")
+     * @ORM\ManyToOne(targetEntity="App\Entity\HeadingIng", inversedBy="ingridient_id")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="fk_head", referencedColumnName="heading_ing_id")
      * })
@@ -55,36 +56,17 @@ class Ingridient
         return $this->name;
     }
 
-    public function setName(?string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
     public function getPortion(): ?string
     {
         return $this->portion;
     }
 
-    public function setPortion(?string $portion): self
-    {
-        $this->portion = $portion;
-
-        return $this;
-    }
 
     public function getFkHead(): ?HeadingIng
     {
         return $this->fkHead;
     }
 
-    public function setFkHead(?HeadingIng $fkHead): self
-    {
-        $this->fkHead = $fkHead;
-
-        return $this;
-    }
 
 
 }

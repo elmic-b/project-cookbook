@@ -9,53 +9,26 @@
 namespace App\Controller;
 
 
+use App\Repository\RecipeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class SucheController extends AbstractController
 {
 
-
-
-
-
     /**
      * @Route("/suche" , name="app_suche")
      */
-    public function suche()
+    public function suche(RecipeRepository $recipeRepository, Request $request): Response
     {
-
-        /*
-                $recipe = $recipeRepository->find($id);
-
-                $category = $recipe->getFkCategory()->getCategory();
-                $nutritionForm = $recipe->getFkNutritionForm()->getNutrition();
-                $difficulty = $recipe->getFkDifficulty()->getDifficulty();
-        */
-
-        $entityManager = $this->getDoctrine()->getManager();
-        $conn = $entityManager->getConnection();
-
-        $sql = 'SELECT Recipe.* , Difficulty.*, Category.*, Nutrition_form.* FROM Recipe
-INNER JOIN Difficulty ON Recipe.fk_difficulty_id = Difficulty.difficulty_id
-INNER JOIN Category ON fk_category_id = category_id
-INNER JOIN Nutrition_form ON fk_nutrition_form_id=nutrition_form_id
-
-';
-
-
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        // returns an array of Product objects
-        $results = $stmt->fetchAll();
+        $q = $request->query->get('q');
+        $recipe = $recipeRepository->findAllWithSearch($q);
 
         return $this->render('start/suche.html.twig', [
-
-            'recipe' => $results,
-
+            'recipe' => $recipe
         ]);
 
-
-        // return $this->render('onlinebuch/rezepte-uebersicht.html.twig');
     }
 }

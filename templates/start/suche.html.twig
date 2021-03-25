@@ -1,57 +1,70 @@
 {% extends 'base.html.twig' %}
-
    {% block stylesheets %}
        {{ parent() }}
-
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-       {{ encore_entry_link_tags('rezept-uebersicht') }}
+       {{ encore_entry_link_tags('suche') }}
    {% endblock %}
-
 {% block body %}
-
-    <img class="hero-image" src="{{ asset('images/starting-page/account.jpg') }}">
-
+<img class="hero-image" src="{{ asset('images/starting-page/account.jpg') }}" alt="Gazpacho">
     <div class="hero-text">
         <div></div>
         <div>
             <h1>rezeptsuche</h1>
-            <h3>hier kannst du bald nach rezepten suchen</h3>
+            <form class="search">
+                <div class="input-group mb-3 suche">
+                    <input type="text"
+                           name="q"
+                           class="search-bar"
+                           placeholder="Search...">
+                    <div class="input-group-append">
+                        <button type="submit"
+                                class="btn btn-outline-secondary search-button">
+                            <span class="fa fa-search"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-
         <div class="see-more">
             <h6>MEHR ENTDECKEN</h6>
             <img class="arrow" src="{{ asset('images/svgs/arrow.svg') }}" alt="Pfeil nach unten" width="25">
         </div>
     </div>
 
-
-
-    <div class="ergebnisse">
-        <h1>ergebnisse</h1>
-        <div class="recipes">
-            {% for recipe in recipe %}
-                <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
-                    <div class="recipe-teaser">
-                        <div class="teaser-image">
-                            <img src="{{ asset(recipe.image_link) }}" alt="" itemprop="image">
-                        </div>
-                        <div class="text">
-                            <h3>{{ recipe.name }}</h3>
-                            <h5>{{ recipe.category }}</h5>
-                        </div>
-                    </div>
-                </a>
-            {% endfor %}
-
+    <a href="{{ path('app_rezept', {'slug': random(['Quiche','Ratatouille','Eggs%20Benedict','Tzatziki', 'Gazpacho','Kaiserschmarrn','Tiramisu','Mandelkuchen','Pita','Fritata','Belgische Waffeln','Topfenknödel','Mohnnudeln']
+    )}) }}">
+        <div class="random">
+            <div class="inside-border">
+                <img src="{{ asset('images/svgs/zutaten.svg') }}" alt="Zufallsrezept" height="35px">
+            </div>
         </div>
+    </a>
+
+<div class="ergebnisse">
+    {% if recipe is empty %}
+        <h1>keine Ergebnisse</h1>
+    {% else %}
+        <h1>die rezeptsammlung</h1>
+    {% endif %}
+    <div class="recipes">
+        {% for recipe in recipe %}
+            <a href="{{ path('app_rezept', {'slug': recipe.name }) }}">
+                <div class="recipe-teaser">
+                    <div class="teaser-image">
+                        <img src="{{ asset(recipe.imageLink) }}" alt="{{ recipe.imgAlt }}" itemprop="image">
+                    </div>
+                    <div class="text">
+                        <h3>{{ recipe.name }}</h3>
+                        <h5>{{ recipe.fkcategory.category }}</h5>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
     </div>
 
-
-
-{% endblock %}
-
-{% block javascripts %}
-
-    {{ parent() }}
-    {{ encore_entry_script_tags('rezept-uebersicht') }}
+    {% endblock %}
+    {% block javascripts %}
+</div>
+{{ parent() }}
+    {{ encore_entry_script_tags('suche') }}
 {% endblock %}

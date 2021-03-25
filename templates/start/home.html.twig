@@ -1,110 +1,87 @@
 {% extends 'base.html.twig' %}
-
    {% block stylesheets %}
        {{ parent() }}
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        {{ encore_entry_link_tags('home') }}
    {% endblock %}
-
-
 {% block body %}
-    <img class="hero-image" src="{{ asset('images/starting-page/onlinebuch.png') }}">
-
-
+    <img class="hero-image" src="{{ asset('images/starting-page/onlinebuch.png') }}" alt="Ratatouille">
     <div class="hero-text">
         <div></div>
         <div>
             <h1>project cookbook</h1>
             <h3>jetzt neu! unsere ersten rezepte!</h3>
         </div>
-
         <div class="see-more">
             <h6>MEHR ENTDECKEN</h6>
             <img class="arrow" src="{{ asset('images/svgs/arrow.svg') }}" alt="Pfeil nach unten" width="25">
         </div>
     </div>
-
     <div class="onlinebuch">
-        <h1>die #winter-edition</h1>
+        <h1>die #winteredition</h1>
         <div class="recipes">
             {% for recipe in recipe %}
-                <a href="{{ path('app_rezept', {'id': recipe.recipe_id }) }}">
+                <a href="{{ path('app_rezept', {'slug': recipe.name }) }}">
                     <div class="recipe-teaser">
                         <div class="teaser-image">
-                            <img src="{{ asset(recipe.image_link) }}" alt="" itemprop="image">
+                            <img src="{{ asset(recipe.imageLink) }}" alt="{{ recipe.imgAlt }}" itemprop="image">
                         </div>
                         <div class="text">
                             <h3>{{ recipe.name }}</h3>
-                            <h5>{{ recipe.category }}</h5>
+                            <h5>{{ recipe.fkcategory.category }}</h5>
                         </div>
                     </div>
                 </a>
             {% endfor %}
-
         </div>
         <a href="{{ path('app_rezepte-uebersicht') }}" class="weitere-rezepte">weitere rezepte</a>
     </div>
-
-
-
     <div class="search">
-        <div></div>
+        <div class="div-1"></div>
         <h1>suchst du was bestimmtes?</h1>
-        <form action="{{ path('app_suche') }}">
-            <input class="search-bar" type="text"  name="search">
+        <form action="{{ path('app_suche')}}">
+            <input class="search-bar" type="text"  name="q">
             <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
         </form>
         <div></div>
     </div>
-
-
-
     <div class="social-media">
         <h1>das genügt dir noch nicht?</h1>
         <h3>keine sorge, es gibt noch mehr von uns!</h3>
-
         <div class="social-media-infos">
             <figure>
                 <a href="https://www.instagram.com/project_cookbook_/">
-                    <img src="{{ asset('images/svgs/instagram.svg') }}" height="100" alt="" itemprop="image">
+                    <img src="{{ asset('images/svgs/instagram.svg') }}" height="100" alt="unser Instagram Account" itemprop="image">
                     <figcaption>project_cookbook_</figcaption>
                 </a>
             </figure>
             <figure>
                 <a href="https://www.facebook.com/projectcookbook.htl3r">
-                    <img src="{{ asset('images/svgs/facebook.svg') }}" height="100" alt="" itemprop="image">
+                    <img src="{{ asset('images/svgs/facebook.svg') }}" height="100" alt="unser Facebook Account" itemprop="image">
                     <figcaption>projectcookbook.htl3r</figcaption>
                 </a>
             </figure>
             <figure class="youtube">
-                <img src="{{ asset('images/svgs/youtube.svg') }}" height="100" alt="" itemprop="image">
+                <a href="https://www.youtube.com/channel/UC3M4s9F6yXgMsDGIvT2QUgw">
+                <img src="{{ asset('images/svgs/youtube.svg') }}" height="100" alt="unser Youtube Account" itemprop="image">
                 <figcaption>projectcookbook</figcaption>
+                </a>
             </figure>
             <figure>
                 <a href="https://www.tiktok.com/@projectcookbook?lang=de-DE">
-                    <img src="{{ asset('images/svgs/tik-tok.svg') }}" height="100" alt="" itemprop="image">
+                    <img src="{{ asset('images/svgs/tik-tok.svg') }}" height="100" alt="unser TikTok Account" itemprop="image">
                     <figcaption>projectcookbook</figcaption>
                 </a>
             </figure>
         </div>
     </div>
-
-
-
     <div class="account">
-        <h1>begeistert?</h1>
+        <h1>interessiert?</h1>
         <h3>erfahre wer dahinter steckt!</h3>
-      <!--  <a class="account-button">Anmelden</a> -->
     </div>
-
-
-
     <div class="team">
-
         <h1>#meet-the-team</h1>
-
         <div class="team-members">
-
             <div class="member-teaser">
                 <div class="member-image">
                     <img src="{{ asset('images/about/anna.JPG') }}" alt="Ein Bild von Anna Schwabegger" itemprop="image">
@@ -114,7 +91,6 @@
                     <h5>Projektleiterin</h5>
                 </div>
             </div>
-
             <div class="member-teaser">
                 <div class="member-image">
                     <img src="{{ asset('images/about/david.JPG') }}" alt="Ein Bild von David Tovilovic" itemprop="image">
@@ -124,7 +100,6 @@
                     <h5>Stv. Projektleiter</h5>
                 </div>
             </div>
-
             <div class="member-teaser">
                 <div class="member-image">
                     <img src="{{ asset('images/about/elma.JPG') }}" alt="Ein Bild von Elma Bajraktarevic" itemprop="image">
@@ -134,7 +109,6 @@
                     <h5>Teammitglied</h5>
                 </div>
             </div>
-
             <div class="member-teaser">
                 <div class="member-image">
                     <img src="{{ asset('images/about/laura.JPG') }}" alt="Ein Bild von Laura Winkler" itemprop="image">
@@ -144,17 +118,10 @@
                     <h5>Teammitglied</h5>
                 </div>
             </div>
-
         </div>
     </div>
-
-
-
-
 {% endblock %}
-
 {% block javascripts %}
     {{ parent() }}
     {{ encore_entry_script_tags('home') }}
-
 {% endblock %}

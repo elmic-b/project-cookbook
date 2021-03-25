@@ -1,0 +1,452 @@
+{% extends 'base.html.twig' %}
+   {% block stylesheets %}
+       {{ parent() }}
+       {{ encore_entry_link_tags('impressum') }}
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   {% endblock %}
+{% block body %}
+    <div class="inhalt">
+        <div class="nebeneinander">
+            <h1>IMPRESSUM</h1>
+            <a href="{{ app.request.headers.get('referer') }}">
+                <img src="{{ asset('images/svgs/close.svg') }}" alt="abbrechen" width="30px">
+            </a>
+        </div>
+        <div class="text">
+            Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und
+            Offenlegungspflicht laut §25 Mediengesetz.
+            <br>
+            <br>
+            Elma Bajraktarevic
+            <br>
+            <br>
+            Rennweg 89b,<br>
+            1030 Wien,<br>
+            Österreich
+            <br>
+            <br>
+            <b>Tel.:</b> 01234/56789<br>
+            <b>E-Mail: </b> <a href="htl3r.projectcookbook@gmail.com">
+                htl3r.projectcookbook@gmail.com
+            </a>
+            <br>
+            <br>
+            Quelle: Erstellt mit dem <a href="https://www.adsimple.at/impressum-generator/">Impressum Generator</a> von
+            AdSimple
+            <br>
+            <br>
+            <h2>EU-Streitschlichtung</h2>
+            Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie
+            über
+            die Online-Streitbeilegungsplattform (OS-Plattform) informieren.<br>
+            Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen
+            Kommission unter <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=DE">http://ec.europa.eu/odr?tid=121680924</a>
+            zu richten. Die dafür notwendigen Kontaktdaten finden Sie
+            oberhalb in unserem Impressum.
+            <br>
+            <br>
+            Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an
+            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+            <br>
+            <br>
+            <h2>Haftung für Inhalte dieser Webseite</h2>
+            Wir entwickeln die Inhalte dieser Webseite ständig weiter und bemühen uns korrekte und aktuelle
+            Informationen
+            bereitzustellen. Leider können wir keine Haftung für die Korrektheit aller Inhalte auf dieser Webseite
+            übernehmen, speziell für jene die seitens Dritter bereitgestellt wurden.
+            <br>
+            <br>
+            Sollten Ihnen problematische oder rechtswidrige Inhalte auffallen, bitten wir Sie uns umgehend zu
+            kontaktieren,
+            Sie finden die Kontaktdaten im Impressum.
+            <br>
+            <br>
+            <h2>Haftung für Links auf dieser Webseite</h2>
+            Unsere Webseite enthält Links zu anderen Webseiten für deren Inhalt wir nicht verantwortlich sind. Haftung
+            für
+            verlinkte Websites besteht laut <a
+                    href="https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Bundesnormen&Dokumentnummer=NOR40025813&tid=121680924">§
+                17 ECG</a> für uns nicht, da wir keine Kenntnis rechtswidriger Tätigkeiten hatten
+            und haben, uns solche Rechtswidrigkeiten auch bisher nicht aufgefallen sind und wir Links sofort entfernen
+            würden, wenn uns Rechtswidrigkeiten bekannt werden.
+            <br>
+            <br>
+            Wenn Ihnen rechtswidrige Links auf unserer Website auffallen, bitten wir Sie uns zu kontaktieren, Sie finden
+            die
+            Kontaktdaten im Impressum.
+            <br>
+            <br>
+            <h2>Urheberrechtshinweis</h2>
+            Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht. Falls notwendig,
+            werden wir die unerlaubte Nutzung von Teilen der Inhalte unserer Seite rechtlich verfolgen.
+            <br>
+            <br>
+            Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, bitten wir Sie uns zu
+            kontaktieren.
+            <br>
+            <br>
+            <h2>Bildernachweis</h2>
+            Die Fotos auf dieser Webseite sind urheberrechtlich geschützt.
+            <br>
+            Die Bilderrechte liegen bei den folgenden Fotografen: Laura Winkler und Anna Schwabegger
+            <br>
+            <br>
+            <h2>Icons</h2>
+            <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <br>
+            <br>
+            <h1>Datenschutzerklärung</h1>
+            <h2>Datenschutz</h2>
+            Wir haben diese Datenschutzerklärung (Fassung 01.01.1970-121680924) verfasst, um Ihnen gemäß der Vorgaben
+            der
+            <a href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=121680924">Datenschutz-Grundverordnung
+                (EU) 2016/679</a> zu erklären, welche Informationen wir sammeln, wie wir Daten verwenden
+            und welche Entscheidungsmöglichkeiten Sie als Besucher dieser Webseite haben.
+            <br>
+            <br>
+            Datenschutzerklärungen klingen für gewöhnlich sehr technisch. Diese Version soll Ihnen hingegen die
+            wichtigsten
+            Dinge so einfach und klar wie möglich beschreiben. Soweit es möglich ist, werden technische Begriffe
+            leserfreundlich erklärt. Außerdem möchten wir vermitteln, dass wir mit dieser Website nur dann Informationen
+            sammeln und verwenden, wenn eine entsprechende gesetzliche Grundlage gegeben ist. Das ist sicher nicht
+            möglich,
+            wenn man möglichst knappe, technische Erklärungen abgibt, so wie sie im Internet oft Standard sind, wenn es
+            um
+            Datenschutz geht. Ich hoffe Sie finden die folgenden Erläuterungen interessant und informativ und vielleicht
+            ist
+            die eine oder andere Information dabei, die Sie noch nicht kannten.
+            Wenn trotzdem Fragen bleiben, möchten wir Sie bitten den vorhandenen Links zu folgen und sich weitere
+            Informationen auf Drittseiten anzusehen, oder uns einfach eine E-Mail zu schreiben. Unsere Kontaktdaten
+            finden
+            Sie im Impressum.
+            <br>
+            <br>
+            <h2>Rechte laut Datenschutzgrundverordnung</h2>
+            Ihnen stehen laut den Bestimmungen der DSGVO und des österreichischen <a
+                    href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&tid=121680924">Datenschutzgesetzes
+                (DSG)</a> grundsätzlich
+            die folgende Rechte zu:
+            <ul>
+                <li>Recht auf Berichtigung (Artikel 16 DSGVO)</li>
+                <li>Recht auf Löschung („Recht auf Vergessenwerden“) (Artikel 17 DSGVO)</li>
+                <li>Recht auf Einschränkung der Verarbeitung (Artikel 18 DSGVO)</li>
+                <li>Recht auf Benachrichtigung – Mitteilungspflicht im Zusammenhang mit der Berichtigung oder Löschung
+                </li>
+                <li>personenbezogener Daten oder der Einschränkung der Verarbeitung (Artikel 19 DSGVO)</li>
+                <li>Recht auf Datenübertragbarkeit (Artikel 20 DSGVO)</li>
+                <li>Widerspruchsrecht (Artikel 21 DSGVO)</li>
+                <li>Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung — einschließlich Profiling
+                    — beruhenden
+                </li>
+                <li>Entscheidung unterworfen zu werden (Artikel 22 DSGVO)</li>
+            </ul>
+            Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre
+            datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der
+            Aufsichtsbehörde beschweren, welche in Österreich die Datenschutzbehörde ist, deren Webseite Sie unter
+            <a href="https://www.dsb.gv.at/?tid=121680924">https://www.dsb.gv.at/</a> finden.
+            <br>
+            <br>
+            <h2>TLS-Verschlüsselung mit https</h2>
+            TLS, Verschlüsselung und https klingen sehr technisch und sind es auch. Wir verwenden HTTPS (das Hypertext
+            Transfer Protocol Secure steht für „sicheres Hypertext-Übertragungsprotokoll“) um Daten abhörsicher im
+            Internet
+            zu übertragen.
+            Das bedeutet, dass die komplette Übertragung aller Daten von Ihrem Browser zu unserem Webserver abgesichert
+            ist
+            – niemand kann “mithören”.
+            <br>
+            <br>
+            Damit haben wir eine zusätzliche Sicherheitsschicht eingeführt und erfüllen Datenschutz durch
+            Technikgestaltung
+            <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=121680924">Artikel
+                25 Absatz 1 DSGVO</a>). Durch den Einsatz von TLS (Transport Layer Security), einem
+            Verschlüsselungsprotokoll zur sicheren Datenübertragung im Internet können wir den Schutz vertraulicher
+            Daten
+            sicherstellen.
+            Sie erkennen die Benutzung dieser Absicherung der Datenübertragung am kleinen Schlosssymbol links oben im
+            Browser links von der Internetadresse (z. B. beispielseite.de) und der Verwendung des Schemas https (anstatt
+            http) als Teil unserer Internetadresse.
+            Wenn Sie mehr zum Thema Verschlüsselung wissen möchten, empfehlen wir die Google Suche nach “Hypertext
+            Transfer
+            Protocol Secure wiki” um gute Links zu weiterführenden Informationen zu erhalten.
+            <br>
+            <br>
+            <h2>Google Fonts Datenschutzerklärung</h2>
+            Auf unserer Website verwenden wir Google Fonts. Das sind die “Google-Schriften” der Firma Google Inc. Für
+            den
+            europäischen Raum ist das Unternehmen Google Ireland Limited (Gordon House, Barrow Street Dublin 4, Irland)
+            für
+            alle Google-Dienste verantwortlich.
+            <br>
+            <br>
+            Für die Verwendung von Google-Schriftarten müssen Sie sich nicht anmelden bzw. ein Passwort hinterlegen.
+            Weiters
+            werden auch keine Cookies in Ihrem Browser gespeichert. Die Dateien (CSS, Schriftarten/Fonts) werden über
+            die
+            Google-Domains fonts.googleapis.com und fonts.gstatic.com angefordert. Laut Google sind die Anfragen nach
+            CSS
+            und Schriften vollkommen getrennt von allen anderen Google-Diensten. Wenn Sie ein Google-Konto haben,
+            brauchen
+            Sie keine Sorge haben, dass Ihre Google-Kontodaten, während der Verwendung von Google Fonts, an Google
+            übermittelt werden. Google erfasst die Nutzung von CSS (Cascading Style Sheets) und der verwendeten
+            Schriftarten
+            und speichert diese Daten sicher. Wie die Datenspeicherung genau aussieht, werden wir uns noch im Detail
+            ansehen.
+            <br>
+            <h3>Was sind Google Fonts?</h3>
+            Google Fonts (früher Google Web Fonts) ist ein Verzeichnis mit über 800 Schriftarten, die Google Ihren
+            Nutzern
+            kostenlos zu Verfügung stellen.
+            <br>
+            <br>
+            Viele dieser Schriftarten sind unter der SIL Open Font License veröffentlicht, während andere unter der
+            Apache-Lizenz veröffentlicht wurden. Beides sind freie Software-Lizenzen.
+            <br>
+            <h3>Warum verwenden wir Google Fonts auf unserer Webseite?</h3>
+            Mit Google Fonts können wir auf der eigenen Webseite Schriften nutzen, und müssen sie nicht auf unserem
+            eigenen
+            Server hochladen. Google Fonts ist ein wichtiger Baustein, um die Qualität unserer Webseite hoch zu halten.
+            Alle
+            Google-Schriften sind automatisch für das Web optimiert und dies spart Datenvolumen und ist speziell für die
+            Verwendung bei mobilen Endgeräten ein großer Vorteil. Wenn Sie unsere Seite besuchen, sorgt die niedrige
+            Dateigröße für eine schnelle Ladezeit. Des Weiteren sind Google Fonts sichere Web Fonts. Unterschiedliche
+            Bildsynthese-Systeme (Rendering) in verschiedenen Browsern, Betriebssystemen und mobilen Endgeräten können
+            zu
+            Fehlern führen. Solche Fehler können teilweise Texte bzw. ganze Webseiten optisch verzerren. Dank des
+            schnellen
+            Content Delivery Network (CDN) gibt es mit Google Fonts keine plattformübergreifenden Probleme. Google Fonts
+            unterstützt alle gängigen Browser (Google Chrome, Mozilla Firefox, Apple Safari, Opera) und funktioniert
+            zuverlässig auf den meisten modernen mobilen Betriebssystemen, einschließlich Android 2.2+ und iOS 4.2+
+            (iPhone,
+            iPad, iPod). Wir verwenden die Google Fonts also, damit wir unser gesamtes Online-Service so schön und
+            einheitlich wie möglich darstellen können.
+            <br>
+            <h3>Welche Daten werden von Google gespeichert?</h3>
+            Wenn Sie unsere Webseite besuchen, werden die Schriften über einen Google-Server nachgeladen. Durch diesen
+            externen Aufruf werden Daten an die Google-Server übermittelt. So erkennt Google auch, dass Sie bzw. Ihre
+            IP-Adresse unsere Webseite besucht. Die Google Fonts API wurde entwickelt, um Verwendung, Speicherung und
+            Erfassung von Endnutzerdaten auf das zu reduzieren, was für eine ordentliche Bereitstellung von Schriften
+            nötig
+            ist. API steht übrigens für „Application Programming Interface“ und dient unter anderem als Datenübermittler
+            im
+            Softwarebereich.
+            <br>
+            <br>
+            Google Fonts speichert CSS- und Schrift-Anfragen sicher bei Google und ist somit geschützt. Durch die
+            gesammelten Nutzungszahlen kann Google feststellen, wie gut die einzelnen Schriften ankommen. Die Ergebnisse
+            veröffentlicht Google auf internen Analyseseiten, wie beispielsweise Google Analytics. Zudem verwendet
+            Google
+            auch Daten des eigenen Web-Crawlers, um festzustellen, welche Webseiten Google-Schriften verwenden. Diese
+            Daten
+            werden in der BigQuery-Datenbank von Google Fonts veröffentlicht. Unternehmer und Entwickler nützen das
+            Google-Webservice BigQuery, um große Datenmengen untersuchen und bewegen zu können.
+            <br>
+            <br>
+            Zu bedenken gilt allerdings noch, dass durch jede Google Font Anfrage auch Informationen wie
+            Spracheinstellungen, IP-Adresse, Version des Browsers, Bildschirmauflösung des Browsers und Name des
+            Browsers
+            automatisch an die Google-Server übertragen werden. Ob diese Daten auch gespeichert werden, ist nicht klar
+            feststellbar bzw. wird von Google nicht eindeutig kommuniziert.
+            <br>
+            <h3>Wie lange und wo werden die Daten gespeichert?</h3>
+            Anfragen für CSS-Assets speichert Google einen Tag lang auf seinen Servern, die hauptsächlich außerhalb der
+            EU
+            angesiedelt sind. Das ermöglicht uns, mithilfe eines Google-Stylesheets die Schriftarten zu nutzen. Ein
+            Stylesheet ist eine Formatvorlage, über die man einfach und schnell z.B. das Design bzw. die Schriftart
+            einer
+            Webseite ändern kann.
+            <br>
+            <br>
+            Die Font-Dateien werden bei Google ein Jahr gespeichert. Google verfolgt damit das Ziel, die Ladezeit von
+            Webseiten grundsätzlich zu verbessern. Wenn Millionen von Webseiten auf die gleichen Schriften verweisen,
+            werden
+            sie nach dem ersten Besuch zwischengespeichert und erscheinen sofort auf allen anderen später besuchten
+            Webseiten wieder. Manchmal aktualisiert Google Schriftdateien, um die Dateigröße zu reduzieren, die
+            Abdeckung
+            von Sprache zu erhöhen und das Design zu verbessern.
+            <br>
+            <h3>Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h3>
+            Jene Daten, die Google für einen Tag bzw. ein Jahr speichert können nicht einfach gelöscht werden. Die Daten
+            werden beim Seitenaufruf automatisch an Google übermittelt. Um diese Daten vorzeitig löschen zu können,
+            müssen
+            Sie den Google-Support auf <a href="https://support.google.com/?hl=de&tid=121680924">https://support.google.com/?hl=de&tid=121680924</a>
+            kontaktieren. Datenspeicherung
+            verhindern Sie in diesem Fall nur, wenn Sie unsere Seite nicht besuchen.
+            <br>
+            <br>
+            Anders als andere Web-Schriften erlaubt uns Google uneingeschränkten Zugriff auf alle Schriftarten. Wir
+            können
+            also unlimitiert auf ein Meer an Schriftarten zugreifen und so das Optimum für unsere Webseite rausholen.
+            Mehr
+            zu Google Fonts und weiteren Fragen finden Sie auf <a
+                    href="https://developers.google.com/fonts/faq?tid=121680924">https://developers.google.com/fonts/faq?tid=121680924</a>.
+            Dort
+            geht zwar Google auf datenschutzrelevante Angelegenheiten ein, doch wirklich detaillierte Informationen über
+            Datenspeicherung sind nicht enthalten. Es ist relativ schwierig, von Google wirklich präzise Informationen
+            über
+            gespeicherten Daten zu bekommen.
+            <br>
+            <br>
+            Welche Daten grundsätzlich von Google erfasst werden und wofür diese Daten verwendet werden, können Sie auch
+            auf
+            <a href="https://policies.google.com/privacy?hl=de&tid=121680924">https://www.google.com/intl/de/policies/privacy/</a>
+            nachlesen.
+            <br>
+            <br>
+            <h2>Google Fonts Lokal Datenschutzerklärung</h2>
+            Auf unserer Website nutzen wir Google Fonts der Firma Google Inc. Für den europäischen Raum ist das
+            Unternehmen
+            Google Ireland Limited (Gordon House, Barrow Street Dublin 4, Irland) verantwortlich. Wir haben die
+            Google-Schriftarten lokal, d.h. auf unserem Webserver – nicht auf den Servern von Google – eingebunden.
+            Dadurch
+            gibt es keine Verbindung zu Google-Servern und somit auch keine Datenübertragung oder Speicherung.
+            <br>
+            <h3>Was sind Google Fonts?</h3>
+            Früher nannte man Google Fonts auch Google Web Fonts. Dabei handelt es sich um ein interaktives Verzeichnis
+            mit
+            über 800 Schriftarten, die Google kostenlos bereitstellt. Mit Google Fonts könnte man Schriften nutzen, ohne
+            sie
+            auf den eigenen Server hochzuladen. Doch um diesbezüglich jede Informationsübertragung zu Google-Servern zu
+            unterbinden, haben wir die Schriftarten auf unseren Server heruntergeladen. Auf diese Weise handeln wir
+            datenschutzkonform und senden keine Daten an Google Fonts weiter.
+            <br>
+            <br>
+            Anders als andere Web-Schriften erlaubt uns Google uneingeschränkten Zugriff auf alle Schriftarten. Wir
+            können
+            also unlimitiert auf ein Meer an Schriftarten zugreifen und so das Optimum für unsere Webseite rausholen.
+            Mehr
+            zu Google Fonts und weiteren Fragen finden Sie auf <a
+                    href="https://developers.google.com/fonts/faq?tid=121680924">https://developers.google.com/fonts/faq?tid=121680924</a>.
+            <br>
+            <br>
+            <h2>Font Awesome Datenschutzerklärung</h2>
+            Wir verwenden auf unserer Website Font Awesome des amerikanischen Unternehmens Fonticons (307 S. Main St.,
+            Suite
+            202, Bentonville, AR 72712, USA). Wenn Sie eine unserer Webseiten aufrufen, wird die Web-Schriftart Font
+            Awesome
+            (im Speziellen Icons) über das Font Awesome Content Delivery Netzwerk (CDN) geladen. So werden die Texte
+            bzw.
+            Schriften und Icons auf jedem Endgerät passend angezeigt. In dieser Datenschutzerklärung gehen wir näher auf
+            die
+            Datenspeicherung und Datenverarbeitung durch diesen Service ein.
+            <br>
+            <h3>Was ist Font Awesome?</h3>
+            Icons spielen für Websites eine immer wichtigere Rolle. Font Awesome ist eine Web-Schriftart, die speziell
+            für
+            Webdesigner und Webentwickler entwickelt wurde. Mit Font Awesome können etwa Icons mit Hilfe der
+            Stylesheet-Sprache CSS nach Belieben skaliert und gefärbt werden. Sie ersetzen so alte Bild-Icons. Font
+            Awesome
+            CDN ist der einfachste Weg die Icons oder Schriftarten auf Ihre Website zu laden. Dafür mussten wir nur eine
+            kleine Code-Zeile in unsere Website einbinden.
+            <br>
+            <h3>Warum verwenden wir Font Awesome auf unserer Website?</h3>
+            Durch Font Awesome können Inhalte auf unserer Website besser aufbereitet werden. So können Sie sich auf
+            unserer
+            Website besser orientieren und die Inhalte leichter erfassen. Mit den Icons kann man sogar manchmal ganze
+            Wörter
+            ersetzen und Platz sparen. Da ist besonders praktisch, wenn wir Inhalte speziell für Smartphones optimieren.
+            Diese Icons werden statt als Bild als HMTL-Code eingefügt. Dadurch können wir die Icons mit CSS genauso
+            bearbeiten, wie wir wollen. Gleichzeitig verbessern wir mit Font Awesome auch unsere Ladegeschwindigkeit,
+            weil
+            es sich nur um HTML-Elemente handelt und nicht um Icon-Bilder. All diese Vorteile helfen uns, die Website
+            für
+            Sie noch übersichtlicher, frischer und schneller zu machen.
+            <br>
+            <h3>Welche Daten werden von Font Awesome gespeichert?</h3>
+            Zum Laden von Icons und Symbolen wird das Font Awesome Content Delivery Network (CDN) verwendet. CDNs sind
+            Netzwerke von Servern, die weltweit verteilt sind und es möglich machen, schnell Dateien aus der Nähe zu
+            laden.
+            So werden auch, sobald Sie eine unserer Seiten aufrufen, die entsprechenden Icons von Font Awesome
+            bereitgestellt.
+            <br>
+            <br>
+            Damit die Web-Schriftarten geladen werden können, muss Ihr Browser eine Verbindung zu den Servern des
+            Unternehmens Fonticons, Inc. herstellen. Dabei wird Ihre IP-Adresse erkannt. Font Awesome sammelt auch Daten
+            darüber, welche Icon-Dateien wann heruntergeladen werden. Weiters werden auch technische Daten wie etwa Ihre
+            Browser-Version, Bildschirmauflösung oder der Zeitpunkt der ausgerufenen Seite übertragen.
+            <br>
+            <br>
+            Aus folgenden Gründen werden diese Daten gesammelt und gespeichert:
+            <ul>
+                <li>um Content Delivery Netzwerke zu optimieren</li>
+                <li>um technische Fehler zu erkennen und zu beheben</li>
+                <li>um CDNs vor Missbrauch und Angriffen zu schützen</li>
+                <li>um Gebühren von Font Awesome Pro-Kunden berechnen zu können</li>
+                <li>um die Beliebtheit von Icons zu erfahren</li>
+                <li>um zu wissen, welchen Computer und welche Software Sie verwenden</li>
+            </ul>
+            Falls Ihr Browser Web-Schriftarten nicht zulässt, wird automatisch eine Standardschrift Ihres PCs verwendet.
+            Nach derzeitigem Stand unserer Erkenntnis werden keine Cookies gesetzt. Wir sind mit der
+            Datenschutzabteilung
+            von Font Awesome in Kontakt und geben Ihnen Bescheid, sobald wir näheres in Erfahrung bringen.
+            <br>
+            <h3>Wie lange und wo werden die Daten gespeichert?</h3>
+            Font Awesome speichert Daten über die Nutzung des Content Delivery Network auf Servern auch in den
+            Vereinigten
+            Staaten von Amerika. Die CDN-Server befinden sich allerdings weltweit und speichern Userdaten, wo Sie sich
+            befinden. In identifizierbarer Form werden die Daten in der Regel nur wenige Wochen gespeichert. Aggregierte
+            Statistiken über die Nutzung von den CDNs können auch länger gespeichert werden. Personenbezogene Daten sind
+            hier nicht enthalten.
+            <br>
+            <h3>Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h3>
+            Font Awesome speichert nach aktuellem Stand unseres Wissens keine personenbezogenen Daten über die Content
+            Delivery Netzwerke. Wenn Sie nicht wollen, dass Daten über die verwendeten Icons gespeichert werden, können
+            Sie
+            leider unsere Website nicht besuchen. Wenn Ihr Browser keine Web-Schriftarten erlaubt, werden auch keine
+            Daten
+            übertragen oder gespeichert. In diesem Fall wird einfach die Standard-Schrift Ihres Computers verwendet.
+            <br>
+            <br>
+            Wenn Sie mehr über Font Awesome und deren Umgang mit Daten erfahren wollen, empfehlen wir Ihnen die
+            Datenschutzerklärung unter <a href="https://fontawesome.com/privacy">https://fontawesome.com/privacy</a> und
+            die Hilfeseite unter
+            <a href="https://fontawesome.com/help">https://fontawesome.com/help</a>.
+            <br>
+            <br>
+            <h2>Eingebettete Social Media Elemente Datenschutzerklärung</h2>
+            Wir binden auf unserer Webseite Elemente von Social Media Diensten ein um Bilder, Videos und Texte
+            anzuzeigen.<br>
+            Durch den Besuch von Seiten die diese Elemente darstellen, werden Daten von Ihrem Browser zum jeweiligen
+            Social
+            Media Dienst übertragen und dort gespeichert. Wir haben keinen Zugriff auf diese Daten.<br>
+            Die folgenden Links führen Sie zu den Seiten der jeweiligen Social Media Dienste wo erklärt wird, wie diese
+            mit
+            Ihren Daten umgehen:
+            <ul>
+                <li>Instagram-Datenschutzrichtlinie: <a href="https://help.instagram.com/519522125107875">https://help.instagram.com/519522125107875</a>
+                </li>
+                <li>Für YouTube gilt die Google Datenschutzerklärung: <a
+                            href="https://policies.google.com/privacy?hl=de">https://policies.google.com/privacy?hl=de</a>
+                </li>
+                <li>Facebook-Datenrichtline: <a href="https://www.facebook.com/about/privacy">https://www.facebook.com/about/privacy</a>
+                </li>
+                <li>Twitter Datenschutzrichtlinie: <a href="https://twitter.com/de/privacy">https://twitter.com/de/privacy</a>
+                </li>
+            </ul>
+            Alle Texte sind urheberrechtlich geschützt.
+            <br>
+            Quelle: Erstellt mit dem <a href="https://www.adsimple.at/datenschutz-generator/">Datenschutz Generator</a>
+            von AdSimple
+            <br>
+            <br>
+            <br>
+            <br>
+            <center>
+                <a class="verstanden" href="{{ app.request.headers.get('referer') }}">Verstanden</a>
+            </center>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    <script>(function () {
+            var s = document.createElement("script");
+            s.setAttribute("data-account", "kyfQmN5l1Z");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            document.body.appendChild(s);
+        })();</script>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('impressum') }}
+{% endblock %}

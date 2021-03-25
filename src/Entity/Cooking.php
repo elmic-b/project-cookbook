@@ -2,12 +2,15 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Cooking
  *
- * @ORM\Table(name="cooking", indexes={@ORM\Index(name="IDX_467BE66A38817584", columns={"fk_recipe_id"})})
+ * @ORM\Table(name="Cooking",
+ *     indexes={@ORM\Index(name="IDX_467BE66A38817584", columns={"fk_recipe_id"})})
  * @ORM\Entity
  */
 class Cooking
@@ -35,15 +38,18 @@ class Cooking
      */
     private $cooking;
 
+
     /**
      * @var \Recipe
      *
-     * @ORM\ManyToOne(targetEntity="Recipe")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Recipe", inversedBy="cooking_id")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="fk_recipe_id", referencedColumnName="recipe_id")
      * })
      */
     private $fkRecipe;
+
+
 
     public function getCookingId(): ?int
     {
@@ -55,36 +61,19 @@ class Cooking
         return $this->heading;
     }
 
-    public function setHeading(?string $heading): self
-    {
-        $this->heading = $heading;
-
-        return $this;
-    }
 
     public function getCooking(): ?string
     {
         return $this->cooking;
     }
 
-    public function setCooking(?string $cooking): self
-    {
-        $this->cooking = $cooking;
-
-        return $this;
-    }
 
     public function getFkRecipe(): ?Recipe
     {
         return $this->fkRecipe;
     }
 
-    public function setFkRecipe(?Recipe $fkRecipe): self
-    {
-        $this->fkRecipe = $fkRecipe;
 
-        return $this;
-    }
 
 
 }

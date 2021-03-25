@@ -3,6 +3,8 @@
 namespace App\Repository;
 
 use App\Entity\Allergen;
+use App\Entity\Cooking;
+use App\Entity\Ingridient;
 use App\Entity\Recipe;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -21,6 +23,113 @@ class RecipeRepository extends ServiceEntityRepository
     }
 
 
+    /**
+     * @param string|null $term
+     * @return Recipe[]
+     */
+    public function findAllWithSearch(?string $term)
+    {
+        $qb = $this->createQueryBuilder('r');
+        if ($term) {
+            $qb->andWhere('r.name LIKE :term')
+                ->setParameter('term', '%' . $term . '%');
+        }
+        return $qb
+            ->orderBy('r.name', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @param string|null $difficulty string|null $nutrition string|null $category
+     * @return Recipe[]
+     */
+    public function filterFunction(?string $difficulty, ?string $nutrition, ?string $category)
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = "";
+
+        if ($difficulty != "") {
+            if ($nutrition != "") {
+                if ($category != "") {
+                    $query = $entityManager->createQuery(
+                        'SELECT  r, n, d, c
+                                FROM App\Entity\Recipe r
+                                INNER JOIN r.fkNutritionForm n 
+                                INNER JOIN r.fkDifficulty d
+                                INNER JOIN r.fkCategory c 
+                                WHERE d.difficulty LIKE :difficulty 
+                                AND n.nutrition LIKE :nutrition
+                                AND c.category LIKE :category'
+                    )->setParameter('difficulty', $difficulty)
+                        ->setParameter('nutrition', $nutrition)
+                        ->setParameter('category', $category);
+                } else {
+                    $query = $entityManager->createQuery(
+                        'SELECT  r, n, d
+                                FROM App\Entity\Recipe r
+                                INNER JOIN r.fkNutritionForm n 
+                                INNER JOIN r.fkDifficulty d
+                                WHERE d.difficulty LIKE :difficulty 
+                                AND n.nutrition LIKE :nutrition'
+                    )->setParameter('difficulty', $difficulty)
+                        ->setParameter('nutrition', $nutrition);
+                }
+            } else {
+                if ($category != "") {
+                    $query = $entityManager->createQuery(
+                        'SELECT  r, d, c
+                                FROM App\Entity\Recipe r
+                                INNER JOIN r.fkDifficulty d
+                                INNER JOIN r.fkCategory c 
+                                WHERE d.difficulty LIKE :difficulty 
+                                AND c.category LIKE :category'
+                    )->setParameter('difficulty', $difficulty)
+                        ->setParameter('category', $category);
+                } else {
+                    $query = $entityManager->createQuery(
+                        'SELECT  r, d
+            FROM App\Entity\Recipe r
+            INNER JOIN r.fkDifficulty d WHERE d.difficulty LIKE :difficulty'
+                    )->setParameter('difficulty', $difficulty);
+                }
+            }
+
+        } else if ($nutrition != "") {
+            if ($category != "") {
+                $query = $entityManager->createQuery(
+                    'SELECT  r, n, c
+                                FROM App\Entity\Recipe r
+                                INNER JOIN r.fkNutritionForm n 
+                                INNER JOIN r.fkCategory c 
+                                WHERE n.nutrition LIKE :nutrition
+                                AND c.category LIKE :category'
+                )->setParameter('nutrition', $nutrition)
+                    ->setParameter('category', $category);
+            } else {
+                $query = $entityManager->createQuery(
+                    'SELECT  r, n
+            FROM App\Entity\Recipe r
+            INNER JOIN r.fkNutritionForm n WHERE n.nutrition LIKE :nutrition'
+                )->setParameter('nutrition', $nutrition);
+            }
+
+        } else if ($category != "") {
+            $query = $entityManager->createQuery(
+                'SELECT  r, c
+            FROM App\Entity\Recipe r
+            INNER JOIN r.fkCategory c WHERE c.category LIKE :category'
+            )->setParameter('category', $category);
+        } else {
+            $query = $entityManager->createQuery(
+                'SELECT  r
+            FROM App\Entity\Recipe r'
+            );
+        }
+
+        return $query->getResult();
+    }
 
 
 
@@ -41,8 +150,6 @@ class RecipeRepository extends ServiceEntityRepository
 
     }
     */
-
-
 
 
     /*
